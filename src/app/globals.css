@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --color-text-primary: #3c2f3a;
+  --color-text-secondary: #5a5353;
+  --color-text-on-pink: #ffffff;
+
+  --color-brand-primary-pink: #ec5998;
+  --color-brand-secondary-light: #f7c0d8;
+  --color-brand-secondary-cream: #fffbea;
+  --color-brand-deep-raspberry: #b12a69;
+  --color-brand-accent-gold: #f9d02e;
+  --color-brand-accent-dark: #1a181a;
+  --color-brand-background-neutral: #faf7f2;
+  --color-brand-neutral-dark: #131313;
+  --color-brand-neutral-lighter: #575757;
+
+  --color-surface-white: #ffffff;
+  --color-surface-neutral-light: #f5f0eb;
+
+  --color-link-primary: #000000;
+  --color-link-alternate: #ffffff;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+}
+
+body {
+  color: var(--color-text-primary);
+  background: var(--color-surface-white);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
