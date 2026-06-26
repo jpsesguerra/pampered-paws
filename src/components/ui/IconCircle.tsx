@@ -1,7 +1,7 @@
 import { cn } from "@/lib/cn";
 
 type IconCircleProps = {
-  variant?: "paw" | "location" | "calendar" | "credit-card";
+  variant?: "paw" | "location" | "calendar" | "credit-card" | "graduation-cap";
   className?: string;
 };
 
@@ -10,6 +10,7 @@ const ICON_SRC: Record<NonNullable<IconCircleProps["variant"]>, string> = {
   location: "/icons/location-pin.svg",
   calendar: "/icons/calendar.svg",
   "credit-card": "/icons/credit-card.svg",
+  "graduation-cap": "/icons/graduation-cap.svg",
 };
 
 const ICON_SIZE: Record<NonNullable<IconCircleProps["variant"]>, string> = {
@@ -17,6 +18,7 @@ const ICON_SIZE: Record<NonNullable<IconCircleProps["variant"]>, string> = {
   location: "size-5",
   calendar: "size-5",
   "credit-card": "size-5",
+  "graduation-cap": "size-6",
 };
 
 export function IconCircle({ variant = "paw", className }: IconCircleProps) {
