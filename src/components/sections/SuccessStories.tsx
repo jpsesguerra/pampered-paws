@@ -1,6 +1,7 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import { Highlight } from "@/components/ui/Highlight";
 
 const SERVICES = [
   {
@@ -33,10 +34,10 @@ export function SuccessStories() {
         <div className="flex max-w-[622px] flex-col items-center gap-s+ text-center">
           <Eyebrow>Our services</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
-            Every groom, built around your pet&rsquo;s needs
+            Every groom, built around your pet&rsquo;s <Highlight>needs</Highlight>
           </h2>
         </div>
-        <div className="flex w-full flex-col items-start gap-2xl sm:flex-row">
+        <div className="flex w-full flex-col items-stretch gap-2xl sm:flex-row">
           {SERVICES.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}

@@ -7,8 +7,8 @@ type EyebrowProps = {
 
 export function Eyebrow({ children, className }: EyebrowProps) {
   return (
-    <div className={cn("flex items-center justify-center gap-sm", className)}>
-      <img src="/icons/chevron-right.svg" alt="" className="size-3" />
+    <div className={cn("flex w-fit items-center gap-sm", className)}>
+      <img src="/icons/dot.svg" alt="" className="size-3 shrink-0" />
       <span className="whitespace-nowrap text-center font-sans text-label-xl leading-none text-text-primary">
         {children}
       </span>

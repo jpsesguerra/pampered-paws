@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LOCATIONS } from "@/lib/data/locations";
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
@@ -14,34 +15,6 @@ const PROGRAM_LINKS = [
   { label: "Schooling", href: "/schooling" },
   { label: "Franchising", href: "/franchise" },
   { label: "Pricing", href: "/grooming-prices" },
-];
-
-type SalonContact = {
-  name: string;
-  address: string;
-  phone: string;
-  email: string;
-};
-
-const SALONS: SalonContact[] = [
-  {
-    name: "Toronto Salon",
-    address: "317 Millwood Rd, Toronto, ON M4S 1J9",
-    phone: "+1 (416) 904-2652",
-    email: "lesley@pamperedpaws.com",
-  },
-  {
-    name: "Mississauga Salon",
-    address: "92 Lakeshore Rd E, Mississauga, ON L5G 4S2",
-    phone: "+1 (905) 278-9663",
-    email: "eggie@pamperedpaws.com",
-  },
-  {
-    name: "Scarborough Salon",
-    address: "123 Guildwood Pkwy, Scarborough, ON M1E 4V2",
-    phone: "+1 (416) 724-1637",
-    email: "info@pamperedpaws.com",
-  },
 ];
 
 function ContactRow({ icon, children }: { icon: string; children: React.ReactNode }) {
@@ -94,17 +67,23 @@ export function Footer() {
             </div>
           </div>
           <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:flex-wrap lg:flex-1 lg:justify-end lg:gap-lg">
-            {SALONS.map((salon) => (
-              <div key={salon.name} className="flex w-full flex-col items-start gap-md sm:w-[209px] lg:pb-3xl">
-                <h3 className="w-full font-serif text-h6 text-text-on-pink">{salon.name}</h3>
-                <ContactRow icon="/icons/location-pin-sm.svg">{salon.address}</ContactRow>
-                <ContactRow icon="/icons/phone.svg">{salon.phone}</ContactRow>
-                <ContactRow icon="/icons/email.svg">{salon.email}</ContactRow>
-              </div>
+            {LOCATIONS.map((location) => (
+              <Link
+                key={location.slug}
+                href={`/locations/${location.slug}`}
+                className="flex w-full flex-col items-start gap-md sm:w-[209px] lg:pb-3xl"
+              >
+                <h3 className="w-full font-serif text-h6 text-text-on-pink">
+                  {location.name} Salon
+                </h3>
+                <ContactRow icon="/icons/location-pin-sm.svg">{location.address}</ContactRow>
+                <ContactRow icon="/icons/phone.svg">{location.phoneLabel}</ContactRow>
+                <ContactRow icon="/icons/email.svg">{location.email}</ContactRow>
+              </Link>
             ))}
           </div>
         </div>
-        <p className="w-full font-sans text-body-sm text-text-on-pink/[0.82]">
+        <p className="w-full font-sans text-body-sm text-[#A8A8A8]">
           © {new Date().getFullYear()} Pampered Paws Ltd. All rights reserved.
         </p>
       </div>

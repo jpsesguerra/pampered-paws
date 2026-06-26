@@ -1,27 +1,30 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { ServiceChip } from "@/components/ui/ServiceChip";
+import { Highlight } from "@/components/ui/Highlight";
 
-const ROW_1 = [
-  "Bath",
+const SERVICES_ROW = [
   "Regular Groom",
-  "Show Trim",
-  "De-matting",
+  "Bath & Blow Dry",
+  "Full Coat Styling",
+  "Breed-Standard Cuts",
+  "Scissor Finishing",
+  "Nail Clipping & Grinding",
+  "De-shedding Treatment",
   "Hand Stripping",
-  "De-shedding",
   "Hot Oil Treatment",
   "Pet Colouring",
+  "Puppy First Groom",
+  "Medicated Bath",
 ];
 
-const ROW_2 = [
-  "Grooming Fundamentals",
-  "Junior Groomer Program",
-  "Enhanced Stylist Development",
+const PROGRAMS_ROW = [
+  "Groomers Professional Development Program",
   "Advanced Scissor Program",
-  "Business Owners Program",
-  "Private Lessons",
-  "Nail Trim",
-  "Ear Cleaning",
+  "Enhanced Stylist Professional Development Program",
+  "Business Owners Professional Animal Stylist Development Program",
+  "Organizational Teachers Professional Development Program",
+  "Private Lesson for Pet Owners",
 ];
 
 export function CraftSection() {
@@ -29,10 +32,10 @@ export function CraftSection() {
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col gap-2xl">
         <div className="flex w-full flex-col items-start gap-lg lg:flex-row lg:gap-2xl">
-          <div className="flex w-full flex-col gap-xs lg:w-[552px] lg:shrink-0">
+          <div className="flex w-full flex-col items-start gap-xs lg:w-[552px] lg:shrink-0">
             <Eyebrow>Services · School curriculum</Eyebrow>
             <h2 className="font-serif text-h2 text-text-primary">
-              The craft behind every great groom
+              The craft behind every <Highlight>great groom</Highlight>
             </h2>
           </div>
           <div className="flex flex-1 flex-col items-start gap-lg lg:pr-lg">
@@ -47,15 +50,15 @@ export function CraftSection() {
             <Button href="/schooling">Learn about the school</Button>
           </div>
         </div>
-        <div className="flex flex-col items-start gap-lg overflow-x-auto">
-          <div className="flex items-center gap-lg">
-            {ROW_1.map((label) => (
-              <ServiceChip key={label}>{label}</ServiceChip>
+        <div className="flex flex-col items-start gap-lg overflow-hidden">
+          <div className="flex w-max animate-marquee-reverse items-center gap-lg">
+            {[...SERVICES_ROW, ...SERVICES_ROW].map((label, i) => (
+              <ServiceChip key={`${label}-${i}`}>{label}</ServiceChip>
             ))}
           </div>
-          <div className="flex items-center gap-lg">
-            {ROW_2.map((label) => (
-              <ServiceChip key={label}>{label}</ServiceChip>
+          <div className="flex w-max animate-marquee items-center gap-lg">
+            {[...PROGRAMS_ROW, ...PROGRAMS_ROW].map((label, i) => (
+              <ServiceChip key={`${label}-${i}`}>{label}</ServiceChip>
             ))}
           </div>
         </div>

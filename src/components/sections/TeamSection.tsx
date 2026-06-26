@@ -30,7 +30,7 @@ export function TeamSection() {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col rounded-[32px] bg-surface-white p-lg sm:p-2xl">
-        <div className="flex flex-col items-start gap-2xl sm:flex-row">
+        <div className="flex flex-col items-start gap-2xl sm:flex-row sm:items-stretch">
           <div className="flex w-full flex-col items-start gap-2xl sm:w-[376px] sm:shrink-0">
             <div className="flex flex-col items-start gap-lg">
               <Eyebrow>Our team</Eyebrow>

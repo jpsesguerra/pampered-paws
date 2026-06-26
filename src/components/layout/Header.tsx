@@ -31,20 +31,20 @@ export function Header() {
             />
           </Link>
 
-          <div className="hidden items-center justify-center gap-2xl lg:flex">
-            <nav className="flex items-center justify-center gap-2xl">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="whitespace-nowrap font-sans text-btn-primary text-text-primary"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-            <Button href="/request-an-appointment">Request An Appointment</Button>
-          </div>
+          <nav className="hidden flex-1 items-center justify-center gap-2xl lg:flex">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="whitespace-nowrap font-sans text-btn-primary text-text-primary"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <Button href="/request-an-appointment" className="hidden lg:flex">
+            Request An Appointment
+          </Button>
 
           <button
             type="button"

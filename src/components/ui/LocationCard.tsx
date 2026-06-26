@@ -8,6 +8,7 @@ export type Location = {
   tagline: string;
   address: string;
   phoneLabel: string;
+  email: string;
   bookingNote: string;
   mapImage: string;
   bookOnline: boolean;

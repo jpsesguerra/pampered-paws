@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { Highlight } from "@/components/ui/Highlight";
 
 const LEFT_PHOTOS = [
   { src: "/images/gallery/pet-chichi.jpg", name: "Chi Chi" },
@@ -24,11 +25,11 @@ export function Gallery() {
         </div>
         <div className="flex max-w-[364px] flex-col items-center gap-3xl text-center">
           <h2 className="font-serif text-h2 text-text-primary">
-            Real pets. Real grooms.{" "}
-            <span className="relative inline-block">
-              <span className="absolute inset-x-0 bottom-1 h-[0.4em] -rotate-1 rounded-full bg-brand-secondary-light/60" />
-              <span className="relative">Fresh from our salon</span>
-            </span>
+            Real pets.
+            <br />
+            Real grooms.
+            <br />
+            Fresh from, <Highlight>our salon</Highlight>
           </h2>
           <Button withIcon href="https://www.instagram.com">
             Follow us on Instagram

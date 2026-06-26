@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { BLOG_POSTS } from "@/lib/data/blog";
 
 export function BlogTeaser({
@@ -38,6 +39,7 @@ export function BlogTeaser({
             </Link>
           ))}
         </div>
+        <SecondaryButton href="/blog">Read all our blogs</SecondaryButton>
       </div>
     </section>
   );

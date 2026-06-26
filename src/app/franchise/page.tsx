@@ -50,7 +50,7 @@ export default function FranchisePage() {
       <section className="flex items-center justify-center px-lg py-7xl">
         <div className="flex w-full max-w-[1240px] flex-wrap items-center justify-center gap-lg">
           {FRANCHISE_LOCATIONS.map((location) => (
-            <ServiceChip key={location}>{location}</ServiceChip>
+            <ServiceChip key={location} icon="location">{location}</ServiceChip>
           ))}
         </div>
       </section>

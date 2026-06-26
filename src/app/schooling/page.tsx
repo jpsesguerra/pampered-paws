@@ -16,34 +16,36 @@ import { SCHOOLING_FAQS } from "@/lib/data/schoolingFaqs";
 export default function SchoolingPage() {
   return (
     <>
-      <section className="flex flex-col items-start gap-2xl px-lg pt-2xl">
-        <Breadcrumb>Grooming School</Breadcrumb>
-        <h1 className="font-serif text-h2 text-text-primary sm:text-display-h1">
-          Learn the art of grooming from a school that&rsquo;s been teaching it
-          since 1979
-        </h1>
-        <div className="flex w-full flex-col items-start gap-2xl lg:flex-row">
-          <div className="relative h-[280px] w-full overflow-hidden rounded-2xl lg:h-[630px] lg:w-[776px] lg:flex-shrink-0">
-            <Image src="/images/schooling-hero-1.png" alt="" fill className="object-cover" />
-          </div>
-          <div className="flex w-full flex-1 flex-col items-start gap-2xl">
-            <div className="relative h-[220px] w-full overflow-hidden rounded-2xl lg:h-[314px]">
-              <Image src="/images/schooling-hero-2.png" alt="" fill className="object-cover" />
+      <section className="flex items-center justify-center px-lg pt-2xl">
+        <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl">
+          <Breadcrumb>Grooming School</Breadcrumb>
+          <h1 className="font-serif text-h2 text-text-primary sm:text-display-h1">
+            Learn the art of grooming from a school that&rsquo;s been teaching it
+            since 1979
+          </h1>
+          <div className="flex w-full flex-col items-start gap-2xl lg:flex-row">
+            <div className="relative h-[280px] w-full overflow-hidden rounded-2xl lg:h-[630px] lg:w-[776px] lg:flex-shrink-0">
+              <Image src="/images/schooling-hero-1.png" alt="" fill className="object-cover" />
             </div>
-            <div className="flex flex-col items-start gap-2xl">
-              <p className="font-sans text-body-lg text-text-primary">
-                Whether you&rsquo;re starting a new career, sharpening your
-                skills, or opening your own salon, Pampered Paws gives you
-                hands-on training from working stylists — not a classroom
-                theory course. Train at your pace, four weeks at a time.
-              </p>
-              <div className="flex flex-col items-start gap-lg sm:flex-row sm:items-center">
-                <Button withIcon href="#programs">
-                  Explore programs
-                </Button>
-                <SecondaryButton href="/schooling/enroll">
-                  Ask about enrolling
-                </SecondaryButton>
+            <div className="flex w-full flex-1 flex-col items-start gap-2xl">
+              <div className="relative h-[220px] w-full overflow-hidden rounded-2xl lg:h-[314px]">
+                <Image src="/images/schooling-hero-2.png" alt="" fill className="object-cover" />
+              </div>
+              <div className="flex flex-col items-start gap-2xl">
+                <p className="font-sans text-body-lg text-text-primary">
+                  Whether you&rsquo;re starting a new career, sharpening your
+                  skills, or opening your own salon, Pampered Paws gives you
+                  hands-on training from working stylists — not a classroom
+                  theory course. Train at your pace, four weeks at a time.
+                </p>
+                <div className="flex flex-col items-start gap-lg sm:flex-row sm:items-center">
+                  <Button withIcon href="#programs">
+                    Explore programs
+                  </Button>
+                  <SecondaryButton href="/schooling/enroll">
+                    Ask about enrolling
+                  </SecondaryButton>
+                </div>
               </div>
             </div>
           </div>
