@@ -7,7 +7,7 @@ import { Highlight } from "@/components/ui/Highlight";
 const BALLS = [
   { src: "/icons/ball-3.svg", className: "left-[69%] top-[5%] rotate-[33deg] hidden sm:block" },
   { src: "/icons/ball-1.svg", className: "left-[67%] top-[38%] -rotate-[17deg] hidden sm:block" },
-  { src: "/icons/ball-2.svg", className: "left-[13%] top-[-2%] -rotate-[30deg] hidden sm:block" },
+  { src: "/icons/ball-2.svg", className: "left-[13%] top-[3%] -rotate-[30deg] hidden sm:block" },
   { src: "/icons/ball-4.svg", className: "left-[8%] top-[38%] rotate-[25deg] hidden sm:block" },
 ];
 
@@ -45,17 +45,17 @@ export function Hero() {
       <div className="relative z-10 grid w-full max-w-[1240px] grid-cols-1 gap-lg sm:h-[398px] sm:grid-cols-[1fr_538px_1fr]">
         <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light p-md sm:h-full">
           <div className="relative size-full overflow-hidden rounded-xl">
-            <Image src="/images/hero-1.png" alt="" fill className="object-cover" />
+            <Image src="/images/Cat.png" alt="" fill className="object-cover" />
           </div>
         </div>
         <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light p-md sm:h-full">
           <div className="relative size-full overflow-hidden rounded-xl">
-            <Image src="/images/hero-2.png" alt="" fill className="object-cover" />
+            <Image src="/images/Dog.png" alt="" fill className="object-cover" />
           </div>
         </div>
         <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light p-md sm:h-full">
           <div className="relative size-full overflow-hidden rounded-xl">
-            <Image src="/images/hero-3.png" alt="" fill className="object-cover" />
+            <Image src="/images/Lesley.png" alt="" fill className="object-cover" />
           </div>
         </div>
       </div>

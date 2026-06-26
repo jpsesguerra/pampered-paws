@@ -7,9 +7,9 @@ type ServiceCardProps = {
 
 export function ServiceCard({ icon, title, description, ctaLabel }: ServiceCardProps) {
   return (
-    <div className="relative flex w-full flex-1 flex-col items-start pt-lg">
-      <div className="flex w-full flex-col items-center gap-s+ rounded-2xl bg-brand-background-neutral px-lg pb-lg pt-3xl">
-        <div className="flex w-full min-w-[336px] flex-col items-center gap-md px-s+ text-center">
+    <div className="relative flex min-w-0 w-full flex-1 flex-col items-start pt-lg">
+      <div className="flex w-full min-w-0 flex-col items-center gap-s+ rounded-2xl bg-brand-background-neutral px-lg pb-lg pt-3xl">
+        <div className="flex w-full min-w-0 flex-col items-center gap-md px-s+ text-center">
           <h3 className="w-full font-serif text-h4 text-text-primary">{title}</h3>
           <p className="w-full font-sans text-body-sm text-text-secondary">{description}</p>
         </div>

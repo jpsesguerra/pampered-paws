@@ -7,22 +7,16 @@ const VALUES = [
     icon: "paw" as const,
     title: "Customized experience",
     description: "Every groom is built around your pet, their coat and their temperament.",
-    ctaLabel: "See grooming services",
-    ctaHref: "/grooming",
   },
   {
     icon: "paw" as const,
     title: "Cleanliness",
     description: "Spotless salons and sanitized tools, every pet, every time.",
-    ctaLabel: "See grooming services",
-    ctaHref: "/grooming",
   },
   {
     icon: "paw" as const,
     title: "Transparency",
     description: "Clear pricing, clear process, clear communication.",
-    ctaLabel: "See grooming services",
-    ctaHref: "/grooming-prices",
   },
 ];
 
