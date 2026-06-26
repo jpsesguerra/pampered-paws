@@ -3,7 +3,11 @@ import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { BLOG_POSTS } from "@/lib/data/blog";
 
-export function BlogTeaser() {
+export function BlogTeaser({
+  heading = "Things to know about your pet",
+}: {
+  heading?: string;
+}) {
   const posts = BLOG_POSTS.slice(0, 3);
 
   return (
@@ -11,9 +15,7 @@ export function BlogTeaser() {
       <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
         <div className="flex flex-col items-center gap-s+ text-center">
           <Eyebrow>Resources</Eyebrow>
-          <h2 className="font-serif text-h2 text-text-primary">
-            Things to know about your pet
-          </h2>
+          <h2 className="font-serif text-h2 text-text-primary">{heading}</h2>
         </div>
         <div className="flex w-full flex-col items-start gap-2xl sm:flex-row">
           {posts.map((post) => (

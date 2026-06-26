@@ -4,7 +4,7 @@ import { cn } from "@/lib/cn";
 
 type CardProps = {
   variant?: "small" | "medium";
-  icon?: "paw" | "location";
+  icon?: "paw" | "location" | "calendar" | "credit-card";
   title: string;
   description: string;
   ctaLabel?: string;
