@@ -2,34 +2,32 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { ServiceChip } from "@/components/ui/ServiceChip";
-import { FAQList } from "@/components/sections/FAQList";
+import { OpportunitySection } from "@/components/sections/OpportunitySection";
+import { WhyPartnerSection } from "@/components/sections/WhyPartnerSection";
+import { WhatsIncludedSection } from "@/components/sections/WhatsIncludedSection";
+import { InvestmentSection } from "@/components/sections/InvestmentSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTABanner } from "@/components/sections/CTABanner";
+import { FRANCHISE_FAQS } from "@/lib/data/franchiseFaqs";
 
-const COUNTRIES = [
-  "Canada",
-  "United States",
-  "Japan",
-  "Germany",
-  "Australia",
-  "United Kingdom",
-];
-
-const FRANCHISE_FAQS = [
-  {
-    question: "How much does a Pampered Paws franchise cost?",
-    answer:
-      "Franchise investment varies by location and salon size. Request franchise information and our team will walk you through the costs, fees, and what's included for your market.",
-  },
+const FRANCHISE_LOCATIONS = [
+  "Toronto",
+  "Mississauga",
+  "Scarborough",
+  "Tokyo",
+  "Yokohama",
+  "Lexington",
 ];
 
 export default function FranchisePage() {
   return (
     <>
       <section className="flex items-center justify-center px-lg pt-2xl">
-        <div className="flex w-full max-w-[1240px] items-center gap-2xl overflow-hidden rounded-[32px] bg-brand-secondary-light pl-2xl">
-          <div className="flex flex-1 flex-col items-start gap-2xl py-2xl">
+        <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl overflow-hidden rounded-[32px] bg-brand-secondary-light lg:flex-row lg:items-center lg:pl-2xl">
+          <div className="flex flex-1 flex-col items-start gap-2xl px-lg pt-2xl lg:px-0 lg:py-2xl">
             <div className="flex flex-col items-start gap-sm">
               <Eyebrow>Franchising Opportunity</Eyebrow>
-              <h1 className="max-w-[516px] font-serif text-display-h1 text-text-primary">
+              <h1 className="max-w-[516px] font-serif text-h2 text-text-primary sm:text-display-h1">
                 Own a grooming business backed by 45 years of expertise
               </h1>
               <p className="max-w-[411px] font-sans text-body-default text-text-primary">
@@ -43,7 +41,7 @@ export default function FranchisePage() {
               Request franchise information
             </Button>
           </div>
-          <div className="relative h-[582px] flex-1 self-end overflow-hidden">
+          <div className="relative h-[280px] w-full flex-1 overflow-hidden lg:h-[582px] lg:self-end">
             <Image src="/images/franchise-hero.png" alt="" fill className="object-cover" />
           </div>
         </div>
@@ -51,13 +49,31 @@ export default function FranchisePage() {
 
       <section className="flex items-center justify-center px-lg py-7xl">
         <div className="flex w-full max-w-[1240px] flex-wrap items-center justify-center gap-lg">
-          {COUNTRIES.map((country) => (
-            <ServiceChip key={country}>{country}</ServiceChip>
+          {FRANCHISE_LOCATIONS.map((location) => (
+            <ServiceChip key={location}>{location}</ServiceChip>
           ))}
         </div>
       </section>
 
-      <FAQList heading="Franchising questions, answered" faqs={FRANCHISE_FAQS} />
+      <OpportunitySection />
+      <WhyPartnerSection />
+      <WhatsIncludedSection />
+      <InvestmentSection />
+      <FAQSection items={FRANCHISE_FAQS} />
+      <CTABanner
+        heading="Start the conversation"
+        description="Tell us about yourself and the market you're interested in. Our franchise team will be in touch to talk through the opportunity."
+        buttonLabel="Franchise inquiry form"
+        buttonHref="/franchise/enquire"
+        phoneLabel={
+          <>
+            or email{" "}
+            <a href="mailto:franchise@pamperedpaws.com" className="underline">
+              franchise@pamperedpaws.com
+            </a>
+          </>
+        }
+      />
     </>
   );
 }

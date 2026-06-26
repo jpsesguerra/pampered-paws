@@ -44,7 +44,7 @@ export function WhoIsThisFor() {
             Our students come from all kinds of backgrounds. You might be:
           </p>
         </div>
-        <div className="flex w-full flex-col items-start gap-3xl lg:flex-row">
+        <div className="flex w-full flex-col items-start gap-3xl lg:flex-row lg:items-stretch">
           <div className="flex w-full flex-1 flex-col items-start gap-md">
             {AUDIENCES.map((audience) => (
               <div
