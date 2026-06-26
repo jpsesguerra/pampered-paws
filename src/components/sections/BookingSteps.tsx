@@ -5,8 +5,8 @@ import { Card } from "@/components/ui/Card";
 export function BookingSteps() {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
-      <div className="flex w-full max-w-[1240px] items-start gap-2xl">
-        <div className="flex flex-1 flex-col items-start justify-between gap-2xl">
+      <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
+        <div className="flex w-full flex-1 flex-col items-start justify-between gap-2xl">
           <div className="flex flex-col items-start gap-s+">
             <Eyebrow>Simple from the start</Eyebrow>
             <h2 className="max-w-[460px] font-serif text-h2 text-text-primary">
@@ -28,7 +28,7 @@ export function BookingSteps() {
             </Button>
           </div>
         </div>
-        <div className="flex flex-1 flex-col items-start gap-s+">
+        <div className="flex w-full flex-1 flex-col items-start gap-s+">
           <Card
             variant="medium"
             icon="location"

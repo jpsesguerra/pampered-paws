@@ -57,16 +57,16 @@ function ContactRow({ icon, children }: { icon: string; children: React.ReactNod
 
 export function Footer() {
   return (
-    <footer className="flex items-center justify-center py-2xl">
-      <div className="flex w-full max-w-[1240px] flex-col gap-7xl rounded-2xl bg-brand-neutral-dark p-[54px]">
-        <div className="flex w-full items-start justify-between">
+    <footer className="flex items-center justify-center px-lg py-2xl">
+      <div className="flex w-full max-w-[1240px] flex-col gap-3xl rounded-2xl bg-brand-neutral-dark p-lg sm:gap-6xl sm:p-2xl lg:p-[54px]">
+        <div className="flex w-full flex-col items-start gap-2xl lg:flex-row lg:justify-between">
           <div className="flex flex-col gap-2xl">
             <Image
               src="/images/logo-footer.png"
               alt="Pampered Paws"
               width={244}
               height={72}
-              className="h-[72px] w-[244px] object-contain"
+              className="h-[60px] w-[203px] object-contain sm:h-[72px] sm:w-[244px]"
             />
             <div className="flex w-full gap-2xl">
               <div className="flex flex-col items-start gap-lg">
@@ -93,9 +93,9 @@ export function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex flex-1 items-start justify-end gap-lg">
+          <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:flex-wrap lg:flex-1 lg:justify-end lg:gap-lg">
             {SALONS.map((salon) => (
-              <div key={salon.name} className="flex w-[209px] flex-col items-start gap-md pb-3xl">
+              <div key={salon.name} className="flex w-full flex-col items-start gap-md sm:w-[209px] lg:pb-3xl">
                 <h3 className="w-full font-serif text-h6 text-text-on-pink">{salon.name}</h3>
                 <ContactRow icon="/icons/location-pin-sm.svg">{salon.address}</ContactRow>
                 <ContactRow icon="/icons/phone.svg">{salon.phone}</ContactRow>

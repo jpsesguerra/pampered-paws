@@ -29,14 +29,14 @@ const SERVICES = [
 export function SuccessStories() {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
-      <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl rounded-[32px] bg-surface-white px-xl py-3xl">
+      <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl rounded-[32px] bg-surface-white px-lg py-2xl sm:px-xl sm:py-3xl">
         <div className="flex max-w-[622px] flex-col items-center gap-s+ text-center">
           <Eyebrow>Our services</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
             Every groom, built around your pet&rsquo;s needs
           </h2>
         </div>
-        <div className="flex w-full items-start gap-2xl">
+        <div className="flex w-full flex-col items-start gap-2xl sm:flex-row">
           {SERVICES.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}

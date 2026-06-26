@@ -18,7 +18,7 @@ export function Button({ withIcon = false, href, className, children, ...props }
     <>
       <span
         className={cn(
-          "flex flex-col items-center rounded-full bg-brand-accent-dark px-xl py-md",
+          "flex flex-1 flex-col items-center rounded-full bg-brand-accent-dark px-xl py-md",
           withIcon && "mr-[-20px]"
         )}
       >
