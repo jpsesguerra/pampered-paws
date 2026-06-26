@@ -50,12 +50,12 @@ export function Hero() {
         </div>
         <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light p-md sm:h-full">
           <div className="relative size-full overflow-hidden rounded-xl">
-            <Image src="/images/Dog.png" alt="" fill className="object-cover" />
+            <Image src="/images/Lesley.png" alt="" fill className="object-cover" />
           </div>
         </div>
         <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light p-md sm:h-full">
           <div className="relative size-full overflow-hidden rounded-xl">
-            <Image src="/images/Lesley.png" alt="" fill className="object-cover" />
+            <Image src="/images/Dog.png" alt="" fill className="object-cover" />
           </div>
         </div>
       </div>
