@@ -43,20 +43,14 @@ export function Hero() {
         </div>
       </div>
       <div className="relative z-10 grid w-full max-w-[1240px] grid-cols-1 gap-lg sm:h-[398px] sm:grid-cols-[1fr_538px_1fr]">
-        <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light p-md sm:h-full">
-          <div className="relative size-full overflow-hidden rounded-xl">
-            <Image src="/images/Cat.png" alt="" fill className="object-cover" />
-          </div>
+        <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light sm:h-full">
+          <Image src="/images/Cat.png" alt="" fill className="object-cover" />
         </div>
-        <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light p-md sm:h-full">
-          <div className="relative size-full overflow-hidden rounded-xl">
-            <Image src="/images/Lesley.png" alt="" fill className="object-cover" />
-          </div>
+        <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light sm:h-full">
+          <Image src="/images/Lesley.png" alt="" fill className="object-cover" />
         </div>
-        <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light p-md sm:h-full">
-          <div className="relative size-full overflow-hidden rounded-xl">
-            <Image src="/images/Dog.png" alt="" fill className="object-cover" />
-          </div>
+        <div className="relative h-[280px] overflow-hidden rounded-2xl bg-brand-secondary-light sm:h-full">
+          <Image src="/images/Dog.png" alt="" fill className="object-cover" />
         </div>
       </div>
     </section>

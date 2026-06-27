@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
@@ -25,40 +28,71 @@ const TESTIMONIALS = [
   },
 ];
 
-export function Testimonials() {
+function TestimonialCard({ testimonial }: { testimonial: (typeof TESTIMONIALS)[number] }) {
   return (
-    <section className="flex items-center justify-center px-lg py-7xl">
-      <div className="flex w-full max-w-[1240px] flex-col items-center gap-6xl">
-        <div className="flex flex-col items-center gap-s+ text-center">
-          <Eyebrow>Testimonials</Eyebrow>
-          <h2 className="max-w-[454px] font-serif text-h2 text-text-primary">
-            What our happy pet parents say
-          </h2>
+    <div className="flex w-[744px] shrink-0 flex-col items-start gap-lg rounded-2xl bg-surface-white p-lg sm:flex-row">
+      <div className="relative size-[120px] shrink-0 overflow-hidden rounded-xl">
+        <Image src={testimonial.image} alt={testimonial.name} fill className="object-cover" />
+      </div>
+      <div className="flex flex-1 flex-col items-start gap-xl">
+        <span className="flex size-12 items-center justify-center rounded-full bg-brand-primary-pink">
+          <img src="/icons/quote.svg" alt="" className="size-5" />
+        </span>
+        <p className="font-sans text-label-xl text-text-primary">{testimonial.quote}</p>
+        <div className="flex flex-col items-start gap-xxs">
+          <span className="font-sans text-label-lg text-text-primary">{testimonial.name}</span>
+          <span className="font-sans text-body-sm text-brand-neutral-lighter">
+            {testimonial.location}
+          </span>
         </div>
-        <div className="flex w-full flex-col items-center gap-2xl lg:flex-row lg:items-start lg:justify-center">
-          {TESTIMONIALS.map((t, i) => (
-            <div
-              key={`${t.name}-${i}`}
-              className="flex w-full max-w-[744px] flex-col items-start gap-lg rounded-2xl bg-surface-white p-lg sm:flex-row"
-            >
-              <div className="relative size-[120px] shrink-0 overflow-hidden rounded-xl">
-                <Image src={t.image} alt={t.name} fill className="object-cover" />
-              </div>
-              <div className="flex flex-1 flex-col items-start gap-xl">
-                <span className="flex size-12 items-center justify-center rounded-full bg-brand-primary-pink">
-                  <img src="/icons/quote.svg" alt="" className="size-5" />
-                </span>
-                <p className="font-sans text-label-xl text-text-primary">{t.quote}</p>
-                <div className="flex flex-col items-start gap-xxs">
-                  <span className="font-sans text-label-lg text-text-primary">{t.name}</span>
-                  <span className="font-sans text-body-sm text-brand-neutral-lighter">
-                    {t.location}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
+      </div>
+    </div>
+  );
+}
+
+export function Testimonials() {
+  const [index, setIndex] = useState(0);
+  const total = TESTIMONIALS.length;
+  const prevIndex = (index - 1 + total) % total;
+  const nextIndex = (index + 1) % total;
+
+  return (
+    <section className="flex flex-col items-center gap-2xl py-7xl">
+      <div className="flex flex-col items-center gap-s+ px-lg text-center">
+        <Eyebrow>Testimonials</Eyebrow>
+        <h2 className="max-w-[454px] font-serif text-h2 text-text-primary">
+          What our happy pet parents say
+        </h2>
+      </div>
+
+      <div className="flex w-full items-center justify-center overflow-hidden">
+        <div className="hidden items-start justify-center gap-2xl lg:flex">
+          <TestimonialCard testimonial={TESTIMONIALS[prevIndex]} />
+          <TestimonialCard testimonial={TESTIMONIALS[index]} />
+          <TestimonialCard testimonial={TESTIMONIALS[nextIndex]} />
         </div>
+        <div className="flex w-full max-w-[744px] px-lg lg:hidden">
+          <TestimonialCard testimonial={TESTIMONIALS[index]} />
+        </div>
+      </div>
+
+      <div className="flex items-center gap-lg">
+        <button
+          type="button"
+          aria-label="Previous testimonial"
+          onClick={() => setIndex(prevIndex)}
+          className="flex size-12 items-center justify-center rounded-full bg-brand-accent-dark"
+        >
+          <img src="/icons/arrow-right.svg" alt="" className="size-5 rotate-180 invert" />
+        </button>
+        <button
+          type="button"
+          aria-label="Next testimonial"
+          onClick={() => setIndex(nextIndex)}
+          className="flex size-12 items-center justify-center rounded-full bg-brand-accent-dark"
+        >
+          <img src="/icons/arrow-right.svg" alt="" className="size-5 invert" />
+        </button>
       </div>
     </section>
   );

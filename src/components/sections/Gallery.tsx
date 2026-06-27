@@ -23,13 +23,13 @@ export function Gallery() {
             </div>
           ))}
         </div>
-        <div className="flex max-w-[364px] flex-col items-center gap-3xl text-center">
+        <div className="flex shrink-0 flex-col items-center gap-3xl px-lg text-center">
           <h2 className="font-serif text-h2 text-text-primary">
-            Real pets.
-            <br />
-            Real grooms.
-            <br />
-            Fresh from, <Highlight>our salon</Highlight>
+            <span className="block whitespace-nowrap">Real pets.</span>
+            <span className="block whitespace-nowrap">Real grooms.</span>
+            <span className="block whitespace-nowrap">
+              Fresh from, <Highlight>our salon</Highlight>
+            </span>
           </h2>
           <Button withIcon href="https://www.instagram.com">
             Follow us on Instagram
