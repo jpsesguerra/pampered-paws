@@ -9,6 +9,7 @@ const nextConfig = {
       { protocol: "https", hostname: "*.figma.com" },
       // TODO: migrate Blog/Resources CSV image URLs to Cloudinary or Sanity in Phase 3
       { protocol: "https", hostname: "cdn.prod.website-files.com" },
+      { protocol: "https", hostname: "cdn.sanity.io" },
     ],
   },
 };
