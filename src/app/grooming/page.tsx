@@ -60,7 +60,7 @@ export default function GroomingPage() {
             </div>
             <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:items-stretch">
               <GroomingServiceCard
-                image="/images/grooming-regular-groom.png"
+                image="https://res.cloudinary.com/du0witbcr/image/upload/v1782664973/pampered-paws/images/grooming-regular-groom.png"
                 eyebrow="The full, all-inclusive service"
                 title="Regular Groom"
                 description="A complete head-to-tail groom for pets seen every 3–6 weeks. Your stylist bathes, brushes, clips, scissors and styles your pet to their breed standard or the custom look you choose."
@@ -79,7 +79,7 @@ export default function GroomingPage() {
                 ctaLabel="View Pricing"
               />
               <GroomingServiceCard
-                image="/images/grooming-bath.png"
+                image="https://res.cloudinary.com/du0witbcr/image/upload/v1782664971/pampered-paws/images/grooming-bath.png"
                 eyebrow="Clean, fresh, and fluffy — between grooms"
                 title="Bath"
                 description="A thorough freshen-up for pets on a regular 3–6 week schedule who don't need a haircut right now. Bathing, brushing and tidying — without body, face or leg trimming."

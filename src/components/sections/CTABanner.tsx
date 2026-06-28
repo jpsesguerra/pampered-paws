@@ -30,7 +30,7 @@ export function CTABanner({
             {buttonLabel}
           </Button>
           {phoneLabel && phoneNumber ? (
-            <SecondaryButton href={`tel:${phoneNumber}`} icon="/icons/phone.svg">
+            <SecondaryButton href={`tel:${phoneNumber}`} icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665058/pampered-paws/icons/phone.svg">
               {phoneLabel}
             </SecondaryButton>
           ) : (

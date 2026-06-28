@@ -11,7 +11,7 @@ export function GroomingHero() {
         <Reveal className="h-[280px] w-full sm:h-[600px] sm:flex-1">
           <div className="relative h-[280px] w-full overflow-hidden rounded-[32px] sm:h-[600px]">
             <video
-              src="/images/groom.mov"
+              src="https://res.cloudinary.com/du0witbcr/video/upload/v1782664970/pampered-paws/images/groom.mov"
               autoPlay
               loop
               muted

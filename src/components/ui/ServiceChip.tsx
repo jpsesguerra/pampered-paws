@@ -8,8 +8,8 @@ type ServiceChipProps = {
 };
 
 const ICON_SRC: Record<NonNullable<ServiceChipProps["icon"]>, string> = {
-  dot: "/icons/dot.svg",
-  location: "/icons/store-location.svg",
+  dot: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665047/pampered-paws/icons/dot.svg",
+  location: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665066/pampered-paws/icons/store-location.svg",
 };
 
 export function ServiceChip({ children, className, icon = "dot", size = "default" }: ServiceChipProps) {

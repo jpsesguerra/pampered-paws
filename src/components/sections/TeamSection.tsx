@@ -50,7 +50,7 @@ export function TeamSection() {
           </Reveal>
           <Reveal delay={200} className="relative h-[280px] w-full shrink-0 overflow-hidden rounded-2xl bg-brand-secondary-light sm:h-auto sm:flex-1">
             <Image
-              src="/images/team-photo.png"
+              src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664988/pampered-paws/images/team-photo.png"
               alt="The Pampered Paws team"
               fill
               className="object-cover"

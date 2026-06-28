@@ -4,29 +4,29 @@ import { Highlight } from "@/components/ui/Highlight";
 
 const AUDIENCES = [
   {
-    icon: "/icons/graduation-cap.svg",
+    icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665051/pampered-paws/icons/graduation-cap.svg",
     title: "Starting a new career",
     description:
       "You're drawn to animals and ready for hands-on, people-and-pet work that's always in demand",
   },
   {
-    icon: "/icons/thumbs-up.svg",
+    icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665067/pampered-paws/icons/thumbs-up.svg",
     title: "Already working with animals",
     description:
       "You're a bather, kennel assistant, or vet tech ready to move up into styling",
   },
   {
-    icon: "/icons/star.svg",
+    icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665065/pampered-paws/icons/star.svg",
     title: "A working groomer levelling up",
     description: "You're looking to master advanced scissor work or specialty skills",
   },
   {
-    icon: "/icons/location-pin.svg",
+    icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665056/pampered-paws/icons/location-pin.svg",
     title: "Opening your own salon",
     description: "You want the full skill set to run your own table with confidence",
   },
   {
-    icon: "/icons/paw.svg",
+    icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665057/pampered-paws/icons/paw.svg",
     title: "A pet owner",
     description: "who simply wants to learn to care for your own dog between visits",
   },
@@ -65,7 +65,7 @@ export function WhoIsThisFor() {
             ))}
           </div>
           <div className="relative h-[400px] w-full flex-1 overflow-hidden rounded-2xl lg:h-auto">
-            <Image src="/images/schooling-who-for.png" alt="" fill className="object-cover" />
+            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664987/pampered-paws/images/schooling-who-for.png" alt="" fill className="object-cover" />
           </div>
         </div>
         <div className="flex w-full flex-col items-start gap-md rounded-2xl bg-brand-secondary-light p-lg">

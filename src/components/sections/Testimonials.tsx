@@ -13,7 +13,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </div>
       <div className="flex flex-1 flex-col items-start gap-xl">
         <span className="flex size-12 items-center justify-center rounded-full bg-brand-primary-pink">
-          <img src="/icons/quote.svg" alt="" className="size-5" />
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/v1782665059/pampered-paws/icons/quote.svg" alt="" className="size-5" />
         </span>
         <p className="font-sans text-label-xl text-text-primary">{testimonial.quote}</p>
         <div className="flex flex-col items-start gap-xxs">
@@ -82,7 +82,7 @@ export function Testimonials({
           onClick={goPrev}
           className="flex size-12 items-center justify-center rounded-full bg-brand-accent-dark"
         >
-          <img src="/icons/arrow-right.svg" alt="" className="size-5 rotate-180 invert" />
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664992/pampered-paws/icons/arrow-right.svg" alt="" className="size-5 rotate-180 invert" />
         </button>
         <button
           type="button"
@@ -90,7 +90,7 @@ export function Testimonials({
           onClick={goNext}
           className="flex size-12 items-center justify-center rounded-full bg-brand-accent-dark"
         >
-          <img src="/icons/arrow-right.svg" alt="" className="size-5 invert" />
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664992/pampered-paws/icons/arrow-right.svg" alt="" className="size-5 invert" />
         </button>
       </div>
       )}

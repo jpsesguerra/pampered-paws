@@ -22,7 +22,7 @@ export function Header() {
         <div className="flex w-full items-center justify-between rounded-full bg-surface-white py-md pl-lg pr-md sm:py-lg sm:pl-xl sm:pr-lg">
           <Link href="/" className="block h-[44px] w-[183px] shrink-0 sm:h-[59px] sm:w-[247px]">
             <Image
-              src="/images/logo.png"
+              src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664982/pampered-paws/images/logo.png"
               alt="Pampered Paws"
               width={247}
               height={59}

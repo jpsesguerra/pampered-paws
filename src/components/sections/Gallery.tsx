@@ -3,16 +3,16 @@ import { Button } from "@/components/ui/Button";
 import { Highlight } from "@/components/ui/Highlight";
 
 const GALLERY_PHOTOS = [
-  { src: "/images/gallery/pet-bichon.jpg", name: "Bichon" },
-  { src: "/images/gallery/pet-black-toy-poodle.jpg", name: "Black Toy Poodle" },
-  { src: "/images/gallery/pet-cat.jpg", name: "Cat" },
-  { src: "/images/gallery/pet-conton.jpg", name: "Coton" },
-  { src: "/images/gallery/pet-king-charles.jpg", name: "King Charles" },
-  { src: "/images/gallery/pet-lhasa.jpg", name: "Lhasa" },
-  { src: "/images/gallery/pet-standard-poodle.jpg", name: "Standard Poodle" },
-  { src: "/images/gallery/pet-yorkshire.jpg", name: "Yorkshire" },
-  { src: "/images/gallery/poodle.jpg", name: "Poodle" },
-  { src: "/images/gallery/schnuzzer.jpg", name: "Schnauzer" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664958/pampered-paws/images/gallery/pet-bichon.jpg", name: "Bichon" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664959/pampered-paws/images/gallery/pet-black-toy-poodle.jpg", name: "Black Toy Poodle" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664959/pampered-paws/images/gallery/pet-cat.jpg", name: "Cat" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664961/pampered-paws/images/gallery/pet-conton.jpg", name: "Coton" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664961/pampered-paws/images/gallery/pet-king-charles.jpg", name: "King Charles" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664961/pampered-paws/images/gallery/pet-lhasa.jpg", name: "Lhasa" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664962/pampered-paws/images/gallery/pet-standard-poodle.jpg", name: "Standard Poodle" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664963/pampered-paws/images/gallery/pet-yorkshire.jpg", name: "Yorkshire" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664963/pampered-paws/images/gallery/poodle.jpg", name: "Poodle" },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664964/pampered-paws/images/gallery/schnuzzer.jpg", name: "Schnauzer" },
 ];
 
 export function Gallery() {

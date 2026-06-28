@@ -5,21 +5,21 @@ import { Highlight } from "@/components/ui/Highlight";
 
 const SERVICES = [
   {
-    icon: "/icons/scissor.svg",
+    icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665061/pampered-paws/icons/scissor.svg",
     title: "Regular Groom",
     description:
       "Our all-inclusive grooming service for dogs and cats kept on a 3–6 week schedule. Full bath, coat styling, nail care, ear cleaning and teeth brushing — everything done to your pet's breed standard, by a licensed stylist.",
     ctaLabel: "Book a Regular Groom",
   },
   {
-    icon: "/icons/shower-head.svg",
+    icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665063/pampered-paws/icons/shower-head.svg",
     title: "Bath",
     description:
       "For clients already in our rotation who want to stay clean and fluffy between full grooms. Includes a full bath, blow dry, nail care and ear cleaning — without the cut and style. A quick top-up, done properly.",
     ctaLabel: "Book a Bath",
   },
   {
-    icon: "/icons/hair-dryer.svg",
+    icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665052/pampered-paws/icons/hair-dryer.svg",
     title: "Specialty Services",
     description:
       "De-matting, hand stripping, de-shedding, hot oil treatments, pet colouring and more. If your pet has specific needs or a style that goes beyond a standard groom, we have the skills and the time to do it right.",

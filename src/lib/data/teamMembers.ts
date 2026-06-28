@@ -19,14 +19,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "lesley-weeks",
     name: "Lesley Weeks",
     role: "Founder & Toronto Groomer",
-    photo: "/images/team-photo.png",
+    photo: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664988/pampered-paws/images/team-photo.png",
     locationKey: "toronto",
   },
   {
     id: "eggie-feng",
     name: "Eggie Feng",
     role: "Salon Lead, Mississauga",
-    photo: "/images/team-photo.png",
+    photo: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664988/pampered-paws/images/team-photo.png",
     locationKey: "mississauga",
   },
 ];

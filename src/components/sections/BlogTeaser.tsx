@@ -36,7 +36,7 @@ export function BlogTeaser({
               </div>
               <span className="flex items-center gap-xs font-sans text-btn-secondary text-text-primary">
                 Read More
-                <img src="/icons/chevron-right.svg" alt="" className="size-5" />
+                <img src="https://res.cloudinary.com/du0witbcr/image/upload/v1782665044/pampered-paws/icons/chevron-right.svg" alt="" className="size-5" />
               </span>
             </Link>
           ))}

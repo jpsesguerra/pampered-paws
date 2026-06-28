@@ -68,7 +68,7 @@ export function WhatsIncludedSection() {
             </p>
           </div>
           <div className="relative h-[400px] w-full flex-1 overflow-hidden rounded-2xl lg:h-auto">
-            <Image src="/images/franchise-included.png" alt="" fill className="object-cover" />
+            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664958/pampered-paws/images/franchise-included.jpg" alt="" fill className="object-cover" />
           </div>
         </div>
       </div>

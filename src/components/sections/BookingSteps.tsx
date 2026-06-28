@@ -45,7 +45,7 @@ export function BookingSteps() {
           />
           <div className="flex w-full flex-col items-start gap-md rounded-2xl bg-surface-white py-lg pl-lg pr-2xl">
             <span className="flex size-12 items-center justify-center rounded-full bg-brand-secondary-light">
-              <img src="/icons/check.svg" alt="" className="size-5" />
+              <img src="https://res.cloudinary.com/du0witbcr/image/upload/v1782665043/pampered-paws/icons/check.svg" alt="" className="size-5" />
             </span>
             <h3 className="font-serif text-h4 text-text-primary">We confirm directly</h3>
             <p className="font-sans text-body-default text-text-primary">

@@ -29,11 +29,11 @@ export default function AboutUsPage() {
           <Reveal delay={200} className="w-full">
             <div className="flex w-full flex-col items-start gap-2xl lg:flex-row">
               <div className="relative h-[280px] w-full overflow-hidden rounded-[32px] lg:h-[630px] lg:w-[776px] lg:flex-shrink-0">
-                <Image src="/images/about-hero-1.png" alt="Lesley Weeks grooming a dog" fill className="object-cover" />
+                <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664955/pampered-paws/images/about-hero-1.png" alt="Lesley Weeks grooming a dog" fill className="object-cover" />
               </div>
               <div className="flex w-full flex-1 flex-col items-start gap-2xl">
                 <div className="relative h-[220px] w-full overflow-hidden rounded-[32px] lg:h-[380px]">
-                  <Image src="/images/about-hero-2.png" alt="" fill className="object-cover" />
+                  <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664956/pampered-paws/images/about-hero-2.png" alt="" fill className="object-cover" />
                 </div>
                 <div className="flex flex-col items-start gap-2xl">
                   <p className="font-sans text-body-lg text-text-primary">

@@ -15,7 +15,7 @@ type SecondaryButtonProps = SecondaryButtonOwnProps &
 
 export function SecondaryButton({
   href,
-  icon = "/icons/arrow-right.svg",
+  icon = "https://res.cloudinary.com/du0witbcr/image/upload/v1782664992/pampered-paws/icons/arrow-right.svg",
   className,
   children,
   ...props

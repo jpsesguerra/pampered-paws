@@ -49,7 +49,7 @@ export const LOCATIONS: Location[] = [
     locationName: "Toronto",
     heroSubtext:
       "Serving Toronto pet owners since 1979 — from our Midtown salon on Millwood Road. Expert grooming built around your pet's coat, temperament, and your standards. No compromises, no surprises.",
-    heroImage: "/images/location-toronto.png",
+    heroImage: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664981/pampered-paws/images/location-toronto.png",
     heroCtaLabel: "Request an Appointment in Toronto",
     address: "317 Millwood Rd",
     city: "Toronto",
@@ -79,7 +79,7 @@ export const LOCATIONS: Location[] = [
     locationName: "Mississauga",
     heroSubtext:
       "Run by Eggie Feng on Lakeshore Road East — expert grooming built around your pet's coat, temperament, and your standards. No compromises, no surprises.",
-    heroImage: "/images/location-mississauga.png",
+    heroImage: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664974/pampered-paws/images/location-mississauga.png",
     heroCtaLabel: "Request an Appointment in Mississauga",
     address: "92 Lakeshore Rd E",
     city: "Mississauga",
@@ -108,7 +108,7 @@ export const LOCATIONS: Location[] = [
     locationName: "Scarborough",
     heroSubtext:
       "Inside Muddy Paws in the Guild — expert grooming built around your pet's coat, temperament, and your standards. No compromises, no surprises.",
-    heroImage: "/images/location-scarborough.png",
+    heroImage: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664978/pampered-paws/images/location-scarborough.png",
     heroCtaLabel: "Call our Scarborough team",
     address: "123 Guildwood Pkwy",
     city: "Scarborough",

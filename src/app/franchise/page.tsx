@@ -54,7 +54,7 @@ export default function FranchisePage() {
           </div>
           <div className="relative z-0 h-[280px] w-full flex-1 overflow-hidden lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[58%] lg:flex-none">
             <Image
-              src="/images/franchise-hero.png"
+              src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664957/pampered-paws/images/franchise-hero.png"
               alt=""
               fill
               className="hero-edge-fade object-cover object-right"

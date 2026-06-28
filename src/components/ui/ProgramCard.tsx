@@ -7,7 +7,7 @@ export function ProgramCard({ program }: { program: Program }) {
     <div className="flex h-full w-full flex-col items-start gap-s+ rounded-2xl bg-surface-white p-lg">
       <div className="flex w-full flex-1 flex-col items-start gap-s+">
         <div className="relative h-[480px] w-full overflow-hidden rounded-2xl">
-          <Image src="/images/program-card.png" alt="" fill className="object-cover" />
+          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664984/pampered-paws/images/program-card.png" alt="" fill className="object-cover" />
         </div>
         <div className="flex w-full flex-col items-start gap-xs">
           <h3 className="font-serif text-h5 text-text-primary">{program.title}</h3>

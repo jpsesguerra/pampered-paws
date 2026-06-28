@@ -38,7 +38,7 @@ export function Footer() {
         <div className="flex w-full flex-col items-start gap-2xl lg:flex-row lg:justify-between">
           <div className="flex flex-col gap-2xl">
             <Image
-              src="/images/logo-footer.png"
+              src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664981/pampered-paws/images/logo-footer.png"
               alt="Pampered Paws"
               width={244}
               height={72}
@@ -83,9 +83,9 @@ export function Footer() {
                   <h3 className="w-full font-serif text-h6 text-text-on-pink">
                     {location.locationName} Salon
                   </h3>
-                  <ContactRow icon="/icons/location-pin-sm.svg">{getFullAddress(location)}</ContactRow>
-                  <ContactRow icon="/icons/phone.svg">{getPhoneLabel(location)}</ContactRow>
-                  <ContactRow icon="/icons/email.svg">{location.email}</ContactRow>
+                  <ContactRow icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665054/pampered-paws/icons/location-pin-sm.svg">{getFullAddress(location)}</ContactRow>
+                  <ContactRow icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665058/pampered-paws/icons/phone.svg">{getPhoneLabel(location)}</ContactRow>
+                  <ContactRow icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665048/pampered-paws/icons/email.svg">{location.email}</ContactRow>
                 </Link>
               </Reveal>
             ))}

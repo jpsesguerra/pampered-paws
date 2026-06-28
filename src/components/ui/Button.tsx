@@ -28,7 +28,7 @@ export function Button({ withIcon = false, href, className, children, ...props }
       </span>
       {withIcon && (
         <span className="btn-hover-icon flex size-12 shrink-0 items-center justify-center rounded-full border-[3px] border-brand-accent-dark bg-brand-primary-pink">
-          <img src="/icons/paw.svg" alt="" className="btn-hover-paw size-7" />
+          <img src="https://res.cloudinary.com/du0witbcr/image/upload/v1782665057/pampered-paws/icons/paw.svg" alt="" className="btn-hover-paw size-7" />
         </span>
       )}
     </>

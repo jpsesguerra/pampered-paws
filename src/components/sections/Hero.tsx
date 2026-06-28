@@ -8,10 +8,10 @@ import { Reveal } from "@/components/ui/Reveal";
 // Each paw starts closer to the hero's center and animates outward to its resting
 // spot, tilting slightly further on the way before settling into its final angle.
 const BALLS = [
-  { src: "/icons/ball-3.svg", className: "left-[88%] top-[2%] hidden lg:block", toRot: 33, fromX: -70, fromY: 50, fromRot: 45, delay: 0 },
-  { src: "/icons/ball-1.svg", className: "left-[92%] top-[62%] hidden lg:block", toRot: -17, fromX: -60, fromY: -50, fromRot: -27, delay: 100 },
-  { src: "/icons/ball-2.svg", className: "left-[2%] top-[2%] hidden lg:block", toRot: -30, fromX: 60, fromY: 50, fromRot: -20, delay: 200 },
-  { src: "/icons/ball-4.svg", className: "left-[1%] top-[62%] hidden lg:block", toRot: 25, fromX: 60, fromY: -50, fromRot: 35, delay: 300 },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665000/pampered-paws/icons/ball-3.svg", className: "left-[88%] top-[2%] hidden lg:block", toRot: 33, fromX: -70, fromY: 50, fromRot: 45, delay: 0 },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664993/pampered-paws/icons/ball-1.svg", className: "left-[92%] top-[62%] hidden lg:block", toRot: -17, fromX: -60, fromY: -50, fromRot: -27, delay: 100 },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664994/pampered-paws/icons/ball-2.svg", className: "left-[2%] top-[2%] hidden lg:block", toRot: -30, fromX: 60, fromY: 50, fromRot: -20, delay: 200 },
+  { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665001/pampered-paws/icons/ball-4.svg", className: "left-[1%] top-[62%] hidden lg:block", toRot: 25, fromX: 60, fromY: -50, fromRot: 35, delay: 300 },
 ];
 
 export function Hero() {
@@ -65,13 +65,13 @@ export function Hero() {
       <Reveal delay={400} className="w-full max-w-[1240px]">
         <div className="relative z-10 grid w-full grid-cols-1 gap-lg sm:grid-cols-[1fr_1.625fr_1fr] sm:items-stretch">
           <div className="relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light">
-            <Image src="/images/Cat.png" alt="" fill className="object-cover" />
+            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664952/pampered-paws/images/Cat.png" alt="" fill className="object-cover" />
           </div>
           <div className="relative aspect-[538/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light">
-            <Image src="/images/Lesley.png" alt="" fill className="object-cover" />
+            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664954/pampered-paws/images/Lesley.png" alt="" fill className="object-cover" />
           </div>
           <div className="relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light">
-            <Image src="/images/Dog.png" alt="" fill className="object-cover" />
+            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664953/pampered-paws/images/Dog.png" alt="" fill className="object-cover" />
           </div>
         </div>
       </Reveal>

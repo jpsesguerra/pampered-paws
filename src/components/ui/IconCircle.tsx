@@ -15,15 +15,15 @@ type IconCircleProps = {
 };
 
 const ICON_SRC: Record<NonNullable<IconCircleProps["variant"]>, string> = {
-  paw: "/icons/paw.svg",
-  location: "/icons/location-pin.svg",
-  calendar: "/icons/calendar.svg",
-  "credit-card": "/icons/credit-card.svg",
-  "graduation-cap": "/icons/graduation-cap.svg",
-  star: "/icons/star.svg",
-  global: "/icons/global.svg",
-  "shower-head": "/icons/shower-head.svg",
-  "thumbs-up": "/icons/thumbs-up.svg",
+  paw: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665057/pampered-paws/icons/paw.svg",
+  location: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665056/pampered-paws/icons/location-pin.svg",
+  calendar: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665042/pampered-paws/icons/calendar.svg",
+  "credit-card": "https://res.cloudinary.com/du0witbcr/image/upload/v1782665045/pampered-paws/icons/credit-card.svg",
+  "graduation-cap": "https://res.cloudinary.com/du0witbcr/image/upload/v1782665051/pampered-paws/icons/graduation-cap.svg",
+  star: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665065/pampered-paws/icons/star.svg",
+  global: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665049/pampered-paws/icons/global.svg",
+  "shower-head": "https://res.cloudinary.com/du0witbcr/image/upload/v1782665063/pampered-paws/icons/shower-head.svg",
+  "thumbs-up": "https://res.cloudinary.com/du0witbcr/image/upload/v1782665067/pampered-paws/icons/thumbs-up.svg",
 };
 
 const ICON_SIZE: Record<NonNullable<IconCircleProps["variant"]>, string> = {
