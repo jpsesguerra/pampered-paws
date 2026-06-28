@@ -1,4 +1,5 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Highlight } from "@/components/ui/Highlight";
 import { IconCircle } from "@/components/ui/IconCircle";
 
 export function WhyChooseSchool() {
@@ -8,7 +9,7 @@ export function WhyChooseSchool() {
         <div className="flex w-full flex-1 flex-col items-start gap-lg">
           <Eyebrow>Why Choose Pampered Paws</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
-            A track record you can build a career on
+            A track record you can build a <Highlight>career</Highlight> on
           </h2>
           <p className="font-sans text-body-lg text-text-primary">
             For more than 45 years, Pampered Paws has trained groomers who go

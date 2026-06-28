@@ -13,7 +13,7 @@ export function AddOnsSection() {
             Regular Groom, or booked on their own.
           </p>
         </div>
-        <div className="flex w-full flex-col items-start gap-2xl lg:flex-row">
+        <div className="flex w-full flex-col items-start gap-2xl lg:flex-row lg:items-stretch">
           {ADD_ON_GROUPS.map((group) => (
             <div
               key={group.title}

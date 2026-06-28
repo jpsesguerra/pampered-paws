@@ -18,7 +18,7 @@ export function Button({ withIcon = false, href, className, children, ...props }
     <>
       <span
         className={cn(
-          "flex flex-1 flex-col items-center rounded-full bg-brand-accent-dark px-xl py-md",
+          "btn-hover-pill flex flex-1 flex-col items-center rounded-full bg-brand-accent-dark px-xl py-md",
           withIcon && "mr-[-20px]"
         )}
       >
@@ -27,15 +27,15 @@ export function Button({ withIcon = false, href, className, children, ...props }
         </span>
       </span>
       {withIcon && (
-        <span className="flex size-12 shrink-0 items-center justify-center rounded-full border-[3px] border-brand-accent-dark bg-brand-primary-pink">
-          <img src="/icons/paw.svg" alt="" className="size-7" />
+        <span className="btn-hover-icon flex size-12 shrink-0 items-center justify-center rounded-full border-[3px] border-brand-accent-dark bg-brand-primary-pink">
+          <img src="/icons/paw.svg" alt="" className="btn-hover-paw size-7" />
         </span>
       )}
     </>
   );
 
   const classes = cn(
-    "inline-flex min-h-[40px] items-center justify-center rounded-full",
+    "btn-hover-group inline-flex min-h-[40px] items-center justify-center rounded-full",
     className
   );
 

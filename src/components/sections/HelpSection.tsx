@@ -33,7 +33,7 @@ export function HelpSection() {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
-        <div className="flex w-full flex-1 flex-col items-start gap-s+">
+        <div className="flex w-full flex-1 flex-col items-start gap-s+ lg:sticky lg:top-2xl lg:self-start">
           <Eyebrow>The three things we do</Eyebrow>
           <h2 className="max-w-[460px] font-serif text-h2 text-text-primary">
             One brand, three ways we can help

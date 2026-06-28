@@ -4,6 +4,7 @@ import { cn } from "@/lib/cn";
 
 type SecondaryButtonOwnProps = {
   href?: string;
+  icon?: string;
 };
 
 type SecondaryButtonProps = SecondaryButtonOwnProps &
@@ -12,16 +13,26 @@ type SecondaryButtonProps = SecondaryButtonOwnProps &
     | ({ href?: undefined } & ButtonHTMLAttributes<HTMLButtonElement>)
   );
 
-export function SecondaryButton({ href, className, children, ...props }: SecondaryButtonProps) {
+export function SecondaryButton({
+  href,
+  icon = "/icons/arrow-right.svg",
+  className,
+  children,
+  ...props
+}: SecondaryButtonProps) {
   const classes = cn(
-    "inline-flex min-h-[40px] items-center justify-center gap-xs rounded-full p-sm font-sans text-btn-secondary text-text-primary",
+    "group inline-flex min-h-[40px] items-center justify-center gap-xs rounded-full p-sm font-sans text-btn-secondary text-text-primary",
     className
   );
 
   const content = (
     <>
       <span className="whitespace-nowrap">{children}</span>
-      <img src="/icons/arrow-right.svg" alt="" className="size-5" />
+      <img
+        src={icon}
+        alt=""
+        className="size-5 transition-transform duration-300 ease-[var(--ease-out-quart)] group-hover:translate-x-1"
+      />
     </>
   );
 

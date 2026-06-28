@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LOCATIONS } from "@/lib/data/locations";
+import { LOCATIONS, getFullAddress, getPhoneLabel } from "@/lib/data/locations";
+import { Reveal } from "@/components/ui/Reveal";
+
+const REVEAL_DELAYS = [0, 100, 200, 300, 400, 500, 600] as const;
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
@@ -67,19 +70,24 @@ export function Footer() {
             </div>
           </div>
           <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:flex-wrap lg:flex-1 lg:justify-end lg:gap-lg">
-            {LOCATIONS.map((location) => (
-              <Link
+            {LOCATIONS.map((location, i) => (
+              <Reveal
                 key={location.slug}
-                href={`/locations/${location.slug}`}
-                className="flex w-full flex-col items-start gap-md sm:w-[209px] lg:pb-3xl"
+                delay={REVEAL_DELAYS[i] ?? 600}
+                className="w-full sm:w-[209px]"
               >
-                <h3 className="w-full font-serif text-h6 text-text-on-pink">
-                  {location.name} Salon
-                </h3>
-                <ContactRow icon="/icons/location-pin-sm.svg">{location.address}</ContactRow>
-                <ContactRow icon="/icons/phone.svg">{location.phoneLabel}</ContactRow>
-                <ContactRow icon="/icons/email.svg">{location.email}</ContactRow>
-              </Link>
+                <Link
+                  href={`/locations/${location.slug}`}
+                  className="flex w-full flex-col items-start gap-md lg:pb-3xl"
+                >
+                  <h3 className="w-full font-serif text-h6 text-text-on-pink">
+                    {location.locationName} Salon
+                  </h3>
+                  <ContactRow icon="/icons/location-pin-sm.svg">{getFullAddress(location)}</ContactRow>
+                  <ContactRow icon="/icons/phone.svg">{getPhoneLabel(location)}</ContactRow>
+                  <ContactRow icon="/icons/email.svg">{location.email}</ContactRow>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>

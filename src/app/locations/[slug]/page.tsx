@@ -1,37 +1,57 @@
-import Image from "next/image";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { Button } from "@/components/ui/Button";
-import { LOCATIONS } from "@/lib/data/locations";
+import { LOCATIONS, getLocationBySlug } from "@/lib/data/locations";
+import { getTestimonialsByIds } from "@/lib/data/testimonials";
+import { LocationHero } from "@/components/sections/LocationHero";
+import { BreedCarousel } from "@/components/sections/BreedCarousel";
+import { SuccessStories } from "@/components/sections/SuccessStories";
+import { LocationTeamSection } from "@/components/sections/LocationTeamSection";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { LocationVisitCard } from "@/components/sections/LocationVisitCard";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function generateStaticParams() {
   return LOCATIONS.map((location) => ({ slug: location.slug }));
 }
 
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const location = getLocationBySlug(params.slug);
+  if (!location) return {};
+  return {
+    title: location.metaTitle,
+    description: location.metaDescription,
+  };
+}
+
 export default function LocationDetailPage({ params }: { params: { slug: string } }) {
-  const location = LOCATIONS.find((l) => l.slug === params.slug);
+  const location = getLocationBySlug(params.slug);
   if (!location) notFound();
 
+  const testimonials = getTestimonialsByIds(location.testimonialIds);
+
   return (
-    <article className="flex flex-col items-center gap-2xl px-lg py-7xl">
-      <div className="flex w-full max-w-[776px] flex-col items-start gap-lg">
-        <Breadcrumb>Locations</Breadcrumb>
-        <h1 className="font-serif text-h2 text-text-primary">
-          Pampered Paws {location.name}
-        </h1>
-        <p className="font-sans text-body-lg text-text-primary">{location.tagline}</p>
-      </div>
-      <div className="relative h-[320px] w-full max-w-[776px] overflow-hidden rounded-2xl">
-        <Image src={location.mapImage} alt={`Map of Pampered Paws ${location.name}`} fill className="object-cover" />
-      </div>
-      <div className="flex w-full max-w-[776px] flex-col items-start gap-md">
-        <p className="font-sans text-label-xl font-semibold text-text-primary">{location.address}</p>
-        <p className="font-sans text-label-lg text-text-primary">{location.phoneLabel}</p>
-        <p className="font-sans text-label-lg text-text-primary">{location.bookingNote}</p>
-        {location.bookOnline && (
-          <Button href="/request-an-appointment">Request an Appointment</Button>
-        )}
-      </div>
-    </article>
+    <>
+      <LocationHero location={location} />
+      <Reveal>
+        <BreedCarousel />
+      </Reveal>
+      <Reveal>
+        <SuccessStories />
+      </Reveal>
+      <Reveal>
+        <LocationTeamSection location={location} />
+      </Reveal>
+      {testimonials.length > 0 && (
+        <Reveal>
+          <Testimonials
+            testimonials={testimonials}
+            heading={`What ${location.locationName} pet parents say`}
+          />
+        </Reveal>
+      )}
+      <Reveal>
+        <LocationVisitCard location={location} />
+      </Reveal>
+    </>
   );
 }

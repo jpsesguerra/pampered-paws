@@ -57,3 +57,11 @@ export const BLOG_POSTS: BlogPost[] = [
       "Winter walks are great for mental and physical health — but winter conditions can be rough on paws. Cold pavement pulls heat from the pads, snow and ice can pack between toes, and de-icing salt/chemicals can sting, dry out, or burn the skin. A few small habits, and the right gear, can make a big difference.",
   },
 ];
+
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+  return BLOG_POSTS.find((post) => post.slug === slug);
+}
+
+export function getOtherBlogPosts(slug: string): BlogPost[] {
+  return BLOG_POSTS.filter((post) => post.slug !== slug);
+}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Card } from "@/components/ui/Card";
+import { Reveal } from "@/components/ui/Reveal";
 
 const VALUES = [
   {
@@ -25,7 +26,7 @@ export function TeamSection() {
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col rounded-[32px] bg-surface-white p-lg sm:p-2xl">
         <div className="flex flex-col items-start gap-2xl sm:flex-row sm:items-stretch">
-          <div className="flex w-full flex-col items-start gap-2xl sm:w-[376px] sm:shrink-0">
+          <Reveal className="flex w-full flex-col items-start gap-2xl sm:w-[376px] sm:shrink-0">
             <div className="flex flex-col items-start gap-lg">
               <Eyebrow>Our team</Eyebrow>
               <h2 className="font-serif text-h2 text-text-primary">
@@ -41,19 +42,26 @@ export function TeamSection() {
               </p>
             </div>
             <a
-              href="/about-us"
+              href="/locations"
               className="flex min-h-[48px] items-center justify-center rounded-full bg-brand-neutral-dark px-xl py-sm font-sans text-label-lg text-text-on-pink"
             >
-              About us
+              Find a Salon Near You
             </a>
-          </div>
-          <div className="relative h-[280px] w-full shrink-0 overflow-hidden rounded-2xl bg-brand-secondary-light sm:h-auto sm:flex-1">
-            <Image src="/images/team-photo.png" alt="The Pampered Paws team" fill className="object-cover" />
-          </div>
+          </Reveal>
+          <Reveal delay={200} className="relative h-[280px] w-full shrink-0 overflow-hidden rounded-2xl bg-brand-secondary-light sm:h-auto sm:flex-1">
+            <Image
+              src="/images/team-photo.png"
+              alt="The Pampered Paws team"
+              fill
+              className="object-cover"
+            />
+          </Reveal>
         </div>
-        <div className="flex flex-col items-start gap-lg pb-xl pt-7xl sm:flex-row">
-          {VALUES.map((value) => (
-            <Card key={value.title} variant="small" {...value} className="w-full sm:flex-1" />
+        <div className="flex flex-col items-start gap-lg pb-xl pt-7xl sm:flex-row sm:items-stretch">
+          {VALUES.map((value, i) => (
+            <Reveal key={value.title} delay={(i * 100) as 0 | 100 | 200} className="w-full min-w-0 sm:flex-1">
+              <Card variant="small" {...value} className="w-full" />
+            </Reveal>
           ))}
         </div>
       </div>

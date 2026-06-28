@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Highlight } from "@/components/ui/Highlight";
 
 const AUDIENCES = [
   {
@@ -38,13 +39,13 @@ export function WhoIsThisFor() {
         <div className="flex flex-col items-start gap-s+">
           <Eyebrow>Who Is This For?</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
-            Is grooming school right for you?
+            Is grooming school right for <Highlight>you?</Highlight>
           </h2>
           <p className="max-w-[518px] font-sans text-body-lg text-text-primary">
             Our students come from all kinds of backgrounds. You might be:
           </p>
         </div>
-        <div className="flex w-full flex-col items-start gap-3xl lg:flex-row lg:items-stretch">
+        <div className="flex w-full flex-col items-start gap-7xl lg:flex-row lg:items-stretch">
           <div className="flex w-full flex-1 flex-col items-start gap-md">
             {AUDIENCES.map((audience) => (
               <div

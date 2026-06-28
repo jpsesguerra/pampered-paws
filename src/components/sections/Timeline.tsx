@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Highlight } from "@/components/ui/Highlight";
 import { IconCircle } from "@/components/ui/IconCircle";
 
 const EVENTS = [
@@ -42,7 +43,7 @@ export function Timeline() {
         <div className="flex flex-col items-start gap-s+">
           <Eyebrow>How we grew</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
-            Four decades of building the craft
+            Four decades of building the <Highlight>craft</Highlight>
           </h2>
         </div>
         <div className="flex w-full flex-col items-start gap-3xl lg:flex-row lg:items-stretch">

@@ -28,7 +28,7 @@ export function TrainingHighlights() {
         <h2 className="text-center font-serif text-h3 text-text-primary">
           Three things set our training apart
         </h2>
-        <div className="flex w-full flex-col items-start gap-lg lg:flex-row">
+        <div className="flex w-full flex-col items-start gap-lg lg:flex-row lg:items-stretch">
           {HIGHLIGHTS.map((item) => (
             <div
               key={item.title}

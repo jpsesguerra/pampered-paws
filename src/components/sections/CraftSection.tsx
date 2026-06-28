@@ -52,12 +52,12 @@ export function CraftSection() {
       <div className="flex w-full flex-col items-start gap-lg overflow-hidden">
         <div className="flex w-max animate-marquee-reverse items-center gap-lg">
           {[...SERVICES_ROW, ...SERVICES_ROW].map((label, i) => (
-            <ServiceChip key={`${label}-${i}`}>{label}</ServiceChip>
+            <ServiceChip key={`${label}-${i}`} size="sm">{label}</ServiceChip>
           ))}
         </div>
         <div className="flex w-max animate-marquee items-center gap-lg">
           {[...PROGRAMS_ROW, ...PROGRAMS_ROW].map((label, i) => (
-            <ServiceChip key={`${label}-${i}`}>{label}</ServiceChip>
+            <ServiceChip key={`${label}-${i}`} size="sm">{label}</ServiceChip>
           ))}
         </div>
       </div>

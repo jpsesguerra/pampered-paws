@@ -37,6 +37,13 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.06);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+
+  /* Motion easings, matched to reference site's IX2 curves */
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-hover: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 body {
@@ -60,9 +67,178 @@ body {
 }
 
 .animate-marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 90s linear infinite;
 }
 
 .animate-marquee-reverse {
-  animation: marquee 40s linear infinite reverse;
+  animation: marquee 90s linear infinite reverse;
+}
+
+/* Scroll reveal: fade + rise on enter (mirrors reference site's "View" interactions) */
+.reveal {
+  opacity: 0;
+  transform: translateY(6%);
+  transition: opacity 1.4s var(--ease-out-quart), transform 1.4s var(--ease-out-quart);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* Image reveal: wipe + zoom-out + de-blur on enter */
+.img-reveal {
+  overflow: hidden;
+}
+
+.img-reveal-wrapper {
+  transform: translateY(-110%);
+  transition: transform 2s var(--ease-out-quart);
+  height: 100%;
+  width: 100%;
+}
+
+.img-reveal.is-visible .img-reveal-wrapper {
+  transform: translateY(0);
+}
+
+.img-reveal-inner {
+  transform: scale(1.5) translateY(100%);
+  filter: blur(10px);
+  transition: transform 2s var(--ease-out-quart), filter 2s var(--ease-out-quart);
+  height: 100%;
+  width: 100%;
+}
+
+.img-reveal.is-visible .img-reveal-inner {
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}
+
+/* Hover: pill button — text pill presses in, icon circle nudges right to "merge" with the pill, paw rotates in place */
+.btn-hover-group:hover .btn-hover-pill {
+  transform: scale(0.93);
+}
+
+.btn-hover-group:hover .btn-hover-icon {
+  transform: translateX(-0.375rem);
+}
+
+.btn-hover-group:hover .btn-hover-paw {
+  transform: rotate(-35deg);
+}
+
+.btn-hover-pill,
+.btn-hover-icon {
+  transition: transform 0.4s var(--ease-out-quart);
+}
+
+.btn-hover-paw {
+  transition: transform 0.4s var(--ease-out-quart);
+}
+
+/* Hover: lift for clickable grid cells (links/buttons only — not static images) */
+.cell-hover {
+  transition: transform 0.2s var(--ease-out-quart);
+}
+
+.cell-hover:hover {
+  transform: translateY(-0.25rem) scale(1.02);
+}
+
+/* Hero paw decorations: expand outward from center on load, tilting in as they settle */
+@keyframes ball-expand {
+  from {
+    transform: translate(var(--ball-from-x), var(--ball-from-y)) rotate(var(--ball-from-rot));
+  }
+  to {
+    transform: translate(0, 0) rotate(var(--ball-to-rot));
+  }
+}
+
+.ball-expand {
+  animation: ball-expand 1.4s var(--ease-out-expo) both;
+}
+
+/* Testimonial carousel: slide + rotate in from the direction of travel */
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(48px) rotate(2deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-48px) rotate(-2deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.testimonial-slide-next {
+  animation: slide-in-from-right 0.5s var(--ease-out-quart) both;
+}
+
+.testimonial-slide-prev {
+  animation: slide-in-from-left 0.5s var(--ease-out-quart) both;
+}
+
+/* Gallery carousel: photo strip drifts left-to-right, fading out behind the
+   centered heading and fading back in as it re-emerges on the other side. */
+@keyframes gallery-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.gallery-marquee-track {
+  animation: gallery-marquee 70s linear infinite;
+}
+
+.hero-edge-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%);
+  mask-image: linear-gradient(to right, transparent 0%, black 20%);
+}
+
+.gallery-fade-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 26%,
+    transparent 40%,
+    transparent 60%,
+    black 74%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 26%,
+    transparent 40%,
+    transparent 60%,
+    black 74%,
+    black 90%,
+    transparent 100%
+  );
 }

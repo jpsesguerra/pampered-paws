@@ -1,4 +1,5 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Highlight } from "@/components/ui/Highlight";
 import { Button } from "@/components/ui/Button";
 
 export function OpportunitySection() {
@@ -8,7 +9,7 @@ export function OpportunitySection() {
         <div className="flex w-full flex-1 flex-col items-start gap-lg lg:max-w-[552px]">
           <Eyebrow>The Opportunity</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
-            A proven business in an industry that keeps growing
+            A proven business in an industry that keeps <Highlight>growing</Highlight>
           </h2>
         </div>
         <div className="flex w-full flex-1 flex-col items-start gap-lg">

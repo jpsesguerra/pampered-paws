@@ -31,7 +31,7 @@ export function BeliefsSection() {
             Three things have guided Pampered Paws from the first day:
           </p>
         </div>
-        <div className="flex w-full flex-col items-start gap-lg lg:flex-row">
+        <div className="flex w-full flex-col items-start gap-lg lg:flex-row lg:items-stretch">
           {BELIEFS.map((belief) => (
             <div
               key={belief.title}

@@ -2,20 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
-import { BLOG_POSTS } from "@/lib/data/blog";
+import { BLOG_POSTS, type BlogPost } from "@/lib/data/blog";
 
 export function BlogTeaser({
+  eyebrow = "Resources",
   heading = "Things to know about your pet",
+  posts = BLOG_POSTS.slice(0, 3),
 }: {
-  heading?: string;
+  eyebrow?: string;
+  heading?: React.ReactNode;
+  posts?: BlogPost[];
 }) {
-  const posts = BLOG_POSTS.slice(0, 3);
-
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
         <div className="flex flex-col items-center gap-s+ text-center">
-          <Eyebrow>Resources</Eyebrow>
+          <Eyebrow>{eyebrow}</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">{heading}</h2>
         </div>
         <div className="flex w-full flex-col items-start gap-2xl sm:flex-row">

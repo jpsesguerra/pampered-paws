@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Highlight } from "@/components/ui/Highlight";
 import { IconCircle } from "@/components/ui/IconCircle";
 
 const INCLUDED = [
@@ -40,10 +41,12 @@ export function WhatsIncludedSection() {
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl">
         <div className="flex flex-col items-start gap-s+">
-          <Eyebrow>What&rsquo;s Included</Eyebrow>
-          <h2 className="font-serif text-h2 text-text-primary">What you get as a partner</h2>
+          <Eyebrow>What you get</Eyebrow>
+          <h2 className="font-serif text-h2 text-text-primary">
+            What comes with a Pampered Paws <Highlight>franchise</Highlight>
+          </h2>
         </div>
-        <div className="flex w-full flex-col items-start gap-3xl lg:flex-row lg:items-stretch">
+        <div className="flex w-full flex-col items-start gap-7xl lg:flex-row lg:items-stretch">
           <div className="flex w-full flex-1 flex-col items-start gap-sm">
             {INCLUDED.map((item) => (
               <div

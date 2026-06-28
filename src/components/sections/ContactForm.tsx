@@ -5,6 +5,8 @@ type ContactFormProps = {
   title: string;
   subtitle: string;
   submitLabel?: string;
+  locationKey?: string;
+  locationName?: string;
 };
 
 export function ContactForm({
@@ -12,6 +14,8 @@ export function ContactForm({
   title,
   subtitle,
   submitLabel = "Submit",
+  locationKey,
+  locationName,
 }: ContactFormProps) {
   return (
     <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
@@ -19,8 +23,14 @@ export function ContactForm({
         <Breadcrumb>{breadcrumb}</Breadcrumb>
         <h1 className="font-serif text-h2 text-text-primary">{title}</h1>
         <p className="font-sans text-label-lg text-text-primary">{subtitle}</p>
+        {locationName && (
+          <span className="rounded-full bg-brand-secondary-light px-lg py-xs font-sans text-label-default text-text-primary">
+            Booking for: {locationName} location
+          </span>
+        )}
       </div>
       <form className="flex w-full max-w-[776px] flex-col items-start gap-lg rounded-2xl bg-surface-white p-lg">
+        {locationKey && <input type="hidden" name="locationKey" value={locationKey} />}
         <label className="flex w-full flex-col items-start gap-xs">
           <span className="font-sans text-label-default text-text-primary">Name</span>
           <input

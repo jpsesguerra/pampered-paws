@@ -1,4 +1,5 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Highlight } from "@/components/ui/Highlight";
 
 export function OriginStory() {
   return (
@@ -7,8 +8,8 @@ export function OriginStory() {
         <div className="flex w-full flex-1 flex-col items-start gap-lg lg:max-w-[552px]">
           <Eyebrow>Origin Story</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
-            It started with a university student and a city full of overgrown
-            dogs
+            It started with a university student and a city full of{" "}
+            <Highlight>overgrown dogs</Highlight>
           </h2>
         </div>
         <div className="flex w-full flex-1 flex-col items-start gap-lg font-sans text-body-default text-text-primary">

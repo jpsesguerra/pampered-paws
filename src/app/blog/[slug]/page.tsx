@@ -1,28 +1,52 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { BLOG_POSTS } from "@/lib/data/blog";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import { Highlight } from "@/components/ui/Highlight";
+import { Reveal } from "@/components/ui/Reveal";
+import { BlogTeaser } from "@/components/sections/BlogTeaser";
+import { BLOG_POSTS, getBlogPostBySlug, getOtherBlogPosts } from "@/lib/data/blog";
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({ slug: post.slug }));
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+  const post = getBlogPostBySlug(params.slug);
   if (!post) notFound();
 
+  const otherPosts = getOtherBlogPosts(post.slug).slice(0, 3);
+
   return (
-    <article className="flex flex-col items-center gap-2xl px-lg py-7xl">
-      <div className="flex w-full max-w-[776px] flex-col items-start gap-lg">
-        <Breadcrumb>Blog</Breadcrumb>
-        <h1 className="font-serif text-h2 text-text-primary">{post.title}</h1>
-      </div>
-      <div className="relative h-[400px] w-full max-w-[776px] overflow-hidden rounded-2xl">
-        <Image src={post.image} alt={post.title} fill className="object-cover" />
-      </div>
-      <div className="flex w-full max-w-[776px] flex-col items-start gap-lg">
-        <p className="font-sans text-body-lg text-text-primary">{post.content}</p>
-      </div>
-    </article>
+    <>
+      <section className="flex items-center justify-center px-lg py-7xl">
+        <Reveal className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
+          <SecondaryButton href="/blog">Back to Blog</SecondaryButton>
+          <div className="flex flex-col items-center gap-s+ text-center">
+            <h1 className="max-w-[1024px] font-serif text-h2 text-text-primary sm:text-display-h1">
+              {post.title}
+            </h1>
+            <p className="font-sans text-label-lg text-brand-neutral-lighter">{post.excerpt}</p>
+          </div>
+          <div className="relative h-[280px] w-full max-w-[1024px] overflow-hidden rounded-[20px] sm:h-[588px]">
+            <Image src={post.image} alt={post.title} fill className="object-cover" />
+          </div>
+          <p className="w-full max-w-[800px] whitespace-pre-line font-sans text-body-default text-text-primary">
+            {post.content}
+          </p>
+        </Reveal>
+      </section>
+
+      <Reveal>
+        <BlogTeaser
+          eyebrow="Blog"
+          heading={
+            <>
+              Similar articles for <Highlight>you</Highlight>
+            </>
+          }
+          posts={otherPosts}
+        />
+      </Reveal>
+    </>
   );
 }

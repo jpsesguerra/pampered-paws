@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/Button";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
 
 type CTABannerProps = {
   heading: string;
   description: string;
   phoneLabel?: React.ReactNode;
+  phoneNumber?: string;
   buttonLabel?: string;
   buttonHref?: string;
 };
@@ -12,6 +14,7 @@ export function CTABanner({
   heading,
   description,
   phoneLabel,
+  phoneNumber,
   buttonLabel = "Request an Appointment",
   buttonHref = "/request-an-appointment",
 }: CTABannerProps) {
@@ -26,8 +29,14 @@ export function CTABanner({
           <Button withIcon href={buttonHref}>
             {buttonLabel}
           </Button>
-          {phoneLabel && (
-            <span className="font-sans text-btn-secondary text-text-primary">{phoneLabel}</span>
+          {phoneLabel && phoneNumber ? (
+            <SecondaryButton href={`tel:${phoneNumber}`} icon="/icons/phone.svg">
+              {phoneLabel}
+            </SecondaryButton>
+          ) : (
+            phoneLabel && (
+              <span className="font-sans text-btn-secondary text-text-primary">{phoneLabel}</span>
+            )
           )}
         </div>
       </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { BREED_PRICING } from "@/lib/data/pricing";
 
@@ -30,9 +29,6 @@ export function BreedPriceLookup() {
         </label>
       </div>
       <div className="flex flex-1 flex-col items-start gap-s+ rounded-2xl bg-surface-white p-lg">
-        <div className="relative h-[480px] w-full overflow-hidden rounded-2xl">
-          <Image src={breed.image} alt={breed.breed} fill className="object-cover" />
-        </div>
         <div className="flex w-full flex-col items-start gap-lg py-md">
           <h3 className="font-serif text-h3 text-text-primary">{breed.breed}</h3>
           <div className="flex w-full items-start gap-sm">

@@ -28,7 +28,7 @@ export function WhyPartnerSection() {
         <h2 className="text-center font-serif text-h3 text-text-primary">
           Why partner with Pampered Paws
         </h2>
-        <div className="flex w-full flex-col items-start gap-lg lg:flex-row">
+        <div className="flex w-full flex-col items-start gap-lg lg:flex-row lg:items-stretch">
           {REASONS.map((reason) => (
             <div
               key={reason.title}

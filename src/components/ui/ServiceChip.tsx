@@ -4,6 +4,7 @@ type ServiceChipProps = {
   children: React.ReactNode;
   className?: string;
   icon?: "dot" | "location";
+  size?: "default" | "sm";
 };
 
 const ICON_SRC: Record<NonNullable<ServiceChipProps["icon"]>, string> = {
@@ -11,16 +12,28 @@ const ICON_SRC: Record<NonNullable<ServiceChipProps["icon"]>, string> = {
   location: "/icons/store-location.svg",
 };
 
-export function ServiceChip({ children, className, icon = "dot" }: ServiceChipProps) {
+export function ServiceChip({ children, className, icon = "dot", size = "default" }: ServiceChipProps) {
+  const isSmall = size === "sm";
+
   return (
     <div
       className={cn(
-        "flex shrink-0 items-center justify-center gap-sm rounded-full bg-surface-white py-md pl-s+ pr-xl",
+        "flex shrink-0 items-center justify-center rounded-full bg-surface-white",
+        isSmall ? "gap-xs py-sm pl-md pr-lg" : "gap-sm py-md pl-s+ pr-xl",
         className
       )}
     >
-      <img src={ICON_SRC[icon]} alt="" className={icon === "dot" ? "size-3" : "size-6"} />
-      <span className="whitespace-nowrap font-sans text-label-xl leading-none text-text-primary">
+      <img
+        src={ICON_SRC[icon]}
+        alt=""
+        className={icon === "dot" ? (isSmall ? "size-2" : "size-3") : isSmall ? "size-4" : "size-6"}
+      />
+      <span
+        className={cn(
+          "whitespace-nowrap font-sans leading-none text-text-primary",
+          isSmall ? "text-label-sm" : "text-label-xl"
+        )}
+      >
         {children}
       </span>
     </div>

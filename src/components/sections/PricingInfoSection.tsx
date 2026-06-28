@@ -44,19 +44,21 @@ export function PricingInfoSection() {
             <SecondaryButton href="/grooming">See grooming services</SecondaryButton>
           </div>
         ))}
-        <div className="flex w-full flex-col items-start gap-lg sm:flex-row">
+        <div className="flex w-full flex-col items-start gap-lg sm:flex-row sm:items-stretch">
           {INFO_CARDS.filter((c) => !c.full).map((card) => (
             <div
               key={card.title}
-              className="flex w-full flex-1 flex-col items-start gap-lg rounded-2xl bg-brand-secondary-cream p-lg"
+              className="flex h-full w-full flex-1 flex-col items-start gap-lg rounded-2xl bg-brand-secondary-cream p-lg"
             >
-              <div className="flex items-center gap-md">
-                <IconCircle variant={card.icon} />
-                <h3 className="font-serif text-h5 text-text-primary">{card.title}</h3>
+              <div className="flex w-full flex-1 flex-col items-start gap-lg">
+                <div className="flex items-center gap-md">
+                  <IconCircle variant={card.icon} />
+                  <h3 className="font-serif text-h5 text-text-primary">{card.title}</h3>
+                </div>
+                <p className="whitespace-pre-line font-sans text-body-default text-text-secondary">
+                  {card.description}
+                </p>
               </div>
-              <p className="whitespace-pre-line font-sans text-body-default text-text-secondary">
-                {card.description}
-              </p>
               <SecondaryButton href="/grooming">See grooming services</SecondaryButton>
             </div>
           ))}

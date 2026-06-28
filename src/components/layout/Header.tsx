@@ -36,7 +36,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="whitespace-nowrap font-sans text-btn-primary text-text-primary"
+                className="whitespace-nowrap font-sans text-btn-primary text-text-primary transition-colors duration-300 hover:text-brand-primary-pink"
               >
                 {link.label}
               </Link>
@@ -75,7 +75,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="w-full font-sans text-btn-primary text-text-primary"
+                className="w-full font-sans text-btn-primary text-text-primary transition-colors duration-300 hover:text-brand-primary-pink"
               >
                 {link.label}
               </Link>

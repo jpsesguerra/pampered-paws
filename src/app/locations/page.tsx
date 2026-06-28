@@ -17,7 +17,7 @@ export default function LocationsPage() {
             you to see hours, services, and how to book.
           </p>
         </div>
-        <div className="flex w-full items-start gap-2xl">
+        <div className="flex w-full flex-col items-stretch gap-2xl sm:flex-row">
           {LOCATIONS.map((location) => (
             <LocationCard key={location.slug} location={location} />
           ))}

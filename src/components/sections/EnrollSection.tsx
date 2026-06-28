@@ -26,7 +26,7 @@ export function EnrollSection() {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
-        <div className="flex w-full flex-1 flex-col items-start gap-2xl">
+        <div className="flex w-full flex-1 flex-col items-start gap-2xl lg:sticky lg:top-2xl lg:self-start">
           <div className="flex flex-col items-start gap-s+">
             <Eyebrow>Enrolment</Eyebrow>
             <h2 className="font-serif text-h2 text-text-primary">How to Enrol</h2>
