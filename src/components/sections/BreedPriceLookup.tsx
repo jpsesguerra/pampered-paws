@@ -1,38 +1,108 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import type { BreedPricing } from "@/lib/data/pricing";
 
 export function BreedPriceLookup({ breeds }: { breeds: BreedPricing[] }) {
   const [query, setQuery] = useState(breeds[0]?.breed ?? "");
+  const [selected, setSelected] = useState(breeds[0]?.breed ?? "");
+  const [isOpen, setIsOpen] = useState(false);
+  const [highlighted, setHighlighted] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const breed = useMemo(() => {
-    const match = breeds.find((b) => b.breed.toLowerCase() === query.trim().toLowerCase());
-    return match ?? breeds.find((b) => b.breed.toLowerCase().startsWith(query.trim().toLowerCase())) ?? breeds[0];
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return breeds;
+    return breeds.filter((b) => b.breed.toLowerCase().includes(q));
   }, [breeds, query]);
+
+  const breed = useMemo(() => breeds.find((b) => b.breed === selected) ?? breeds[0], [breeds, selected]);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  function selectBreed(name: string) {
+    setSelected(name);
+    setQuery(name);
+    setIsOpen(false);
+  }
 
   return (
     <div className="flex w-full max-w-[1240px] items-start gap-2xl">
       <div className="flex flex-1 flex-col items-start gap-2xl rounded-[32px] bg-surface-white p-2xl">
-        <label className="flex w-full flex-col items-start gap-lg">
-          <span className="font-sans text-label-xl text-text-primary">
+        <div ref={containerRef} className="relative flex w-full flex-col items-start gap-lg">
+          <label htmlFor="breed-search" className="font-sans text-label-xl text-text-primary">
             Type or search for your dog or cat breed
-          </span>
+          </label>
           <input
+            id="breed-search"
             type="text"
-            list="breed-options"
+            role="combobox"
+            aria-expanded={isOpen}
+            aria-controls="breed-listbox"
+            autoComplete="off"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onFocus={() => setIsOpen(true)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setIsOpen(true);
+              setHighlighted(0);
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowDown") {
+                e.preventDefault();
+                setIsOpen(true);
+                setHighlighted((i) => Math.min(i + 1, filtered.length - 1));
+              } else if (e.key === "ArrowUp") {
+                e.preventDefault();
+                setHighlighted((i) => Math.max(i - 1, 0));
+              } else if (e.key === "Enter") {
+                e.preventDefault();
+                if (filtered[highlighted]) selectBreed(filtered[highlighted].breed);
+              } else if (e.key === "Escape") {
+                setIsOpen(false);
+              }
+            }}
             placeholder="Start typing a breed…"
             className="w-full rounded-full border border-[#efeff2] bg-surface-white px-xl py-lg font-sans text-body-default text-text-primary"
           />
-          <datalist id="breed-options">
-            {breeds.map((b) => (
-              <option key={b.breed} value={b.breed} />
-            ))}
-          </datalist>
-        </label>
+          {isOpen && (
+            <ul
+              id="breed-listbox"
+              role="listbox"
+              className="absolute left-0 top-full z-20 mt-sm max-h-[320px] w-full overflow-y-auto rounded-2xl bg-surface-white p-sm shadow-lg"
+            >
+              {filtered.length > 0 ? (
+                filtered.map((b, i) => (
+                  <li key={b.breed} role="option" aria-selected={b.breed === selected}>
+                    <button
+                      type="button"
+                      onClick={() => selectBreed(b.breed)}
+                      onMouseEnter={() => setHighlighted(i)}
+                      className={`w-full rounded-xl px-lg py-sm text-left font-sans text-body-default text-text-primary ${
+                        i === highlighted ? "bg-brand-background-neutral" : ""
+                      }`}
+                    >
+                      {b.breed}
+                    </button>
+                  </li>
+                ))
+              ) : (
+                <li className="px-lg py-sm font-sans text-body-default text-text-secondary">
+                  No breeds match &ldquo;{query}&rdquo;
+                </li>
+              )}
+            </ul>
+          )}
+        </div>
       </div>
       <div className="flex flex-1 flex-col items-start gap-s+ rounded-2xl bg-surface-white p-lg">
         {breed ? (
