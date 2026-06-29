@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { RESOURCES } from "@/lib/data/resources";
+import { getResources } from "@/sanity/lib/resources";
 
-export default function ResourcesPage() {
+export const revalidate = 60;
+
+export default async function ResourcesPage() {
+  const resources = await getResources();
   return (
     <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
       <div className="flex flex-col items-center gap-md text-center">
@@ -12,7 +15,7 @@ export default function ResourcesPage() {
         </h1>
       </div>
       <div className="grid w-full max-w-[1240px] grid-cols-2 gap-lg">
-        {RESOURCES.map((resource) => (
+        {resources.map((resource) => (
           <Link
             key={resource.slug}
             href={`/resources/${resource.slug}`}

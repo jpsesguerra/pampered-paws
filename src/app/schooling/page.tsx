@@ -12,11 +12,19 @@ import { EnrollSection } from "@/components/sections/EnrollSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTABanner } from "@/components/sections/CTABanner";
-import { PROGRAMS } from "@/lib/data/programs";
-import { SCHOOLING_FAQS } from "@/lib/data/schoolingFaqs";
+import { getPrograms } from "@/sanity/lib/programs";
+import { getFaqsByCategory } from "@/sanity/lib/faqs";
+import { getTestimonialsByCategory } from "@/sanity/lib/testimonials";
 import { Reveal } from "@/components/ui/Reveal";
 
-export default function SchoolingPage() {
+export const revalidate = 60;
+
+export default async function SchoolingPage() {
+  const [programs, faqs, testimonials] = await Promise.all([
+    getPrograms(),
+    getFaqsByCategory("schooling"),
+    getTestimonialsByCategory("Schooling"),
+  ]);
   return (
     <>
       <section className="flex items-center justify-center px-lg pt-2xl">
@@ -83,7 +91,7 @@ export default function SchoolingPage() {
               </p>
             </div>
             <div className="grid w-full grid-cols-1 gap-2xl sm:grid-cols-2">
-              {PROGRAMS.map((program) => (
+              {programs.map((program) => (
                 <ProgramCard key={program.slug} program={program} />
               ))}
             </div>
@@ -94,11 +102,13 @@ export default function SchoolingPage() {
       <Reveal>
         <EnrollSection />
       </Reveal>
+      {testimonials.length > 0 && (
+        <Reveal>
+          <Testimonials testimonials={testimonials} />
+        </Reveal>
+      )}
       <Reveal>
-        <Testimonials />
-      </Reveal>
-      <Reveal>
-        <FAQSection items={SCHOOLING_FAQS} />
+        <FAQSection items={faqs} />
       </Reveal>
       <Reveal>
         <CTABanner

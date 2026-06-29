@@ -1,25 +1,25 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import { Button } from "@/components/ui/Button";
 import { IconCircle } from "@/components/ui/IconCircle";
 import { Reveal } from "@/components/ui/Reveal";
-import {
-  RESOURCES,
-  getResourceBySlug,
-  getResourceContent,
-  getOtherResources,
-} from "@/lib/data/resources";
+import { RichText } from "@/components/ui/RichText";
+import { getResources, getResourceBySlug, getOtherResources } from "@/sanity/lib/resources";
 
-export function generateStaticParams() {
-  return RESOURCES.map((resource) => ({ slug: resource.slug }));
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const resources = await getResources();
+  return resources.map((resource) => ({ slug: resource.slug }));
 }
 
-export default function ResourcePostPage({ params }: { params: { slug: string } }) {
-  const resource = getResourceBySlug(params.slug);
+export default async function ResourcePostPage({ params }: { params: { slug: string } }) {
+  const resource = await getResourceBySlug(params.slug);
   if (!resource) notFound();
 
-  const content = getResourceContent(resource);
-  const otherResources = getOtherResources(resource.slug).slice(0, 7);
+  const otherResources = (await getOtherResources(resource.slug)).slice(0, 7);
+  const hasContent = resource.content && resource.content.length > 0;
 
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
@@ -30,13 +30,16 @@ export default function ResourcePostPage({ params }: { params: { slug: string } 
               <SecondaryButton href="/resources">Back To All Resources</SecondaryButton>
               <h1 className="font-serif text-h2 text-text-primary">{resource.title}</h1>
             </div>
-            <div className="flex flex-col items-start gap-md font-sans text-body-default text-text-primary">
-              {content.map((paragraph, i) => (
-                <p key={i} className="w-full whitespace-pre-line">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            {hasContent ? (
+              <RichText value={resource.content!} className="w-full" />
+            ) : (
+              <p className="w-full font-sans text-body-default text-text-primary">{resource.excerpt}</p>
+            )}
+            {(resource.link || resource.file) && (
+              <Button href={resource.link ?? resource.file!} target="_blank" rel="noopener noreferrer">
+                {resource.link ? "Visit resource" : "Download PDF"}
+              </Button>
+            )}
           </article>
         </Reveal>
 

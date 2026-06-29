@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "import:cms": "tsx scripts/import-cms.ts",
     "cloudinary:upload": "tsx scripts/cloudinary-upload.ts",
     "cloudinary:replace": "tsx scripts/cloudinary-replace.ts"
   },
   "dependencies": {
+    "@portabletext/react": "^6.2.0",
     "@sanity/client": "^7.23.0",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^3.99.0",

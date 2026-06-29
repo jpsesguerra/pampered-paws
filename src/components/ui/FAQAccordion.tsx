@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import type { PortableTextBlock } from "@portabletext/react";
+import { RichText } from "@/components/ui/RichText";
 
 export type FAQItem = {
   question: string;
-  answer: string;
+  answer: string | PortableTextBlock[];
 };
 
 function FAQRow({ item }: { item: FAQItem }) {
@@ -33,9 +35,13 @@ function FAQRow({ item }: { item: FAQItem }) {
         </span>
       </button>
       {isOpen && (
-        <p className="w-full pt-md font-sans text-body-default text-text-secondary">
-          {item.answer}
-        </p>
+        <div className="w-full pt-md text-text-secondary">
+          {typeof item.answer === "string" ? (
+            <p className="font-sans text-body-default">{item.answer}</p>
+          ) : (
+            <RichText value={item.answer} />
+          )}
+        </div>
       )}
     </div>
   );

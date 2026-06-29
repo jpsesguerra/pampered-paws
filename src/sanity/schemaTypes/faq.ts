@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+import { richTextBlocks } from "./objects/richText";
 
 export default defineType({
   name: "faq",
@@ -13,7 +14,7 @@ export default defineType({
       validation: (r) => r.required(),
     }),
     defineField({ name: "question", title: "Question", type: "string", validation: (r) => r.required() }),
-    defineField({ name: "answer", title: "Answer", type: "text", validation: (r) => r.required() }),
+    defineField({ name: "answer", title: "Answer", type: "array", of: richTextBlocks, validation: (r) => r.required() }),
     defineField({ name: "order", title: "Order", type: "number", description: "Lower numbers appear first." }),
   ],
   orderings: [

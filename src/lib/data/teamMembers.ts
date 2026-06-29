@@ -1,6 +1,7 @@
-// Mirrors the future Sanity "Team Members" collection. Team members are
-// NOT referenced on the Location document — they're queried by matching
-// `locationKey` (a query relationship, not a stored reference).
+// Mirrors the Sanity "Team Member" collection — see src/sanity/lib/teamMembers.ts
+// for the actual data-fetching (this file now only holds the shared type).
+// Team members are NOT referenced on the Location document — they're
+// queried by matching `locationKey` (a query relationship, not a reference).
 export type TeamMember = {
   id: string;
   name: string;
@@ -8,29 +9,3 @@ export type TeamMember = {
   photo: string;
   locationKey: string;
 };
-
-// Only seeded with the staff names we actually have on record (see
-// src/lib/data/locations.ts taglines). Scarborough has no named staff yet —
-// this is intentionally left empty rather than inventing placeholder people.
-// Add real team members (with their locationKey) once provided, the query
-// below will pick them up automatically.
-export const TEAM_MEMBERS: TeamMember[] = [
-  {
-    id: "lesley-weeks",
-    name: "Lesley Weeks",
-    role: "Founder & Toronto Groomer",
-    photo: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664988/pampered-paws/images/team-photo.png",
-    locationKey: "toronto",
-  },
-  {
-    id: "eggie-feng",
-    name: "Eggie Feng",
-    role: "Salon Lead, Mississauga",
-    photo: "https://res.cloudinary.com/du0witbcr/image/upload/v1782664988/pampered-paws/images/team-photo.png",
-    locationKey: "mississauga",
-  },
-];
-
-export function getTeamMembersByLocationKey(locationKey: string): TeamMember[] {
-  return TEAM_MEMBERS.filter((member) => member.locationKey === locationKey);
-}

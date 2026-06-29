@@ -8,5 +8,10 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: true,
+  token: process.env.SANITY_API_TOKEN,
+  useCdn: false,
+  // Only ever serve published content to the live site — without this,
+  // an unpublished Studio draft (e.g. someone editing a doc without hitting
+  // Publish) leaks into the public site's queries alongside the live one.
+  perspective: "published",
 });

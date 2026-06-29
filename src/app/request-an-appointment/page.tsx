@@ -1,12 +1,12 @@
 import { ContactForm } from "@/components/sections/ContactForm";
-import { getLocationBySlug } from "@/lib/data/locations";
+import { getLocationBySlug } from "@/sanity/lib/locations";
 
-export default function RequestAppointmentPage({
+export default async function RequestAppointmentPage({
   searchParams,
 }: {
   searchParams: { location?: string };
 }) {
-  const location = searchParams.location ? getLocationBySlug(searchParams.location) : undefined;
+  const location = searchParams.location ? await getLocationBySlug(searchParams.location) : undefined;
 
   return (
     <ContactForm

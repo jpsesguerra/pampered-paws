@@ -8,8 +8,10 @@ import { TESTIMONIALS, type Testimonial } from "@/lib/data/testimonials";
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <div className="flex w-[744px] shrink-0 flex-col items-start gap-lg rounded-2xl bg-surface-white p-lg sm:flex-row">
-      <div className="relative size-[120px] shrink-0 overflow-hidden rounded-xl">
-        <Image src={testimonial.image} alt={testimonial.name} fill className="object-cover" />
+      <div className="relative size-[120px] shrink-0 overflow-hidden rounded-xl bg-brand-secondary-light">
+        {testimonial.image && (
+          <Image src={testimonial.image} alt={testimonial.name} fill className="object-cover" />
+        )}
       </div>
       <div className="flex flex-1 flex-col items-start gap-xl">
         <span className="flex size-12 items-center justify-center rounded-full bg-brand-primary-pink">

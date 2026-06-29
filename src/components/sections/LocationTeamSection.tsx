@@ -2,10 +2,10 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Highlight } from "@/components/ui/Highlight";
 import { GroomerProfileCard } from "@/components/ui/GroomerProfileCard";
 import type { Location } from "@/lib/data/locations";
-import { getTeamMembersByLocationKey } from "@/lib/data/teamMembers";
+import { getTeamMembersByLocationKey } from "@/sanity/lib/teamMembers";
 
-export function LocationTeamSection({ location }: { location: Location }) {
-  const members = getTeamMembersByLocationKey(location.locationKey);
+export async function LocationTeamSection({ location }: { location: Location }) {
+  const members = await getTeamMembersByLocationKey(location.locationKey);
   const words = location.teamHeading.split(" ");
   const highlighted = words.slice(-2).join(" ");
   const headingLead = words.slice(0, -2).join(" ");

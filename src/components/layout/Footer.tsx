@@ -1,7 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { LOCATIONS, getFullAddress, getPhoneLabel } from "@/lib/data/locations";
+import {
+  type Location,
+  getFullAddress,
+  getPhoneLabel,
+  getGoogleMapsViewUrl,
+} from "@/lib/data/locations";
 import { Reveal } from "@/components/ui/Reveal";
+import { useToast } from "@/components/ui/ToastProvider";
 
 const REVEAL_DELAYS = [0, 100, 200, 300, 400, 500, 600] as const;
 
@@ -20,18 +28,78 @@ const PROGRAM_LINKS = [
   { label: "Pricing", href: "/grooming-prices" },
 ];
 
-function ContactRow({ icon, children }: { icon: string; children: React.ReactNode }) {
+function ContactRow({
+  icon,
+  as: Tag = "span",
+  ...props
+}: {
+  icon: string;
+  as?: "span" | "a" | "button";
+  children: React.ReactNode;
+} & React.AnchorHTMLAttributes<HTMLAnchorElement> &
+  React.ButtonHTMLAttributes<HTMLButtonElement>) {
+  const { children, ...rest } = props;
   return (
-    <div className="flex w-full items-center gap-md">
+    <Tag
+      {...rest}
+      className="flex w-full items-center gap-md text-left"
+    >
       <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-secondary-light">
         <img src={icon} alt="" className="size-4" />
       </span>
       <span className="font-sans text-label-sm text-text-on-pink">{children}</span>
-    </div>
+    </Tag>
   );
 }
 
-export function Footer() {
+function LocationFooterCard({
+  location,
+  delay,
+}: {
+  location: Location;
+  delay: 0 | 100 | 200 | 300 | 400 | 500 | 600;
+}) {
+  const { showToast } = useToast();
+
+  return (
+    <Reveal delay={delay} className="w-full sm:w-[209px]">
+      <div className="flex w-full flex-col items-start gap-md lg:pb-3xl">
+        <Link href={`/locations/${location.slug}`} className="w-full font-serif text-h6 text-text-on-pink">
+          {location.locationName} Salon
+        </Link>
+        <ContactRow
+          as="a"
+          href={getGoogleMapsViewUrl(location)}
+          target="_blank"
+          rel="noopener noreferrer"
+          icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665054/pampered-paws/icons/location-pin-sm.svg"
+        >
+          {getFullAddress(location)}
+        </ContactRow>
+        <ContactRow
+          as="a"
+          href={`tel:${location.phoneCall.replace(/[^0-9+]/g, "")}`}
+          icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665058/pampered-paws/icons/phone.svg"
+        >
+          {getPhoneLabel(location)}
+        </ContactRow>
+        <ContactRow
+          as="button"
+          type="button"
+          onClick={() => {
+            navigator.clipboard.writeText(location.email);
+            showToast("Email copied to your clipboard");
+          }}
+          icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665048/pampered-paws/icons/email.svg"
+        >
+          {location.email}
+        </ContactRow>
+      </div>
+    </Reveal>
+  );
+}
+
+export function Footer({ locations }: { locations: Location[] }) {
   return (
     <footer className="flex items-center justify-center px-lg py-2xl">
       <div className="flex w-full max-w-[1240px] flex-col gap-3xl rounded-2xl bg-brand-neutral-dark p-lg sm:gap-6xl sm:p-2xl lg:p-[54px]">
@@ -70,24 +138,8 @@ export function Footer() {
             </div>
           </div>
           <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:flex-wrap lg:flex-1 lg:justify-end lg:gap-lg">
-            {LOCATIONS.map((location, i) => (
-              <Reveal
-                key={location.slug}
-                delay={REVEAL_DELAYS[i] ?? 600}
-                className="w-full sm:w-[209px]"
-              >
-                <Link
-                  href={`/locations/${location.slug}`}
-                  className="flex w-full flex-col items-start gap-md lg:pb-3xl"
-                >
-                  <h3 className="w-full font-serif text-h6 text-text-on-pink">
-                    {location.locationName} Salon
-                  </h3>
-                  <ContactRow icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665054/pampered-paws/icons/location-pin-sm.svg">{getFullAddress(location)}</ContactRow>
-                  <ContactRow icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665058/pampered-paws/icons/phone.svg">{getPhoneLabel(location)}</ContactRow>
-                  <ContactRow icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665048/pampered-paws/icons/email.svg">{location.email}</ContactRow>
-                </Link>
-              </Reveal>
+            {locations.map((location, i) => (
+              <LocationFooterCard key={location.slug} location={location} delay={REVEAL_DELAYS[i] ?? 600} />
             ))}
           </div>
         </div>

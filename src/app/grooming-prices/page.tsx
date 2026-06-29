@@ -1,7 +1,11 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { BreedPriceLookup } from "@/components/sections/BreedPriceLookup";
+import { getBreedPricing } from "@/sanity/lib/pricing";
 
-export default function GroomingPricesPage() {
+export const revalidate = 60;
+
+export default async function GroomingPricesPage() {
+  const breeds = await getBreedPricing();
   return (
     <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
       <div className="flex max-w-[1024px] flex-col items-center gap-lg text-center">
@@ -15,7 +19,7 @@ export default function GroomingPricesPage() {
           confirm the exact price for your pet.
         </p>
       </div>
-      <BreedPriceLookup />
+      <BreedPriceLookup breeds={breeds} />
     </section>
   );
 }

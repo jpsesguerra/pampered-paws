@@ -1,6 +1,8 @@
-import { ADD_ON_GROUPS, ADD_ON_NOTE } from "@/lib/data/addOns";
+import { ADD_ON_NOTE } from "@/lib/data/addOns";
+import { getServiceGroups } from "@/sanity/lib/services";
 
-export function AddOnsSection() {
+export async function AddOnsSection() {
+  const groups = await getServiceGroups();
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
@@ -14,7 +16,7 @@ export function AddOnsSection() {
           </p>
         </div>
         <div className="flex w-full flex-col items-start gap-2xl lg:flex-row lg:items-stretch">
-          {ADD_ON_GROUPS.map((group) => (
+          {groups.map((group) => (
             <div
               key={group.title}
               className="flex w-full flex-1 flex-col items-start gap-lg rounded-2xl bg-surface-white p-lg"

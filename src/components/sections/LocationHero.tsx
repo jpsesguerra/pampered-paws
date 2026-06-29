@@ -41,12 +41,14 @@ export function LocationHero({ location }: { location: Location }) {
           </Reveal>
         </div>
         <div className="relative z-0 h-[280px] w-full flex-1 overflow-hidden lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[58%] lg:flex-none">
-          <Image
-            src={location.heroImage}
-            alt={`Pampered Paws ${location.locationName} storefront`}
-            fill
-            className="hero-edge-fade object-cover object-right"
-          />
+          {location.heroImage && (
+            <Image
+              src={location.heroImage}
+              alt={`Pampered Paws ${location.locationName} storefront`}
+              fill
+              className="hero-edge-fade object-cover object-right"
+            />
+          )}
         </div>
       </div>
     </section>

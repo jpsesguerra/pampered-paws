@@ -4,17 +4,21 @@ import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { Button } from "@/components/ui/Button";
 import { IconCircle } from "@/components/ui/IconCircle";
 import { Reveal } from "@/components/ui/Reveal";
-import { PROGRAMS, getProgramBySlug, getOtherPrograms } from "@/lib/data/programs";
+import { RichText } from "@/components/ui/RichText";
+import { getPrograms, getProgramBySlug, getOtherPrograms } from "@/sanity/lib/programs";
 
-export function generateStaticParams() {
-  return PROGRAMS.map((program) => ({ slug: program.slug }));
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const programs = await getPrograms();
+  return programs.map((program) => ({ slug: program.slug }));
 }
 
-export default function ProgramDetailPage({ params }: { params: { slug: string } }) {
-  const program = getProgramBySlug(params.slug);
+export default async function ProgramDetailPage({ params }: { params: { slug: string } }) {
+  const program = await getProgramBySlug(params.slug);
   if (!program) notFound();
 
-  const otherPrograms = getOtherPrograms(program.slug);
+  const otherPrograms = await getOtherPrograms(program.slug);
 
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
@@ -29,13 +33,7 @@ export default function ProgramDetailPage({ params }: { params: { slug: string }
               <span>Program Length: {program.duration}</span>
               <span>Cost: {program.cost}</span>
             </div>
-            <div className="flex flex-col items-start gap-md font-sans text-body-default text-text-primary">
-              {program.description.map((paragraph, i) => (
-                <p key={i} className="w-full whitespace-pre-line">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            <RichText value={program.description} className="w-full" />
             <Button href="/schooling/enroll">{program.ctaLabel}</Button>
           </article>
         </Reveal>

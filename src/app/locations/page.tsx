@@ -1,8 +1,11 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LocationCard } from "@/components/ui/LocationCard";
-import { LOCATIONS } from "@/lib/data/locations";
+import { getLocations } from "@/sanity/lib/locations";
 
-export default function LocationsPage() {
+export const revalidate = 60;
+
+export default async function LocationsPage() {
+  const locations = await getLocations();
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
@@ -18,7 +21,7 @@ export default function LocationsPage() {
           </p>
         </div>
         <div className="flex w-full flex-col items-stretch gap-2xl sm:flex-row">
-          {LOCATIONS.map((location) => (
+          {locations.map((location) => (
             <LocationCard key={location.slug} location={location} />
           ))}
         </div>

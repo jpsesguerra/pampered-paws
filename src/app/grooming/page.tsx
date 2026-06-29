@@ -9,10 +9,19 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { BlogTeaser } from "@/components/sections/BlogTeaser";
-import { GROOMING_FAQS } from "@/lib/data/groomingFaqs";
 import { Reveal } from "@/components/ui/Reveal";
+import { getAllTestimonials } from "@/sanity/lib/testimonials";
+import { getFaqsByCategory } from "@/sanity/lib/faqs";
+import { getBlogPosts } from "@/sanity/lib/blog";
 
-export default function GroomingPage() {
+export const revalidate = 60;
+
+export default async function GroomingPage() {
+  const [testimonials, faqs, blogPosts] = await Promise.all([
+    getAllTestimonials(),
+    getFaqsByCategory("grooming"),
+    getBlogPosts(),
+  ]);
   return (
     <>
       <GroomingHero />
@@ -116,10 +125,10 @@ export default function GroomingPage() {
         <PricingInfoSection />
       </Reveal>
       <Reveal>
-        <Testimonials />
+        <Testimonials testimonials={testimonials} />
       </Reveal>
       <Reveal>
-        <FAQSection items={GROOMING_FAQS} />
+        <FAQSection items={faqs} />
       </Reveal>
       <Reveal>
         <CTABanner
@@ -130,7 +139,7 @@ export default function GroomingPage() {
         />
       </Reveal>
       <Reveal>
-        <BlogTeaser heading="Things to know about your pet's groom" />
+        <BlogTeaser heading="Things to know about your pet's groom" posts={blogPosts.slice(0, 3)} />
       </Reveal>
     </>
   );

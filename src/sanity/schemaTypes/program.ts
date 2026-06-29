@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+import { richTextBlocks } from "./objects/richText";
 
 export default defineType({
   name: "program",
@@ -13,7 +14,7 @@ export default defineType({
     defineField({ name: "cost", title: "Cost", type: "string" }),
     defineField({ name: "level", title: "Level", type: "string" }),
     defineField({ name: "nextStartDate", title: "Next Start Date", type: "date" }),
-    defineField({ name: "description", title: "Description", type: "array", of: [{ type: "text" }], description: "Body paragraphs." }),
+    defineField({ name: "description", title: "Description", type: "array", of: richTextBlocks }),
     defineField({ name: "ctaLabel", title: "CTA Label", type: "string" }),
     defineField({ name: "orderNumber", title: "Order Number", type: "number", description: "Lower numbers appear first." }),
   ],

@@ -9,8 +9,13 @@ import { Gallery } from "@/components/sections/Gallery";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { BlogTeaser } from "@/components/sections/BlogTeaser";
 import { Reveal } from "@/components/ui/Reveal";
+import { getAllTestimonials } from "@/sanity/lib/testimonials";
+import { getBlogPosts } from "@/sanity/lib/blog";
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  const [testimonials, blogPosts] = await Promise.all([getAllTestimonials(), getBlogPosts()]);
   return (
     <>
       <Hero />
@@ -28,7 +33,7 @@ export default function Home() {
       </Reveal>
       <TeamSection />
       <Reveal>
-        <Testimonials />
+        <Testimonials testimonials={testimonials} />
       </Reveal>
       <Reveal>
         <Gallery />
@@ -42,7 +47,7 @@ export default function Home() {
         />
       </Reveal>
       <Reveal>
-        <BlogTeaser />
+        <BlogTeaser posts={blogPosts.slice(0, 3)} />
       </Reveal>
     </>
   );

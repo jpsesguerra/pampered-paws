@@ -9,8 +9,8 @@ import { WhatsIncludedSection } from "@/components/sections/WhatsIncludedSection
 import { InvestmentSection } from "@/components/sections/InvestmentSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTABanner } from "@/components/sections/CTABanner";
-import { FRANCHISE_FAQS } from "@/lib/data/franchiseFaqs";
 import { Reveal } from "@/components/ui/Reveal";
+import { getFaqsByCategory } from "@/sanity/lib/faqs";
 
 const FRANCHISE_LOCATIONS = [
   "Toronto",
@@ -21,7 +21,10 @@ const FRANCHISE_LOCATIONS = [
   "Lexington",
 ];
 
-export default function FranchisePage() {
+export const revalidate = 60;
+
+export default async function FranchisePage() {
+  const faqs = await getFaqsByCategory("franchising");
   return (
     <>
       <section className="flex items-center justify-center px-lg pt-2xl">
@@ -86,7 +89,7 @@ export default function FranchisePage() {
         <InvestmentSection />
       </Reveal>
       <Reveal>
-        <FAQSection items={FRANCHISE_FAQS} />
+        <FAQSection items={faqs} />
       </Reveal>
       <Reveal>
         <CTABanner

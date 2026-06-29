@@ -2,16 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
-import { BLOG_POSTS, type BlogPost } from "@/lib/data/blog";
+import type { BlogPost } from "@/lib/data/blog";
 
 export function BlogTeaser({
   eyebrow = "Resources",
   heading = "Things to know about your pet",
-  posts = BLOG_POSTS.slice(0, 3),
+  posts,
 }: {
   eyebrow?: string;
   heading?: React.ReactNode;
-  posts?: BlogPost[];
+  posts: BlogPost[];
 }) {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
@@ -27,8 +27,8 @@ export function BlogTeaser({
               href={`/blog/${post.slug}`}
               className="flex w-full flex-1 flex-col items-start gap-s+ rounded-2xl bg-surface-white p-lg"
             >
-              <div className="relative h-[280px] w-full overflow-hidden rounded-xl">
-                <Image src={post.image} alt={post.title} fill className="object-cover" />
+              <div className="relative h-[280px] w-full overflow-hidden rounded-xl bg-brand-background-neutral">
+                {post.image && <Image src={post.image} alt={post.title} fill className="object-cover" />}
               </div>
               <div className="flex w-full flex-col items-start gap-xs">
                 <h3 className="font-serif text-h5 text-text-primary">{post.title}</h3>

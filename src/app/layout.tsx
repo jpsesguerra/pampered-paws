@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ToastProvider } from "@/components/ui/ToastProvider";
+import { getLocations } from "@/sanity/lib/locations";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,11 +11,12 @@ export const metadata: Metadata = {
     "Pampered Paws offers professional pet grooming, grooming school programs, and franchise opportunities across Mississauga, Toronto, Scarborough, and Tokyo.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locations = await getLocations();
   return (
     <html lang="en">
       <head>
@@ -30,9 +33,11 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased font-sans text-text-primary bg-brand-background-neutral">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ToastProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer locations={locations} />
+        </ToastProvider>
       </body>
     </html>
   );
