@@ -167,6 +167,22 @@ body {
   animation: ball-expand 1.4s var(--ease-out-expo) both;
 }
 
+/* Hero photo row: slides up while dissolving in on page load, no scroll needed */
+@keyframes hero-photo-in {
+  from {
+    transform: translateY(36px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-photo-in {
+  animation: hero-photo-in 0.9s var(--ease-out-quart) both;
+}
+
 /* Testimonial carousel: slide + rotate in from the direction of travel */
 @keyframes slide-in-from-right {
   from {

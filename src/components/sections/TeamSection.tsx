@@ -42,10 +42,10 @@ export function TeamSection() {
               </p>
             </div>
             <a
-              href="/locations"
+              href="/about-us"
               className="flex min-h-[48px] items-center justify-center rounded-full bg-brand-neutral-dark px-xl py-sm font-sans text-label-lg text-text-on-pink"
             >
-              Find a Salon Near You
+              Learn More About Us
             </a>
           </Reveal>
           <Reveal delay={200} className="relative h-[280px] w-full shrink-0 overflow-hidden rounded-2xl bg-brand-secondary-light sm:h-auto sm:flex-1">

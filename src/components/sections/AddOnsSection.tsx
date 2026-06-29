@@ -4,7 +4,7 @@ import { getServiceGroups } from "@/sanity/lib/services";
 export async function AddOnsSection() {
   const groups = await getServiceGroups();
   return (
-    <section className="flex items-center justify-center px-lg py-7xl">
+    <section id="add-ons" className="flex scroll-mt-2xl items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
         <div className="flex max-w-[716px] flex-col items-center gap-md text-center">
           <h2 className="font-serif text-h3 text-text-primary">
