@@ -67,7 +67,7 @@ export function Hero() {
           className="hero-photo-in relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "0ms" }}
         >
-          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664952/pampered-paws/images/Cat.png" alt="" fill className="object-cover" />
+          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783544610/C80F382A-DF83-4030-9402-3EF6F6213650_y1lbox.jpg" alt="" fill className="object-cover" />
         </div>
         <div
           className="hero-photo-in relative aspect-[538/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
@@ -79,7 +79,7 @@ export function Hero() {
           className="hero-photo-in relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "150ms" }}
         >
-          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664953/pampered-paws/images/Dog.png" alt="" fill className="object-cover" />
+          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783544685/pp-cat_upnhef.png" alt="" fill className="object-cover" />
         </div>
       </div>
     </section>

@@ -1,0 +1,3549 @@
+{
+  "estimates": [
+    {
+      "breed": "abyssinian",
+      "label": "Abyssinian",
+      "breedType": "Cat",
+      "price": 214.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "affenpinscher",
+      "label": "Affenpinscher",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "afghan hound",
+      "label": "Afghan Hound",
+      "breedType": "Pure bred dog",
+      "price": 206.8,
+      "times": {
+        "4": 130,
+        "8": 150,
+        "12": 240,
+        "20": 320
+      }
+    },
+    {
+      "breed": "airedale",
+      "label": "Airedale",
+      "breedType": "Pure bred dog",
+      "price": 184.8,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "akbash",
+      "label": "Akbash",
+      "breedType": "Pure bred dog",
+      "price": 301.4,
+      "times": {
+        "4": 180,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "akita",
+      "label": "Akita",
+      "breedType": "Pure bred dog",
+      "price": 264,
+      "times": {
+        "4": 150,
+        "8": 200,
+        "12": 280,
+        "20": 360
+      }
+    },
+    {
+      "breed": "alaskan malamute",
+      "label": "Alaskan Malamute",
+      "breedType": "Pure bred dog",
+      "price": 192.5,
+      "times": {
+        "4": 120,
+        "8": 160,
+        "12": 240,
+        "20": 360
+      }
+    },
+    {
+      "breed": "american bobtail",
+      "label": "American Bobtail",
+      "breedType": "Cat",
+      "price": 214.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "american bulldog",
+      "label": "American Bulldog",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "american bully pocket",
+      "label": "American Bully Pocket",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "american bully x large",
+      "label": "American Bully X Large",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 150,
+        "20": 150
+      }
+    },
+    {
+      "breed": "american cocker",
+      "label": "American Cocker",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 200
+      }
+    },
+    {
+      "breed": "american eskimo dog",
+      "label": "American Eskimo Dog",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 100,
+        "12": 120,
+        "20": 180
+      }
+    },
+    {
+      "breed": "american pit bull",
+      "label": "American Pit Bull",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "american staffordshire terrier",
+      "label": "American Staffordshire Terrier",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "american water spaniel",
+      "label": "American Water Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 203.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "anatolian shepherd dog",
+      "label": "Anatolian Shepherd Dog",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 150,
+        "8": 170,
+        "12": 230,
+        "20": 300
+      }
+    },
+    {
+      "breed": "argentine dogo",
+      "label": "Argentine Dogo",
+      "breedType": "Pure bred dog",
+      "price": 203.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 150
+      }
+    },
+    {
+      "breed": "australian cattle",
+      "label": "Australian Cattle",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 102,
+        "20": 120
+      }
+    },
+    {
+      "breed": "australian kelpie",
+      "label": "Australian Kelpie",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 90,
+        "8": 100,
+        "12": 120,
+        "20": 140
+      }
+    },
+    {
+      "breed": "australian shepherd",
+      "label": "Australian Shepherd",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 120,
+        "20": 150
+      }
+    },
+    {
+      "breed": "australian terrier",
+      "label": "Australian Terrier",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "balinese",
+      "label": "Balinese",
+      "breedType": "Cat",
+      "price": 214.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "barbet",
+      "label": "Barbet",
+      "breedType": "Pure bred dog",
+      "price": 247.5,
+      "times": {
+        "4": 150,
+        "8": 180,
+        "12": 300,
+        "20": 350
+      }
+    },
+    {
+      "breed": "basenji",
+      "label": "Basenji",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "basset hound",
+      "label": "Basset Hound",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 102,
+        "20": 120
+      }
+    },
+    {
+      "breed": "beagle",
+      "label": "Beagle",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "bearded collie",
+      "label": "Bearded Collie",
+      "breedType": "Pure bred dog",
+      "price": 192.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "beauceron",
+      "label": "Beauceron",
+      "breedType": "Pure bred dog",
+      "price": 247.5,
+      "times": {
+        "4": 150,
+        "8": 150,
+        "12": 150,
+        "20": 150
+      }
+    },
+    {
+      "breed": "bedlington terrier",
+      "label": "Bedlington Terrier",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 102,
+        "20": 120
+      }
+    },
+    {
+      "breed": "belgian sheepdog",
+      "label": "Belgian Sheepdog",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "belgian tervuren",
+      "label": "Belgian Tervuren",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "bengal",
+      "label": "Bengal",
+      "breedType": "Cat",
+      "price": 214.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "berger des pyrenees",
+      "label": "Berger des Pyrenees",
+      "breedType": "Pure bred dog",
+      "price": 247.5,
+      "times": {
+        "4": 150,
+        "8": 150,
+        "12": 150,
+        "20": 150
+      }
+    },
+    {
+      "breed": "bernese mountain dog",
+      "label": "Bernese Mountain Dog",
+      "breedType": "Pure bred dog",
+      "price": 247.5,
+      "times": {
+        "4": 150,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "bichon frise",
+      "label": "Bichon Frise",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 120,
+        "12": 150,
+        "20": 270
+      }
+    },
+    {
+      "breed": "bichon",
+      "label": "Bichon",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 120,
+        "12": 150,
+        "20": 270
+      }
+    },
+    {
+      "breed": "birman",
+      "label": "Birman",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "black russian terrier",
+      "label": "Black Russian Terrier",
+      "breedType": "Pure bred dog",
+      "price": 247.5,
+      "times": {
+        "4": 150,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "bloodhound",
+      "label": "Bloodhound",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 102,
+        "20": 120
+      }
+    },
+    {
+      "breed": "blue picardy spaniel",
+      "label": "Blue Picardy Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "bolognese",
+      "label": "Bolognese",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 100,
+        "12": 180,
+        "20": 200
+      }
+    },
+    {
+      "breed": "border collie",
+      "label": "Border Collie",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "border terrier",
+      "label": "Border Terrier",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 150
+      }
+    },
+    {
+      "breed": "borzoi",
+      "label": "Borzoi",
+      "breedType": "Pure bred dog",
+      "price": 181.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "boston terrier",
+      "label": "Boston Terrier",
+      "breedType": "Pure bred dog",
+      "price": 129.8,
+      "times": {
+        "4": 78,
+        "8": 78,
+        "12": 78,
+        "20": 78
+      }
+    },
+    {
+      "breed": "bouvier",
+      "label": "Bouvier",
+      "breedType": "Pure bred dog",
+      "price": 302.5,
+      "times": {
+        "4": 180,
+        "8": 240,
+        "12": 320,
+        "20": 400
+      }
+    },
+    {
+      "breed": "boxer",
+      "label": "Boxer",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 102,
+        "20": 120
+      }
+    },
+    {
+      "breed": "briard",
+      "label": "Briard",
+      "breedType": "Pure bred dog",
+      "price": 214.5,
+      "times": {
+        "4": 120,
+        "8": 180,
+        "12": 240,
+        "20": 360
+      }
+    },
+    {
+      "breed": "brittany spaniel",
+      "label": "Brittany Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 176,
+      "times": {
+        "4": 106,
+        "8": 106,
+        "12": 130,
+        "20": 150
+      }
+    },
+    {
+      "breed": "brussels griffon",
+      "label": "Brussels Griffon",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 180
+      }
+    },
+    {
+      "breed": "bulldog",
+      "label": "Bulldog",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "bullmastiff",
+      "label": "Bullmastiff",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 300,
+        "8": 300,
+        "12": 300,
+        "20": 300
+      }
+    },
+    {
+      "breed": "bull terrier",
+      "label": "Bull Terrier",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "cairn",
+      "label": "Cairn",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 200
+      }
+    },
+    {
+      "breed": "canaan dog",
+      "label": "Canaan Dog",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 200
+      }
+    },
+    {
+      "breed": "canadian eskimo dog",
+      "label": "Canadian Eskimo Dog",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 160,
+        "12": 240,
+        "20": 360
+      }
+    },
+    {
+      "breed": "cane corso",
+      "label": "Cane Corso",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 150,
+        "8": 150,
+        "12": 150,
+        "20": 150
+      }
+    },
+    {
+      "breed": "cardigan welsh corgi",
+      "label": "Cardigan Welsh Corgi",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 180,
+        "8": 180,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "cat",
+      "label": "Cat",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "catahoula leopard dog",
+      "label": "Catahoula Leopard Dog",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 180,
+        "8": 180,
+        "12": 180,
+        "20": 180
+      }
+    },
+    {
+      "breed": "caucasian ovcharka",
+      "label": "Caucasian Ovcharka",
+      "breedType": "Pure bred dog",
+      "price": 275,
+      "times": {
+        "4": 165,
+        "8": 200,
+        "12": 280,
+        "20": 360
+      }
+    },
+    {
+      "breed": "cavalier king charles",
+      "label": "Cavalier King Charles",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 180
+      }
+    },
+    {
+      "breed": "cesky terrier",
+      "label": "Cesky Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 200
+      }
+    },
+    {
+      "breed": "chesapeake bay",
+      "label": "Chesapeake Bay",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "chihuahua",
+      "label": "Chihuahua",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "chinese crested",
+      "label": "Chinese Crested",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "chinese shar-pei",
+      "label": "Chinese Shar-Pei",
+      "breedType": "Pure bred dog",
+      "price": 155,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "chow chow",
+      "label": "Chow Chow",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 180,
+        "12": 270,
+        "20": 360
+      }
+    },
+    {
+      "breed": "clumber spaniel",
+      "label": "Clumber Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 280
+      }
+    },
+    {
+      "breed": "cock-a-poo large",
+      "label": "Cock-A-Poo Large",
+      "breedType": "Mix breed dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "cock-a-poo medium",
+      "label": "Cock-A-Poo medium",
+      "breedType": "Mix breed dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "cock-a-poo toy & miniature",
+      "label": "Cock-A-Poo toy & miniature",
+      "breedType": "Mix breed dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "cocker",
+      "label": "Cocker",
+      "breedType": "Pure bred dog",
+      "price": 150,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 200
+      }
+    },
+    {
+      "breed": "collie smooth",
+      "label": "Collie Smooth",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "collie rough collie",
+      "label": "Collie Rough Collie",
+      "breedType": "Pure bred dog",
+      "price": 247.5,
+      "times": {
+        "4": 150,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "colour point short hair",
+      "label": "Colour Point Short Hair",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "coonhound",
+      "label": "Coonhound",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "cornish rex",
+      "label": "Cornish Rex",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "coton de tulear",
+      "label": "Coton De Tulear",
+      "breedType": "Pure bred dog",
+      "price": 163.9,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "curly coated retriever",
+      "label": "Curly Coated Retriever",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "dachshund",
+      "label": "Dachshund",
+      "breedType": "Pure bred dog",
+      "price": 159.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "dalmatian",
+      "label": "Dalmatian",
+      "breedType": "Pure bred dog",
+      "price": 170.5,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 102,
+        "20": 120
+      }
+    },
+    {
+      "breed": "dandie dinmont",
+      "label": "Dandie Dinmont",
+      "breedType": "Pure bred dog",
+      "price": 154,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "devon rex",
+      "label": "Devon Rex",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "doberman",
+      "label": "Doberman",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "dogue de bordeaux",
+      "label": "Dogue de Bordeaux",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "domestic long hair",
+      "label": "Domestic Long Hair",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "dutch sheepdog",
+      "label": "Dutch Sheepdog",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "dutch shepherd",
+      "label": "Dutch Shepherd",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "egyptian mau",
+      "label": "Egyptian Mau",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "english cocker",
+      "label": "English Cocker",
+      "breedType": "Pure bred dog",
+      "price": 181.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "english setter",
+      "label": "English Setter",
+      "breedType": "Pure bred dog",
+      "price": 192.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "english shepherd dog",
+      "label": "English Shepherd Dog",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "english springer spaniel",
+      "label": "English springer spaniel",
+      "breedType": "Pure bred dog",
+      "price": 181.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "english toy spaniel",
+      "label": "English Toy Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 148.5,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 150
+      }
+    },
+    {
+      "breed": "entlebucher mountain dog",
+      "label": "Entlebucher Mountain Dog",
+      "breedType": "Pure bred dog",
+      "price": 203.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "eurasier",
+      "label": "Eurasier",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "field spaniel",
+      "label": "Field Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "finnish lapphund",
+      "label": "Finnish Lapphund",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "finnish spitz",
+      "label": "Finnish Spitz",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "flat-coated retriever",
+      "label": "Flat-Coated Retriever",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "foxhound - american",
+      "label": "Foxhound - American",
+      "breedType": "Pure bred dog",
+      "price": 165,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "foxhound - english",
+      "label": "Foxhound - English",
+      "breedType": "Pure bred dog",
+      "price": 165,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "french bulldog",
+      "label": "French Bulldog",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "french spaniel",
+      "label": "French Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "german pinscher",
+      "label": "German Pinscher",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "german shepherd",
+      "label": "German Shepherd",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 160,
+        "12": 200,
+        "20": 300
+      }
+    },
+    {
+      "breed": "german shorthaired pointer",
+      "label": "German Shorthaired Pointer",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "german wire-haired pointer",
+      "label": "German Wire-Haired Pointer",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "giant schnauzer",
+      "label": "Giant Schnauzer",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 150,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "glen of imaal",
+      "label": "Glen of Imaal",
+      "breedType": "Pure bred dog",
+      "price": 203.5,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "godiepoo x-large",
+      "label": "Godiepoo X-Large",
+      "breedType": "Mix breed dog",
+      "price": 255,
+      "times": {
+        "4": 150,
+        "8": 200,
+        "12": 280,
+        "20": 360
+      }
+    },
+    {
+      "breed": "golden retriever",
+      "label": "Golden Retriever",
+      "breedType": "Pure bred dog",
+      "price": 247.5,
+      "times": {
+        "4": 150,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "goldiepoo large",
+      "label": "Goldiepoo Large",
+      "breedType": "Mix breed dog",
+      "price": 247.5,
+      "times": {
+        "4": 150,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "goldiepoo medium",
+      "label": "Goldiepoo Medium",
+      "breedType": "Mix breed dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "gordon setter",
+      "label": "Gordon Setter",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "great dane",
+      "label": "Great Dane",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "great pyrenees",
+      "label": "Great Pyrenees",
+      "breedType": "Pure bred dog",
+      "price": 324.5,
+      "times": {
+        "4": 195,
+        "8": 195,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "greater swiss mountain dog",
+      "label": "Greater Swiss Mountain Dog",
+      "breedType": "Pure bred dog",
+      "price": 295,
+      "times": {
+        "4": 180,
+        "8": 180,
+        "12": 180,
+        "20": 180
+      }
+    },
+    {
+      "breed": "greyhound",
+      "label": "Greyhound",
+      "breedType": "Pure bred dog",
+      "price": 175,
+      "times": {
+        "4": 105,
+        "8": 105,
+        "12": 105,
+        "20": 120
+      }
+    },
+    {
+      "breed": "griffon (wire-haired pointing)",
+      "label": "Griffon (Wire-Haired Pointing)",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "harrier",
+      "label": "Harrier",
+      "breedType": "Pure bred dog",
+      "price": 155,
+      "times": {
+        "4": 90,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "havanese",
+      "label": "Havanese",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "himalayan",
+      "label": "Himalayan",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "hovawart",
+      "label": "Hovawart",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 240
+      }
+    },
+    {
+      "breed": "husky",
+      "label": "Husky",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 160,
+        "12": 240,
+        "20": 360
+      }
+    },
+    {
+      "breed": "ibizan hound",
+      "label": "Ibizan Hound",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "iceland dog",
+      "label": "Iceland Dog",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "irish red & white setter",
+      "label": "Irish Red & White Setter",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "irish setter",
+      "label": "Irish Setter",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "irish terrier",
+      "label": "Irish Terrier",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "irish water spaniel",
+      "label": "Irish Water Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "irish wolfhound",
+      "label": "Irish Wolfhound",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "italian greyhound",
+      "label": "Italian Greyhound",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "jack russell",
+      "label": "Jack Russell",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "japanese spaniel",
+      "label": "Japanese Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "karelian bear dog",
+      "label": "Karelian Bear Dog",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "keeshond",
+      "label": "Keeshond",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "kerry blue",
+      "label": "Kerry Blue",
+      "breedType": "Pure bred dog",
+      "price": 175,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 300
+      }
+    },
+    {
+      "breed": "king charles spaniel",
+      "label": "King Charles Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "kleiner münsterländer vorstehund",
+      "label": "Kleiner Münsterländer Vorstehund",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "komondor",
+      "label": "Komondor",
+      "breedType": "Pure bred dog",
+      "price": 400,
+      "times": {
+        "4": 240,
+        "8": 240,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "kuvasz",
+      "label": "Kuvasz",
+      "breedType": "Pure bred dog",
+      "price": 300,
+      "times": {
+        "4": 180,
+        "8": 180,
+        "12": 180,
+        "20": 360
+      }
+    },
+    {
+      "breed": "lhd",
+      "label": "LHD",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "lab a doodle large",
+      "label": "Lab A Doodle Large",
+      "breedType": "Mix breed dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "lab a doodle medium",
+      "label": "Lab A Doodle Medium",
+      "breedType": "Mix breed dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "lab a doodle x large",
+      "label": "Lab A Doodle X Large",
+      "breedType": "Mix breed dog",
+      "price": 255,
+      "times": {
+        "4": 150,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "labrador mix",
+      "label": "Labrador Mix",
+      "breedType": "Mix breed dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "labrador retriever",
+      "label": "Labrador Retriever",
+      "breedType": "Pure bred dog",
+      "price": 200,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "lagotto romagnolo",
+      "label": "Lagotto Romagnolo",
+      "breedType": "Pure bred dog",
+      "price": 200,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "lakeland",
+      "label": "Lakeland",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "large mix",
+      "label": "Large Mix",
+      "breedType": "Mix breed dog",
+      "price": 200,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 300,
+        "20": 380
+      }
+    },
+    {
+      "breed": "leonberger",
+      "label": "Leonberger",
+      "breedType": "Pure bred dog",
+      "price": 295,
+      "times": {
+        "4": 180,
+        "8": 220,
+        "12": 320,
+        "20": 400
+      }
+    },
+    {
+      "breed": "lhasa apso",
+      "label": "Lhasa Apso",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 150
+      }
+    },
+    {
+      "breed": "lhasa mix",
+      "label": "Lhasa Mix",
+      "breedType": "Mix breed dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "lhasa-poo",
+      "label": "Lhasa-Poo",
+      "breedType": "Mix breed dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "long coat chihuahua",
+      "label": "Long Coat Chihuahua",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "lowchen",
+      "label": "Lowchen",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "maine coon",
+      "label": "Maine Coon",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "malamute",
+      "label": "Malamute",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 120,
+        "8": 160,
+        "12": 240,
+        "20": 360
+      }
+    },
+    {
+      "breed": "malinois",
+      "label": "Malinois",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "maltese",
+      "label": "Maltese",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "manchester terrier - standard",
+      "label": "Manchester Terrier - Standard",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "manchester terrier - toy",
+      "label": "Manchester Terrier - Toy",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "mastiff",
+      "label": "Mastiff",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "miniature australian shepherd",
+      "label": "Miniature Australian Shepherd",
+      "breedType": "Pure bred dog",
+      "price": 170,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 102,
+        "20": 120
+      }
+    },
+    {
+      "breed": "miniature pinscher",
+      "label": "Miniature Pinscher",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "miniature poodle",
+      "label": "Miniature Poodle",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 180
+      }
+    },
+    {
+      "breed": "poodle miniature",
+      "label": "Poodle Miniature",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "miniature schnauzer",
+      "label": "Miniature Schnauzer",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 100,
+        "12": 120,
+        "20": 130
+      }
+    },
+    {
+      "breed": "mudi",
+      "label": "Mudi",
+      "breedType": "Pure bred dog",
+      "price": 200,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "munchkin",
+      "label": "Munchkin",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "neapolitan mastiff",
+      "label": "Neapolitan Mastiff",
+      "breedType": "Pure bred dog",
+      "price": 275,
+      "times": {
+        "4": 165,
+        "8": 165,
+        "12": 165,
+        "20": 165
+      }
+    },
+    {
+      "breed": "newfoundland",
+      "label": "Newfoundland",
+      "breedType": "Pure bred dog",
+      "price": 300,
+      "times": {
+        "4": 180,
+        "8": 240,
+        "12": 320,
+        "20": 400
+      }
+    },
+    {
+      "breed": "norfolk terrier",
+      "label": "Norfolk Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "norrbottenspets",
+      "label": "Norrbottenspets",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "norwegian buhund",
+      "label": "Norwegian Buhund",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "norwegian elkhound",
+      "label": "Norwegian Elkhound",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "norwich terrier",
+      "label": "Norwich Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "nova scotia duck toller",
+      "label": "Nova Scotia Duck Toller",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "old english sheepdog",
+      "label": "Old English Sheepdog",
+      "breedType": "Pure bred dog",
+      "price": 300,
+      "times": {
+        "4": 180,
+        "8": 240,
+        "12": 320,
+        "20": 400
+      }
+    },
+    {
+      "breed": "olde english bulldogge",
+      "label": "Olde English Bulldogge",
+      "breedType": "Pure bred dog",
+      "price": 165,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "otterhound",
+      "label": "Otterhound",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "pbgv",
+      "label": "PBGV",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "papillon",
+      "label": "Papillon",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 120,
+        "20": 150
+      }
+    },
+    {
+      "breed": "parson russell terrier",
+      "label": "Parson Russell Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "pekingese",
+      "label": "Pekingese",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 180
+      }
+    },
+    {
+      "breed": "pembroke welsh corgi",
+      "label": "Pembroke Welsh Corgi",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "perro de presa canario",
+      "label": "Perro de Presa Canario",
+      "breedType": "Pure bred dog",
+      "price": 200,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "persian cat",
+      "label": "Persian Cat",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "petit basset griffon vendeen",
+      "label": "Petit Basset Griffon Vendeen",
+      "breedType": "Pure bred dog",
+      "price": 200,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "pharaoh hound",
+      "label": "Pharaoh Hound",
+      "breedType": "Pure bred dog",
+      "price": 165,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "pixie-bob cat",
+      "label": "Pixie-Bob Cat",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "pointer",
+      "label": "Pointer",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "polish lowland sheepdog",
+      "label": "Polish Lowland Sheepdog",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "pomeranian",
+      "label": "Pomeranian",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "poodle x-large",
+      "label": "Poodle X-Large",
+      "breedType": "Pure bred dog",
+      "price": 255,
+      "times": {
+        "4": 150,
+        "8": 150,
+        "12": 150,
+        "20": 150
+      }
+    },
+    {
+      "breed": "portuguese sheepdog",
+      "label": "Portuguese Sheepdog",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "portuguese water dog - lion",
+      "label": "Portuguese Water Dog - Lion",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 135
+      }
+    },
+    {
+      "breed": "pug",
+      "label": "Pug",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "puli",
+      "label": "Puli",
+      "breedType": "Pure bred dog",
+      "price": 350,
+      "times": {
+        "4": 210,
+        "8": 210,
+        "12": 210,
+        "20": 210
+      }
+    },
+    {
+      "breed": "ragdoll cat",
+      "label": "Ragdoll Cat",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "rat terrier",
+      "label": "Rat Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "rhodesian ridgeback",
+      "label": "Rhodesian Ridgeback",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "rottweiler",
+      "label": "Rottweiler",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "scwt",
+      "label": "SCWT",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "shd cat",
+      "label": "SHD Cat",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "saluki",
+      "label": "Saluki",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "samoyed",
+      "label": "Samoyed",
+      "breedType": "Pure bred dog",
+      "price": 275,
+      "times": {
+        "4": 180,
+        "8": 220,
+        "12": 280,
+        "20": 300
+      }
+    },
+    {
+      "breed": "sarplaninac",
+      "label": "Sarplaninac",
+      "breedType": "Pure bred dog",
+      "price": 285,
+      "times": {
+        "4": 180,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "schapendoes",
+      "label": "Schapendoes",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "schipperke",
+      "label": "Schipperke",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "scottish deerhound",
+      "label": "Scottish Deerhound",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "scottish fold cat",
+      "label": "Scottish Fold Cat",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "scottish terrier",
+      "label": "Scottish Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "sealyham",
+      "label": "Sealyham",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "selkirk rex cat",
+      "label": "Selkirk Rex Cat",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "shar pei",
+      "label": "Shar Pei",
+      "breedType": "Pure bred dog",
+      "price": 155,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "sheltie",
+      "label": "Sheltie",
+      "breedType": "Pure bred dog",
+      "price": 175,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 150,
+        "20": 180
+      }
+    },
+    {
+      "breed": "shiba inu",
+      "label": "Shiba Inu",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "shih tzu",
+      "label": "Shih Tzu",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 120,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "shikoku",
+      "label": "Shikoku",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "shiloh shepherd",
+      "label": "Shiloh Shepherd",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 150,
+        "8": 180,
+        "12": 240,
+        "20": 300
+      }
+    },
+    {
+      "breed": "siamese cat",
+      "label": "Siamese Cat",
+      "breedType": "Cat",
+      "price": 183,
+      "times": {
+        "4": 110,
+        "8": 110,
+        "12": 110,
+        "20": 120
+      }
+    },
+    {
+      "breed": "siberian husky",
+      "label": "Siberian Husky",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 120,
+        "8": 160,
+        "12": 240,
+        "20": 360
+      }
+    },
+    {
+      "breed": "silky terrier",
+      "label": "Silky Terrier",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "skye terrier",
+      "label": "Skye Terrier",
+      "breedType": "Pure bred dog",
+      "price": 155,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "smooth coat chihuahua",
+      "label": "Smooth Coat Chihuahua",
+      "breedType": "Pure bred dog",
+      "price": 125,
+      "times": {
+        "4": 75,
+        "8": 75,
+        "12": 75,
+        "20": 75
+      }
+    },
+    {
+      "breed": "smooth fox terrier",
+      "label": "Smooth Fox Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 90
+      }
+    },
+    {
+      "breed": "somali cat",
+      "label": "Somali Cat",
+      "breedType": "Cat",
+      "price": 183,
+      "times": {
+        "4": 110,
+        "8": 110,
+        "12": 110,
+        "20": 120
+      }
+    },
+    {
+      "breed": "south african boerboel",
+      "label": "South African Boerboel",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "spanish mastiff",
+      "label": "Spanish Mastiff",
+      "breedType": "Pure bred dog",
+      "price": 276,
+      "times": {
+        "4": 166,
+        "8": 166,
+        "12": 166,
+        "20": 166
+      }
+    },
+    {
+      "breed": "spanish water dog",
+      "label": "Spanish Water Dog",
+      "breedType": "Pure bred dog",
+      "price": 200,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "sphynx cat",
+      "label": "Sphynx Cat",
+      "breedType": "Cat",
+      "price": 183,
+      "times": {
+        "4": 110,
+        "8": 110,
+        "12": 110,
+        "20": 120
+      }
+    },
+    {
+      "breed": "spinone italiano",
+      "label": "Spinone Italiano",
+      "breedType": "Pure bred dog",
+      "price": 200,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "spitz",
+      "label": "Spitz",
+      "breedType": "Pure bred dog",
+      "price": 175,
+      "times": {
+        "4": 105,
+        "8": 105,
+        "12": 105,
+        "20": 120
+      }
+    },
+    {
+      "breed": "springer spaniel",
+      "label": "Springer Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "st. bernard",
+      "label": "St. Bernard",
+      "breedType": "Pure bred dog",
+      "price": 300,
+      "times": {
+        "4": 180,
+        "8": 240,
+        "12": 300,
+        "20": 400
+      }
+    },
+    {
+      "breed": "staffordshire terrier",
+      "label": "Staffordshire Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "standard poodle",
+      "label": "Standard Poodle",
+      "breedType": "Pure bred dog",
+      "price": 225,
+      "times": {
+        "4": 135,
+        "8": 135,
+        "12": 135,
+        "20": 150
+      }
+    },
+    {
+      "breed": "standard schnauzer",
+      "label": "Standard Schnauzer",
+      "breedType": "Pure bred dog",
+      "price": 175,
+      "times": {
+        "4": 105,
+        "8": 105,
+        "12": 105,
+        "20": 150
+      }
+    },
+    {
+      "breed": "sussex spaniel",
+      "label": "Sussex Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 165,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 180
+      }
+    },
+    {
+      "breed": "swedish vallhund",
+      "label": "Swedish Vallhund",
+      "breedType": "Pure bred dog",
+      "price": 170,
+      "times": {
+        "4": 102,
+        "8": 102,
+        "12": 102,
+        "20": 150
+      }
+    },
+    {
+      "breed": "tibetan mastiff**",
+      "label": "Tibetan Mastiff**",
+      "breedType": "Pure bred dog",
+      "price": 295,
+      "times": {
+        "4": 180,
+        "8": 180,
+        "12": 180,
+        "20": 180
+      }
+    },
+    {
+      "breed": "tibetan spaniel",
+      "label": "Tibetan Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 150
+      }
+    },
+    {
+      "breed": "tibetan terrier",
+      "label": "Tibetan Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 120,
+        "8": 150,
+        "12": 180,
+        "20": 240
+      }
+    },
+    {
+      "breed": "tonkinese cat",
+      "label": "Tonkinese Cat",
+      "breedType": "Cat",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "tosa inu",
+      "label": "Tosa Inu",
+      "breedType": "Pure bred dog",
+      "price": 175,
+      "times": {
+        "4": 105,
+        "8": 105,
+        "12": 105,
+        "20": 120
+      }
+    },
+    {
+      "breed": "toy fox terrier",
+      "label": "Toy Fox Terrier",
+      "breedType": "Pure bred dog",
+      "price": 149,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "toy poodle",
+      "label": "Toy Poodle",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "vizsla",
+      "label": "Vizsla",
+      "breedType": "Pure bred dog",
+      "price": 178,
+      "times": {
+        "4": 107,
+        "8": 107,
+        "12": 107,
+        "20": 120
+      }
+    },
+    {
+      "breed": "weimaraner",
+      "label": "Weimaraner",
+      "breedType": "Pure bred dog",
+      "price": 178,
+      "times": {
+        "4": 107,
+        "8": 107,
+        "12": 107,
+        "20": 120
+      }
+    },
+    {
+      "breed": "welsh springer spaniel",
+      "label": "Welsh Springer Spaniel",
+      "breedType": "Pure bred dog",
+      "price": 178,
+      "times": {
+        "4": 107,
+        "8": 107,
+        "12": 107,
+        "20": 120
+      }
+    },
+    {
+      "breed": "welsh terrier",
+      "label": "Welsh Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "west highland white terrier",
+      "label": "West Highland White Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "wheaten terrier",
+      "label": "Wheaten Terrier",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "whippet",
+      "label": "Whippet",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "wire fox terrier",
+      "label": "Wire Fox Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "wire haired pointing griffon",
+      "label": "Wire Haired Pointing Griffon",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "xoloitzcuintli",
+      "label": "Xoloitzcuintli",
+      "breedType": "Pure bred dog",
+      "price": 195,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    },
+    {
+      "breed": "yorkie mix",
+      "label": "Yorkie Mix",
+      "breedType": "Mix breed dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "yorkshire terrier",
+      "label": "Yorkshire Terrier",
+      "breedType": "Pure bred dog",
+      "price": 145,
+      "times": {
+        "4": 90,
+        "8": 90,
+        "12": 90,
+        "20": 120
+      }
+    },
+    {
+      "breed": "yugoslavian shepherd dog",
+      "label": "Yugoslavian Shepherd Dog",
+      "breedType": "Pure bred dog",
+      "price": 300,
+      "times": {
+        "4": 180,
+        "8": 180,
+        "12": 180,
+        "20": 300
+      }
+    },
+    {
+      "breed": "zulu hound",
+      "label": "Zulu Hound",
+      "breedType": "Pure bred dog",
+      "price": 185,
+      "times": {
+        "4": 120,
+        "8": 120,
+        "12": 120,
+        "20": 120
+      }
+    }
+  ],
+  "breedsByType": {
+    "Cat": [
+      "Abyssinian",
+      "American Bobtail",
+      "Balinese",
+      "Bengal",
+      "Birman",
+      "Cat",
+      "Colour Point Short Hair",
+      "Cornish Rex",
+      "Devon Rex",
+      "Domestic Long Hair",
+      "Egyptian Mau",
+      "Himalayan",
+      "LHD",
+      "Maine Coon",
+      "Munchkin",
+      "Persian Cat",
+      "Pixie-Bob Cat",
+      "Ragdoll Cat",
+      "SHD Cat",
+      "Scottish Fold Cat",
+      "Selkirk Rex Cat",
+      "Siamese Cat",
+      "Somali Cat",
+      "Sphynx Cat",
+      "Tonkinese Cat"
+    ],
+    "Pure bred dog": [
+      "Affenpinscher",
+      "Afghan Hound",
+      "Airedale",
+      "Akbash",
+      "Akita",
+      "Alaskan Malamute",
+      "American Bulldog",
+      "American Bully Pocket",
+      "American Bully X Large",
+      "American Cocker",
+      "American Eskimo Dog",
+      "American Pit Bull",
+      "American Staffordshire Terrier",
+      "American Water Spaniel",
+      "Anatolian Shepherd Dog",
+      "Argentine Dogo",
+      "Australian Cattle",
+      "Australian Kelpie",
+      "Australian Shepherd",
+      "Australian Terrier",
+      "Barbet",
+      "Basenji",
+      "Basset Hound",
+      "Beagle",
+      "Bearded Collie",
+      "Beauceron",
+      "Bedlington Terrier",
+      "Belgian Sheepdog",
+      "Belgian Tervuren",
+      "Berger des Pyrenees",
+      "Bernese Mountain Dog",
+      "Bichon Frise",
+      "Bichon",
+      "Black Russian Terrier",
+      "Bloodhound",
+      "Blue Picardy Spaniel",
+      "Bolognese",
+      "Border Collie",
+      "Border Terrier",
+      "Borzoi",
+      "Boston Terrier",
+      "Bouvier",
+      "Boxer",
+      "Briard",
+      "Brittany Spaniel",
+      "Brussels Griffon",
+      "Bulldog",
+      "Bullmastiff",
+      "Bull Terrier",
+      "Cairn",
+      "Canaan Dog",
+      "Canadian Eskimo Dog",
+      "Cane Corso",
+      "Cardigan Welsh Corgi",
+      "Catahoula Leopard Dog",
+      "Caucasian Ovcharka",
+      "Cavalier King Charles",
+      "Cesky Terrier",
+      "Chesapeake Bay",
+      "Chihuahua",
+      "Chinese Crested",
+      "Chinese Shar-Pei",
+      "Chow Chow",
+      "Clumber Spaniel",
+      "Cocker",
+      "Collie Smooth",
+      "Collie Rough Collie",
+      "Coonhound",
+      "Coton De Tulear",
+      "Curly Coated Retriever",
+      "Dachshund",
+      "Dalmatian",
+      "Dandie Dinmont",
+      "Doberman",
+      "Dogue de Bordeaux",
+      "Dutch Sheepdog",
+      "Dutch Shepherd",
+      "English Cocker",
+      "English Setter",
+      "English Shepherd Dog",
+      "English springer spaniel",
+      "English Toy Spaniel",
+      "Entlebucher Mountain Dog",
+      "Eurasier",
+      "Field Spaniel",
+      "Finnish Lapphund",
+      "Finnish Spitz",
+      "Flat-Coated Retriever",
+      "Foxhound - American",
+      "Foxhound - English",
+      "French Bulldog",
+      "French Spaniel",
+      "German Pinscher",
+      "German Shepherd",
+      "German Shorthaired Pointer",
+      "German Wire-Haired Pointer",
+      "Giant Schnauzer",
+      "Glen of Imaal",
+      "Golden Retriever",
+      "Gordon Setter",
+      "Great Dane",
+      "Great Pyrenees",
+      "Greater Swiss Mountain Dog",
+      "Greyhound",
+      "Griffon (Wire-Haired Pointing)",
+      "Harrier",
+      "Havanese",
+      "Hovawart",
+      "Husky",
+      "Ibizan Hound",
+      "Iceland Dog",
+      "Irish Red & White Setter",
+      "Irish Setter",
+      "Irish Terrier",
+      "Irish Water Spaniel",
+      "Irish Wolfhound",
+      "Italian Greyhound",
+      "Jack Russell",
+      "Japanese Spaniel",
+      "Karelian Bear Dog",
+      "Keeshond",
+      "Kerry Blue",
+      "King Charles Spaniel",
+      "Kleiner Münsterländer Vorstehund",
+      "Komondor",
+      "Kuvasz",
+      "Labrador Retriever",
+      "Lagotto Romagnolo",
+      "Lakeland",
+      "Leonberger",
+      "Lhasa Apso",
+      "Long Coat Chihuahua",
+      "Lowchen",
+      "Malamute",
+      "Malinois",
+      "Maltese",
+      "Manchester Terrier - Standard",
+      "Manchester Terrier - Toy",
+      "Mastiff",
+      "Miniature Australian Shepherd",
+      "Miniature Pinscher",
+      "Miniature Poodle",
+      "Poodle Miniature",
+      "Miniature Schnauzer",
+      "Mudi",
+      "Neapolitan Mastiff",
+      "Newfoundland",
+      "Norfolk Terrier",
+      "Norrbottenspets",
+      "Norwegian Buhund",
+      "Norwegian Elkhound",
+      "Norwich Terrier",
+      "Nova Scotia Duck Toller",
+      "Old English Sheepdog",
+      "Olde English Bulldogge",
+      "Otterhound",
+      "PBGV",
+      "Papillon",
+      "Parson Russell Terrier",
+      "Pekingese",
+      "Pembroke Welsh Corgi",
+      "Perro de Presa Canario",
+      "Petit Basset Griffon Vendeen",
+      "Pharaoh Hound",
+      "Pointer",
+      "Polish Lowland Sheepdog",
+      "Pomeranian",
+      "Poodle X-Large",
+      "Portuguese Sheepdog",
+      "Portuguese Water Dog - Lion",
+      "Pug",
+      "Puli",
+      "Rat Terrier",
+      "Rhodesian Ridgeback",
+      "Rottweiler",
+      "SCWT",
+      "Saluki",
+      "Samoyed",
+      "Sarplaninac",
+      "Schapendoes",
+      "Schipperke",
+      "Scottish Deerhound",
+      "Scottish Terrier",
+      "Sealyham",
+      "Shar Pei",
+      "Sheltie",
+      "Shiba Inu",
+      "Shih Tzu",
+      "Shikoku",
+      "Shiloh Shepherd",
+      "Siberian Husky",
+      "Silky Terrier",
+      "Skye Terrier",
+      "Smooth Coat Chihuahua",
+      "Smooth Fox Terrier",
+      "South African Boerboel",
+      "Spanish Mastiff",
+      "Spanish Water Dog",
+      "Spinone Italiano",
+      "Spitz",
+      "Springer Spaniel",
+      "St. Bernard",
+      "Staffordshire Terrier",
+      "Standard Poodle",
+      "Standard Schnauzer",
+      "Sussex Spaniel",
+      "Swedish Vallhund",
+      "Tibetan Mastiff**",
+      "Tibetan Spaniel",
+      "Tibetan Terrier",
+      "Tosa Inu",
+      "Toy Fox Terrier",
+      "Toy Poodle",
+      "Vizsla",
+      "Weimaraner",
+      "Welsh Springer Spaniel",
+      "Welsh Terrier",
+      "West Highland White Terrier",
+      "Wheaten Terrier",
+      "Whippet",
+      "Wire Fox Terrier",
+      "Wire Haired Pointing Griffon",
+      "Xoloitzcuintli",
+      "Yorkshire Terrier",
+      "Yugoslavian Shepherd Dog",
+      "Zulu Hound"
+    ],
+    "Mix breed dog": [
+      "Cock-A-Poo Large",
+      "Cock-A-Poo medium",
+      "Cock-A-Poo toy & miniature",
+      "Godiepoo X-Large",
+      "Goldiepoo Large",
+      "Goldiepoo Medium",
+      "Lab A Doodle Large",
+      "Lab A Doodle Medium",
+      "Lab A Doodle X Large",
+      "Labrador Mix",
+      "Large Mix",
+      "Lhasa Mix",
+      "Lhasa-Poo",
+      "Yorkie Mix"
+    ]
+  },
+  "apptAvailability": [
+    {
+      "recId": 1,
+      "minMinutes": 10,
+      "maxMinutes": 20,
+      "waitDays": "1",
+      "notes": ""
+    },
+    {
+      "recId": 2,
+      "minMinutes": 20,
+      "maxMinutes": 90,
+      "waitDays": "5",
+      "notes": ""
+    },
+    {
+      "recId": 3,
+      "minMinutes": 91,
+      "maxMinutes": 120,
+      "waitDays": "7",
+      "notes": ""
+    },
+    {
+      "recId": 4,
+      "minMinutes": 121,
+      "maxMinutes": 150,
+      "waitDays": "10",
+      "notes": ""
+    },
+    {
+      "recId": 5,
+      "minMinutes": 151,
+      "maxMinutes": 180,
+      "waitDays": "15",
+      "notes": ""
+    },
+    {
+      "recId": 6,
+      "minMinutes": 201,
+      "maxMinutes": 240,
+      "waitDays": "30",
+      "notes": ""
+    },
+    {
+      "recId": 7,
+      "minMinutes": 241,
+      "maxMinutes": 360,
+      "waitDays": "100",
+      "notes": ""
+    },
+    {
+      "recId": 8,
+      "minMinutes": 181,
+      "maxMinutes": 200,
+      "waitDays": "20",
+      "notes": ""
+    }
+  ],
+  "ageGroups": [
+    {
+      "age": "Under 15 weeks",
+      "notes": ""
+    },
+    {
+      "age": "3month to 5month",
+      "notes": ""
+    },
+    {
+      "age": "5month to 10 month",
+      "notes": ""
+    },
+    {
+      "age": "10 month to 15 month",
+      "notes": ""
+    },
+    {
+      "age": "15 month to 2 Years",
+      "notes": ""
+    },
+    {
+      "age": "2 Years to 10 years",
+      "notes": ""
+    },
+    {
+      "age": "10 to 13 years",
+      "notes": ""
+    },
+    {
+      "age": "13 to 16 years",
+      "notes": ""
+    }
+  ]
+}
