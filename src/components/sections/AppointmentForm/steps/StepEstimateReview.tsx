@@ -6,7 +6,6 @@ import {
   combineGender,
   estimateText,
   formatCurrency,
-  formatMinutesAsHM,
   groomingMinutesForBreed,
   hasQaTrigger,
   waitDaysForMinutes,
