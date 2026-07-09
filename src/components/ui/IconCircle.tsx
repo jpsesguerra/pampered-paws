@@ -42,7 +42,7 @@ export function IconCircle({ variant = "paw", className }: IconCircleProps) {
   return (
     <span
       className={cn(
-        "flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-secondary-light",
+        "flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-accent-gold",
         className
       )}
     >

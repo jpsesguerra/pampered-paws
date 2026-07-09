@@ -82,7 +82,7 @@ function ContactRow({
       {...rest}
       className="flex w-full items-center gap-md text-left"
     >
-      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-secondary-light">
+      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-accent-gold">
         <img src={icon} alt="" className="size-4" />
       </span>
       <span className="font-sans text-label-sm text-text-on-pink">{children}</span>

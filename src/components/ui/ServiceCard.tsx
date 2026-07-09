@@ -25,7 +25,7 @@ export function ServiceCard({ icon, title, description, ctaLabel, ctaHref }: Ser
           </span>
         </Link>
       </div>
-      <span className="absolute left-1/2 top-1 flex size-12 -translate-x-1/2 items-center justify-center rounded-full bg-brand-secondary-light">
+      <span className="absolute left-1/2 top-1 flex size-12 -translate-x-1/2 items-center justify-center rounded-full bg-brand-accent-gold">
         <img src={icon} alt="" className="size-6" />
       </span>
     </div>

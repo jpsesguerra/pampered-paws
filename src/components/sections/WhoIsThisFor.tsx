@@ -53,7 +53,7 @@ export function WhoIsThisFor() {
                 className="flex w-full flex-col items-start gap-md rounded-2xl bg-surface-white p-lg"
               >
                 <div className="flex items-center gap-md">
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-secondary-light">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-brand-accent-gold">
                     <img src={audience.icon} alt="" className="size-6" />
                   </span>
                   <h3 className="font-serif text-h5 text-text-primary">{audience.title}</h3>
