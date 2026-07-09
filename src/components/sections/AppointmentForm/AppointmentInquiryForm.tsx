@@ -288,6 +288,7 @@ export function AppointmentInquiryForm({
             onOwnerNameChange={(v) => update("ownerName", v)}
             onEmailChange={(v) => update("email", v)}
             onPhoneChange={(v) => update("phone", v)}
+            onBack={() => setStepIndex((i) => Math.max(0, i - 1))}
             onSubmit={handleSubmit}
             isSubmitting={isSubmitting}
             canSubmit={isContactValid}

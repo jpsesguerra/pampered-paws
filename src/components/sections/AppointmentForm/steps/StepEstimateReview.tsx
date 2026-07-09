@@ -22,6 +22,7 @@ export function StepEstimateReview({
   onOwnerNameChange,
   onEmailChange,
   onPhoneChange,
+  onBack,
   onSubmit,
   isSubmitting,
   canSubmit,
@@ -34,6 +35,7 @@ export function StepEstimateReview({
   onOwnerNameChange: (value: string) => void;
   onEmailChange: (value: string) => void;
   onPhoneChange: (value: string) => void;
+  onBack: () => void;
   onSubmit: () => void;
   isSubmitting: boolean;
   canSubmit: boolean;
@@ -142,6 +144,14 @@ export function StepEstimateReview({
             {answers.behaviorNotes && <p className="font-sans text-body-default text-text-primary">{answers.behaviorNotes}</p>}
           </div>
         )}
+
+        <button
+          type="button"
+          onClick={onBack}
+          className="self-start font-sans text-label-default text-text-secondary underline"
+        >
+          Edit your answers
+        </button>
 
         <div className="flex w-full flex-col items-start gap-lg border-t border-[#efeff2] pt-lg">
           <p className="font-sans text-body-sm text-text-secondary">
