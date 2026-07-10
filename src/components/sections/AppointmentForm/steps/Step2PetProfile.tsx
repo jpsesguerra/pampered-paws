@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import type { BreedDataFile } from "@/lib/appointmentForm/breedData";
+import { OTHER_BREED_OPTION } from "@/lib/appointmentForm/constants";
 import type { Gender } from "@/lib/appointmentForm/types";
 import { BreedSearchField } from "../BreedSearchField";
 import { GenderField } from "../GenderField";
@@ -9,12 +10,15 @@ export function Step2PetProfile({
   breedData,
   petType,
   breedLabel,
+  isCustomBreed,
+  customBreedName,
   petName,
   petAge,
   gender,
   neuteredOrSpayed,
   onPetTypeChange,
   onBreedChange,
+  onCustomBreedNameChange,
   onPetNameChange,
   onPetAgeChange,
   onGenderChange,
@@ -23,12 +27,15 @@ export function Step2PetProfile({
   breedData: BreedDataFile;
   petType: "Dog" | "Cat";
   breedLabel: string;
+  isCustomBreed: boolean;
+  customBreedName: string;
   petName: string;
   petAge: string;
   gender: Gender;
   neuteredOrSpayed: boolean;
   onPetTypeChange: (petType: "Dog" | "Cat") => void;
   onBreedChange: (label: string) => void;
+  onCustomBreedNameChange: (name: string) => void;
   onPetNameChange: (name: string) => void;
   onPetAgeChange: (age: string) => void;
   onGenderChange: (gender: Gender) => void;
@@ -55,11 +62,22 @@ export function Step2PetProfile({
           options={breedOptions}
           value={breedLabel}
           onChange={onBreedChange}
+          otherOption={OTHER_BREED_OPTION}
           helperText={`Showing ${breedOptions.length} ${petType.toLowerCase()} breed options${
             petType === "Dog" ? ", including mixed breed names" : ""
           }`}
         />
       </div>
+
+      {isCustomBreed && (
+        <Field label={`Describe ${petType === "Dog" ? "your dog's" : "your cat's"} breed`}>
+          <TextInput
+            value={customBreedName}
+            onChange={(e) => onCustomBreedNameChange(e.target.value)}
+            placeholder={petType === "Dog" ? "e.g. Terrier mix" : "e.g. Tabby"}
+          />
+        </Field>
+      )}
 
       <Field label="Pet name">
         <TextInput value={petName} onChange={(e) => onPetNameChange(e.target.value)} placeholder="Your pet's name" />

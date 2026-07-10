@@ -1,6 +1,6 @@
 import type { ApptAvailabilityRule, BreedDataFile, BreedEstimate, BreedType } from "./breedData";
 import { findBreedByLabel } from "./breedData";
-import type { AppointmentFormAnswers } from "./types";
+import { effectiveBreedLabel, type AppointmentFormAnswers } from "./types";
 
 export function weeksSinceLastGroomed(lastGroomed: string): number {
   if (!lastGroomed) return 4;
@@ -66,7 +66,7 @@ export function calculatedPrice(minutes: number): number {
 
 export function computeSubmissionFields(route: BreedType, answers: AppointmentFormAnswers, breedData: BreedDataFile) {
   const isCat = route === "Cat";
-  const breed = findBreedByLabel(breedData, answers.breedLabel);
+  const breed = findBreedByLabel(breedData, effectiveBreedLabel(answers));
   const weeks = isCat ? 4 : weeksSinceLastGroomed(answers.lastGroomed);
   const minutes = breed ? groomingMinutesForBreed(breed, weeks, isCat) : 0;
   const waitDays = breed ? waitDaysForMinutes(minutes, breedData.apptAvailability) : null;

@@ -9,12 +9,14 @@ export function BreedSearchField({
   value,
   onChange,
   helperText,
+  otherOption,
 }: {
   label: string;
   options: string[];
   value: string;
   onChange: (label: string) => void;
   helperText?: string;
+  otherOption?: string;
 }) {
   const [query, setQuery] = useState(value);
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +54,8 @@ export function BreedSearchField({
     setIsOpen(false);
   }
 
+  const optionCount = filtered.length + (otherOption ? 1 : 0);
+
   return (
     <div ref={containerRef} className="relative flex w-full flex-col items-start gap-xs">
       <FieldLabel htmlFor="breed-search-input">{label}</FieldLabel>
@@ -73,13 +77,17 @@ export function BreedSearchField({
           if (e.key === "ArrowDown") {
             e.preventDefault();
             setIsOpen(true);
-            setHighlighted((i) => Math.min(i + 1, filtered.length - 1));
+            setHighlighted((i) => Math.min(i + 1, optionCount - 1));
           } else if (e.key === "ArrowUp") {
             e.preventDefault();
             setHighlighted((i) => Math.max(i - 1, 0));
           } else if (e.key === "Enter") {
             e.preventDefault();
-            if (filtered[highlighted]) select(filtered[highlighted]);
+            if (highlighted < filtered.length) {
+              if (filtered[highlighted]) select(filtered[highlighted]);
+            } else if (otherOption) {
+              select(otherOption);
+            }
           } else if (e.key === "Escape") {
             setIsOpen(false);
           }
@@ -94,24 +102,37 @@ export function BreedSearchField({
           role="listbox"
           className="absolute left-0 top-full z-20 mt-sm max-h-[320px] w-full overflow-y-auto rounded-2xl bg-surface-white p-sm shadow-lg"
         >
-          {filtered.length > 0 ? (
-            filtered.map((option, i) => (
-              <li key={option} role="option" aria-selected={option === value}>
-                <button
-                  type="button"
-                  onClick={() => select(option)}
-                  onMouseEnter={() => setHighlighted(i)}
-                  className={`w-full rounded-xl px-lg py-sm text-left font-sans text-body-default text-text-primary ${
-                    i === highlighted ? "bg-brand-background-neutral" : ""
-                  }`}
-                >
-                  {option}
-                </button>
-              </li>
-            ))
-          ) : (
+          {filtered.map((option, i) => (
+            <li key={option} role="option" aria-selected={option === value}>
+              <button
+                type="button"
+                onClick={() => select(option)}
+                onMouseEnter={() => setHighlighted(i)}
+                className={`w-full rounded-xl px-lg py-sm text-left font-sans text-body-default text-text-primary ${
+                  i === highlighted ? "bg-brand-background-neutral" : ""
+                }`}
+              >
+                {option}
+              </button>
+            </li>
+          ))}
+          {filtered.length === 0 && !otherOption && (
             <li className="px-lg py-sm font-sans text-body-default text-text-secondary">
               No breeds match &ldquo;{query}&rdquo;
+            </li>
+          )}
+          {otherOption && (
+            <li role="option" aria-selected={otherOption === value}>
+              <button
+                type="button"
+                onClick={() => select(otherOption)}
+                onMouseEnter={() => setHighlighted(filtered.length)}
+                className={`w-full rounded-xl px-lg py-sm text-left font-sans text-body-default text-text-primary ${
+                  filtered.length === highlighted ? "bg-brand-background-neutral" : ""
+                }`}
+              >
+                {otherOption}
+              </button>
             </li>
           )}
         </ul>

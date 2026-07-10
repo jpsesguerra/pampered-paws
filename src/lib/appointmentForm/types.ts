@@ -4,6 +4,8 @@ export type AppointmentFormAnswers = {
   location: string;
   petType: "Dog" | "Cat";
   breedLabel: string;
+  isCustomBreed: boolean;
+  customBreedName: string;
   petName: string;
   petAge: string;
   gender: Gender;
@@ -12,6 +14,7 @@ export type AppointmentFormAnswers = {
   dogHeight: string;
   coatType: string;
   coatLength: string;
+  otherGroomingNotes: string;
   healthConditions: string[];
   healthNotes: string;
   behaviorConcerns: string[];
@@ -29,6 +32,8 @@ export const initialAnswers: AppointmentFormAnswers = {
   location: "",
   petType: "Dog",
   breedLabel: "",
+  isCustomBreed: false,
+  customBreedName: "",
   petName: "",
   petAge: "",
   gender: "",
@@ -37,6 +42,7 @@ export const initialAnswers: AppointmentFormAnswers = {
   dogHeight: "",
   coatType: "",
   coatLength: "",
+  otherGroomingNotes: "",
   healthConditions: [],
   healthNotes: "",
   behaviorConcerns: [],
@@ -49,3 +55,7 @@ export const initialAnswers: AppointmentFormAnswers = {
   email: "",
   phone: "",
 };
+
+export function effectiveBreedLabel(answers: AppointmentFormAnswers): string {
+  return answers.isCustomBreed ? answers.customBreedName : answers.breedLabel;
+}

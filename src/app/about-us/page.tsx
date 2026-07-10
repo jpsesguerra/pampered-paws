@@ -33,7 +33,7 @@ export default function AboutUsPage() {
               </div>
               <div className="flex w-full flex-1 flex-col items-start gap-2xl">
                 <div className="relative h-[220px] w-full overflow-hidden rounded-[32px] lg:h-[380px]">
-                  <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664956/pampered-paws/images/about-hero-2.png" alt="" fill className="object-cover" />
+                  <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783639963/About_us_q5aeeo.png" alt="" fill className="object-cover" />
                 </div>
                 <div className="flex flex-col items-start gap-2xl">
                   <p className="font-sans text-body-lg text-text-primary">

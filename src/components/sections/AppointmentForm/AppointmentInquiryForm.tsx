@@ -6,8 +6,9 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import type { Location } from "@/lib/data/locations";
 import { fetchBreedData, findBreedByLabel, type BreedDataFile, type BreedType } from "@/lib/appointmentForm/breedData";
 import { combineGender, computeSubmissionFields } from "@/lib/appointmentForm/calculations";
+import { OTHER_BREED_OPTION } from "@/lib/appointmentForm/constants";
 import { buildMailtoHref } from "@/lib/appointmentForm/mailto";
-import { initialAnswers, type Gender } from "@/lib/appointmentForm/types";
+import { effectiveBreedLabel, initialAnswers, type Gender } from "@/lib/appointmentForm/types";
 import { isValidEmail } from "@/lib/appointmentForm/validation";
 import { submitToWeb3Forms } from "@/lib/web3forms";
 
@@ -66,10 +67,14 @@ export function AppointmentInquiryForm({
 
   const selectedLocation = useMemo(() => locations.find((l) => l.slug === answers.location), [locations, answers.location]);
   const selectedBreed = useMemo(
-    () => (breedData ? findBreedByLabel(breedData, answers.breedLabel) : undefined),
-    [breedData, answers.breedLabel]
+    () => (breedData && !answers.isCustomBreed ? findBreedByLabel(breedData, answers.breedLabel) : undefined),
+    [breedData, answers.breedLabel, answers.isCustomBreed]
   );
-  const route: BreedType | null = selectedBreed?.breedType ?? null;
+  const route: BreedType | null = answers.isCustomBreed
+    ? answers.petType === "Cat"
+      ? "Cat"
+      : "Mix breed dog"
+    : selectedBreed?.breedType ?? null;
   const steps = stepsForRoute(route);
   const currentStepKey = steps[stepIndex];
   const isPhoneOnlyLocation = selectedLocation?.bookingMethod === "phone";
@@ -85,13 +90,13 @@ export function AppointmentInquiryForm({
         return Boolean(answers.location) && !isPhoneOnlyLocation;
       case "profile":
         return Boolean(
-          answers.breedLabel &&
+          (answers.isCustomBreed ? answers.customBreedName.trim() : answers.breedLabel) &&
             answers.petName &&
             answers.gender &&
             (answers.petType === "Cat" || answers.petAge)
         );
       case "physicalDescription":
-        return Boolean(answers.dogHeight && answers.coatType && answers.coatLength);
+        return Boolean(answers.dogHeight && answers.coatLength);
       case "groomingHistory":
       case "groomingHealthBehaviour":
         return Boolean(answers.lastGroomed);
@@ -115,7 +120,7 @@ export function AppointmentInquiryForm({
     const payload: Record<string, string | string[]> = {
       location: selectedLocation.locationName,
       pet_type: answers.petType,
-      breed: answers.breedLabel,
+      breed: effectiveBreedLabel(answers),
       inquiry_route: computed.inquiry_route,
       pet_name: answers.petName,
       pet_gender: combinedGender,
@@ -140,6 +145,7 @@ export function AppointmentInquiryForm({
       payload.dog_height = answers.dogHeight;
       payload.coat_type = answers.coatType;
       payload.coat_length = answers.coatLength;
+      payload.other_grooming_notes = answers.otherGroomingNotes;
     }
     if (route === "Cat") {
       payload.cat_age = answers.catAge;
@@ -150,11 +156,16 @@ export function AppointmentInquiryForm({
 
     try {
       await submitToWeb3Forms(WEB3FORMS_GROOMING_KEY, "Pampered Paws grooming inquiry", payload);
-      const mailtoHref = buildMailtoHref(
-        selectedLocation.email,
-        `Pampered Paws grooming inquiry — ${answers.petName}`,
-        Object.entries(payload).map(([key, value]) => `${key}: ${Array.isArray(value) ? value.join(", ") : value}`)
-      );
+      const mailtoHref = buildMailtoHref(selectedLocation.email, `Pampered Paws grooming inquiry — ${answers.petName}`, [
+        `location: ${payload.location}`,
+        `pet_type: ${payload.pet_type}`,
+        `breed: ${payload.breed}`,
+        `pet_name: ${answers.petName}`,
+        `pet_gender: ${combinedGender}`,
+        `owner_name: ${answers.ownerName}`,
+        `email: ${answers.email}`,
+        `phone: ${answers.phone}`,
+      ]);
       setSuccessData({ petName: answers.petName, locationName: selectedLocation.locationName, mailtoHref });
     } catch (err) {
       setErrorMessage(err instanceof Error ? err.message : "Something went wrong. Please try again.");
@@ -189,7 +200,7 @@ export function AppointmentInquiryForm({
         <Breadcrumb>Booking</Breadcrumb>
         <h1 className="font-serif text-h2 text-text-primary">Request an Appointment</h1>
         <p className="font-sans text-label-lg text-text-primary">
-          Tell us about your pet and we&rsquo;ll confirm your spot, usually within 24 hours.
+          Tell us about your pet and we&rsquo;ll confirm your spot, usually within one business day.
         </p>
       </div>
 
@@ -207,14 +218,31 @@ export function AppointmentInquiryForm({
             breedData={breedData}
             petType={answers.petType}
             breedLabel={answers.breedLabel}
+            isCustomBreed={answers.isCustomBreed}
+            customBreedName={answers.customBreedName}
             petName={answers.petName}
             petAge={answers.petAge}
             gender={answers.gender}
             neuteredOrSpayed={answers.neuteredOrSpayed}
             onPetTypeChange={(petType) =>
-              setAnswers((prev) => ({ ...prev, petType, breedLabel: "", petAge: "" }))
+              setAnswers((prev) => ({
+                ...prev,
+                petType,
+                breedLabel: "",
+                petAge: "",
+                isCustomBreed: false,
+                customBreedName: "",
+              }))
             }
-            onBreedChange={(label) => update("breedLabel", label)}
+            onBreedChange={(label) =>
+              setAnswers((prev) => ({
+                ...prev,
+                breedLabel: label,
+                isCustomBreed: label === OTHER_BREED_OPTION,
+                customBreedName: "",
+              }))
+            }
+            onCustomBreedNameChange={(name) => update("customBreedName", name)}
             onPetNameChange={(name) => update("petName", name)}
             onPetAgeChange={(age) => update("petAge", age)}
             onGenderChange={(gender: Gender) => setAnswers((prev) => ({ ...prev, gender, neuteredOrSpayed: false }))}
@@ -227,9 +255,11 @@ export function AppointmentInquiryForm({
             dogHeight={answers.dogHeight}
             coatType={answers.coatType}
             coatLength={answers.coatLength}
+            otherGroomingNotes={answers.otherGroomingNotes}
             onDogHeightChange={(v) => update("dogHeight", v)}
             onCoatTypeChange={(v) => update("coatType", v)}
             onCoatLengthChange={(v) => update("coatLength", v)}
+            onOtherGroomingNotesChange={(v) => update("otherGroomingNotes", v)}
           />
         )}
 

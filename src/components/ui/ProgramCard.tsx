@@ -10,8 +10,8 @@ export function ProgramCard({ program }: { program: Program }) {
   return (
     <div className="flex h-full w-full flex-col items-start gap-s+ rounded-xl bg-surface-white px-lg pb-lg pt-s+">
       <div className="flex w-full flex-1 flex-col items-start gap-s+">
-        <div className="relative h-[480px] w-full overflow-hidden rounded-xl bg-background-neutral">
-          <Image src={imageUrl} alt="" fill sizes="(min-width: 640px) 50vw, 100vw" className="object-contain" />
+        <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-background-neutral">
+          <Image src={imageUrl} alt="" fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="flex w-full flex-col items-start gap-xs">
           <h3 className="font-serif text-h5 text-text-primary">{program.title}</h3>

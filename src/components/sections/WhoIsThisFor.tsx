@@ -65,7 +65,7 @@ export function WhoIsThisFor() {
             ))}
           </div>
           <div className="relative h-[400px] w-full flex-1 overflow-hidden rounded-2xl lg:h-auto">
-            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664987/pampered-paws/images/schooling-who-for.png" alt="" fill className="object-cover" />
+            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783639976/schooling_trlwcc.png" alt="" fill className="object-cover" />
           </div>
         </div>
         <div className="flex w-full flex-col items-start gap-md rounded-2xl bg-brand-secondary-light p-lg">

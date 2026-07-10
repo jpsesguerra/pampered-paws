@@ -27,7 +27,7 @@ export function BlogTeaser({
               href={`/blog/${post.slug}`}
               className="flex w-full flex-1 flex-col items-start gap-s+ rounded-2xl bg-surface-white p-lg"
             >
-              <div className="relative h-[280px] w-full overflow-hidden rounded-xl bg-brand-background-neutral">
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-brand-background-neutral">
                 {post.image && <Image src={post.image} alt={post.title} fill className="object-cover" />}
               </div>
               <div className="flex w-full flex-col items-start gap-xs">

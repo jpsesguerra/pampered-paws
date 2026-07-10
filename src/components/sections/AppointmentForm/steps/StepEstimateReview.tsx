@@ -11,7 +11,7 @@ import {
   waitDaysForMinutes,
   weeksSinceLastGroomed,
 } from "@/lib/appointmentForm/calculations";
-import type { AppointmentFormAnswers } from "@/lib/appointmentForm/types";
+import { effectiveBreedLabel, type AppointmentFormAnswers } from "@/lib/appointmentForm/types";
 import { ChipTag, Field, TextInput } from "@/components/ui/FormFields";
 
 export function StepEstimateReview({
@@ -43,8 +43,9 @@ export function StepEstimateReview({
 }) {
   const isCat = route === "Cat";
   const isMix = route === "Mix breed dog";
+  const breedLabel = effectiveBreedLabel(answers);
 
-  const breed = useMemo(() => findBreedByLabel(breedData, answers.breedLabel), [breedData, answers.breedLabel]);
+  const breed = useMemo(() => findBreedByLabel(breedData, breedLabel), [breedData, breedLabel]);
 
   const { estimateHeadlineText, groomingMinutes, showPrices } = useMemo(() => {
     if (!breed) {
@@ -66,7 +67,7 @@ export function StepEstimateReview({
     <div className="flex w-full flex-col items-start gap-2xl">
       <div className="flex w-full flex-col items-start gap-sm rounded-2xl bg-brand-background-neutral p-lg">
         <h3 className="font-serif text-h5 text-text-primary">
-          Estimate for {answers.petName || "your pet"} the {answers.breedLabel || "pet"}
+          Estimate for {answers.petName || "your pet"} the {breedLabel || "pet"}
         </h3>
         <p className="font-sans text-body-default text-text-primary">{estimateHeadlineText}</p>
         {showPrices && breed && (
@@ -89,7 +90,7 @@ export function StepEstimateReview({
 
         <div className="flex w-full flex-col items-start gap-xs">
           <h4 className="font-serif text-h6 text-text-primary">About {answers.petName || "your pet"}</h4>
-          <p className="font-sans text-body-default text-text-primary">Breed: {answers.breedLabel}</p>
+          <p className="font-sans text-body-default text-text-primary">Breed: {breedLabel}</p>
           {!isCat && <p className="font-sans text-body-default text-text-primary">Pet age range: {answers.petAge}</p>}
           {isCat && <p className="font-sans text-body-default text-text-primary">Cat age: {answers.catAge}</p>}
           <p className="font-sans text-body-default text-text-primary">Gender: {combinedGender}</p>
@@ -102,8 +103,15 @@ export function StepEstimateReview({
           {isMix && (
             <>
               <p className="font-sans text-body-default text-text-primary">Dog height: {answers.dogHeight}</p>
-              <p className="font-sans text-body-default text-text-primary">Coat type: {answers.coatType}</p>
+              {answers.coatType && (
+                <p className="font-sans text-body-default text-text-primary">Coat type: {answers.coatType}</p>
+              )}
               <p className="font-sans text-body-default text-text-primary">Coat length: {answers.coatLength}</p>
+              {answers.otherGroomingNotes && (
+                <p className="font-sans text-body-default text-text-primary">
+                  Other grooming notes: {answers.otherGroomingNotes}
+                </p>
+              )}
             </>
           )}
           {isCat && (

@@ -37,11 +37,19 @@ export const BEHAVIOUR_CONCERNS = [
   "Not comfortable around other dogs",
 ];
 
-export const DOG_HEIGHT_OPTIONS = ["Under 20cm", "20–35cm", "35–50cm", "50–65cm", "Over 65cm"];
+export const DOG_HEIGHT_OPTIONS = [
+  "Under 10 inches",
+  "10 to 15 inches",
+  "16 to 22 inches",
+  "23 to 26 inches",
+  "Over 26 inches",
+];
 
-export const COAT_TYPE_OPTIONS = ["Curly", "Wavy", "Straight", "Double coat", "Wire coat"];
+export const COAT_TYPE_OPTIONS = ["Thin", "Medium", "Thick"];
 
-export const COAT_LENGTH_OPTIONS = ["Short", "Medium", "Long"];
+export const COAT_LENGTH_OPTIONS = ["Under 1 inch", "Between 1 and 2 inches", "Over 2 inches"];
+
+export const OTHER_BREED_OPTION = "Other — my breed isn't listed";
 
 export const CAT_AGE_OPTIONS = ["Kitten (under 1 year)", "1–3 years", "4–8 years", "9–12 years", "13+ years"];
 

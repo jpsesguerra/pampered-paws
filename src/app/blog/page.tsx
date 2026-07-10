@@ -22,7 +22,7 @@ export default async function BlogPage() {
             href={`/blog/${post.slug}`}
             className="flex flex-col items-start gap-md rounded-2xl bg-surface-white p-lg"
           >
-            <div className="relative h-[220px] w-full overflow-hidden rounded-2xl bg-brand-background-neutral">
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-brand-background-neutral">
               {post.image && <Image src={post.image} alt={post.title} fill className="object-cover" />}
             </div>
             <h2 className="font-serif text-h5 text-text-primary">{post.title}</h2>
