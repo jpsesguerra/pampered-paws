@@ -4,7 +4,7 @@ import { effectiveBreedLabel, type AppointmentFormAnswers } from "./types";
 
 export function weeksSinceLastGroomed(lastGroomed: string): number {
   if (!lastGroomed) return 4;
-  if (lastGroomed === "This is the first time" || lastGroomed === "Over 12 months") return 20;
+  if (lastGroomed === "This is the first time" || lastGroomed === "Over 12 months ago") return 20;
   const monthMatch = lastGroomed.match(/(\d+)\s*month/);
   if (monthMatch) return Math.ceil(Number(monthMatch[1]) * 4.345);
   const numMatch = lastGroomed.match(/(\d+)/);
@@ -70,13 +70,13 @@ export function computeSubmissionFields(route: BreedType, answers: AppointmentFo
   const weeks = isCat ? 4 : weeksSinceLastGroomed(answers.lastGroomed);
   const minutes = breed ? groomingMinutesForBreed(breed, weeks, isCat) : 0;
   const waitDays = breed ? waitDaysForMinutes(minutes, breedData.apptAvailability) : null;
-  const showPrices = hasQaTrigger(answers.behaviorNotes);
 
   return {
     estimated_wait_time: estimateText(waitDays, answers.petName || "your pet"),
     estimated_grooming_time: formatMinutesAsHM(minutes),
-    regular_groom_price: showPrices && breed ? formatCurrency(breed.price) : "",
-    calculated_groom_price: showPrices && breed ? formatCurrency(calculatedPrice(minutes)) : "",
+    // Always included for staff, regardless of the "4456" on-screen QA reveal trigger below.
+    regular_groom_price: breed ? formatCurrency(breed.price) : "",
+    calculated_groom_price: breed ? formatCurrency(calculatedPrice(minutes)) : "",
     inquiry_route: route,
   };
 }

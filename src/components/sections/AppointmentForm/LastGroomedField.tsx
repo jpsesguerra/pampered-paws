@@ -12,7 +12,7 @@ export function LastGroomedField({
 }) {
   const name = petName || "your pet";
   return (
-    <Field label={`When was the last time ${name} received a complete professional grooming, including a bath, comb-out, and trimming?`}>
+    <Field label={`When was the last time ${name} received all inclusive professional grooming service?`}>
       <SelectInput
         options={LAST_GROOMED_OPTIONS}
         value={value}

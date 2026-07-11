@@ -30,7 +30,7 @@ export function HealthBehaviourFields({
           onChange={onHealthConditionsChange}
           exclusiveOption="None"
         />
-        <Field label="Health or handling notes">
+        <Field label="Other health notes">
           <TextareaInput
             value={healthNotes}
             onChange={(e) => onHealthNotesChange(e.target.value)}
@@ -48,7 +48,7 @@ export function HealthBehaviourFields({
           onChange={onBehaviorConcernsChange}
           exclusiveOption="No concerns"
         />
-        <Field label="Other behaviour or handling notes">
+        <Field label="Other behaviour notes">
           <TextareaInput
             value={behaviorNotes}
             onChange={(e) => onBehaviorNotesChange(e.target.value)}

@@ -95,10 +95,7 @@ export function StepEstimateReview({
           {isCat && <p className="font-sans text-body-default text-text-primary">Cat age: {answers.catAge}</p>}
           <p className="font-sans text-body-default text-text-primary">Gender: {combinedGender}</p>
           {!isCat && (
-            <p className="font-sans text-body-default text-text-primary">
-              Last grooming received: {answers.lastGroomed}
-              {answers.lastGroomed !== "This is the first time" && answers.lastGroomed ? " ago" : ""}
-            </p>
+            <p className="font-sans text-body-default text-text-primary">Last grooming received: {answers.lastGroomed}</p>
           )}
           {isMix && (
             <>
