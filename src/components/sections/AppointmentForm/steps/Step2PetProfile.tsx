@@ -65,7 +65,7 @@ export function Step2PetProfile({
           otherOption={OTHER_BREED_OPTION}
           helperText={`Showing ${breedOptions.length} ${petType.toLowerCase()} breed options${
             petType === "Dog" ? ", including mixed breed names" : ""
-          }`}
+          }. Can't find your breed? Select "Other (Unlisted Breed)".`}
         />
       </div>
 

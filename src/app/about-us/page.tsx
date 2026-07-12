@@ -79,6 +79,7 @@ export default function AboutUsPage() {
           description="Forty-five years on, the goal hasn't changed: your pet, cared for exactly the way you want."
           buttonLabel="Find your nearest salon"
           buttonHref="/locations"
+          buttonVariant="secondary"
         />
       </Reveal>
     </>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/Button";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { Highlight } from "@/components/ui/Highlight";
 import { ServiceChip } from "@/components/ui/ServiceChip";
 import { OpportunitySection } from "@/components/sections/OpportunitySection";
@@ -50,9 +50,9 @@ export default async function FranchisePage() {
               </Reveal>
             </div>
             <Reveal delay={300}>
-              <Button withIcon href="/franchise/enquire">
+              <SecondaryButton href="/franchise/enquire">
                 Request franchise information
-              </Button>
+              </SecondaryButton>
             </Reveal>
           </div>
           <div className="relative z-0 h-[280px] w-full flex-1 overflow-hidden lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[58%] lg:flex-none">
@@ -97,6 +97,7 @@ export default async function FranchisePage() {
           description="Tell us about yourself and the market you're interested in. Our franchise team will be in touch to talk through the opportunity."
           buttonLabel="Franchise inquiry form"
           buttonHref="/franchise/enquire"
+          buttonVariant="secondary"
           phoneLabel={
             <>
               or email{" "}

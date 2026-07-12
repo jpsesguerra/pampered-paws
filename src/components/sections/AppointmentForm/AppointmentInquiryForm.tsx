@@ -197,7 +197,7 @@ export function AppointmentInquiryForm({
   return (
     <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
       <div className="flex max-w-[898px] flex-col items-center gap-md text-center">
-        <Breadcrumb>Booking</Breadcrumb>
+        <Breadcrumb>Request</Breadcrumb>
         <h1 className="font-serif text-h2 text-text-primary">Request an Appointment</h1>
         <p className="font-sans text-label-lg text-text-primary">
           Tell us about your pet and we&rsquo;ll confirm your spot, usually within one business day.

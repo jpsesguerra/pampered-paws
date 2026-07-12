@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
-import { Button } from "@/components/ui/Button";
 import { IconCircle } from "@/components/ui/IconCircle";
 import { Reveal } from "@/components/ui/Reveal";
 import { RichText } from "@/components/ui/RichText";
@@ -34,7 +33,7 @@ export default async function ProgramDetailPage({ params }: { params: { slug: st
               <span>Cost: {program.cost}</span>
             </div>
             <RichText value={program.description} className="w-full" />
-            <Button href="/schooling/enroll">{program.ctaLabel}</Button>
+            <SecondaryButton href="/schooling/enroll">{program.ctaLabel}</SecondaryButton>
           </article>
         </Reveal>
 

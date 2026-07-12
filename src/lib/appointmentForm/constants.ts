@@ -48,7 +48,7 @@ export const COAT_TYPE_OPTIONS = ["Thin", "Medium", "Thick"];
 
 export const COAT_LENGTH_OPTIONS = ["Under 1 inch", "Between 1 and 2 inches", "Over 2 inches"];
 
-export const OTHER_BREED_OPTION = "Other — my breed isn't listed";
+export const OTHER_BREED_OPTION = "Other (Unlisted Breed)";
 
 export const CAT_AGE_OPTIONS = ["Kitten (under 1 year)", "1–3 years", "4–8 years", "9–12 years", "13+ years"];
 

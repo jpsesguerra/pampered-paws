@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
-import { Button } from "@/components/ui/Button";
 import { IconCircle } from "@/components/ui/IconCircle";
 import { Reveal } from "@/components/ui/Reveal";
 import { RichText } from "@/components/ui/RichText";
@@ -36,9 +35,9 @@ export default async function ResourcePostPage({ params }: { params: { slug: str
               <p className="w-full font-sans text-body-default text-text-primary">{resource.excerpt}</p>
             )}
             {(resource.link || resource.file) && (
-              <Button href={resource.link ?? resource.file!} target="_blank" rel="noopener noreferrer">
+              <SecondaryButton href={resource.link ?? resource.file!} target="_blank" rel="noopener noreferrer">
                 {resource.link ? "Visit resource" : "Download PDF"}
-              </Button>
+              </SecondaryButton>
             )}
           </article>
         </Reveal>

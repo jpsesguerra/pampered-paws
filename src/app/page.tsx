@@ -40,7 +40,7 @@ export default async function Home() {
       </Reveal>
       <Reveal>
         <CTABanner
-          heading="Ready to book your appointment?"
+          heading="Ready to request your appointment?"
           description="We review your request on the same day, and we usually respond within 24 hours to let you know about our availability."
           phoneLabel="or call 416-904-2652"
           phoneNumber="+14169042652"

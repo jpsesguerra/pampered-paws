@@ -1,6 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Highlight } from "@/components/ui/Highlight";
-import { Button } from "@/components/ui/Button";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
 
 export function OpportunitySection() {
   return (
@@ -27,7 +27,7 @@ export function OpportunitySection() {
             buying isn&rsquo;t an idea. It&rsquo;s a system that&rsquo;s been
             working for decades, on two continents.
           </p>
-          <Button href="/franchise/enquire">Request franchise information</Button>
+          <SecondaryButton href="/franchise/enquire">Request franchise information</SecondaryButton>
         </div>
       </div>
     </section>

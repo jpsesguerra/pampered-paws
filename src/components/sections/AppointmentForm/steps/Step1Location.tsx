@@ -30,9 +30,9 @@ export function Step1Location({
 
       {isPhoneOnly && selected && (
         <div className="flex w-full flex-col items-start gap-sm rounded-2xl bg-brand-background-neutral p-lg">
-          <h3 className="font-serif text-h5 text-text-primary">Book by phone</h3>
+          <h3 className="font-serif text-h5 text-text-primary">Request by phone</h3>
           <p className="font-sans text-body-default text-text-primary">
-            Our {selected.locationName} salon takes bookings directly by phone.
+            Our {selected.locationName} salon takes appointment requests directly by phone.
           </p>
           <a
             href={`tel:${selected.phoneCall.replace(/[^0-9+]/g, "")}`}

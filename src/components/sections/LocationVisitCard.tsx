@@ -44,7 +44,7 @@ export function LocationVisitCard({ location }: { location: Location }) {
               </Button>
             ) : (
               <Button href={`tel:${location.phoneCall.replace(/[^0-9+]/g, "")}`} className="w-full sm:w-auto">
-                Call to Book
+                Call to Request an Appointment
               </Button>
             )}
             <SecondaryButton

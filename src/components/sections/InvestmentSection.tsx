@@ -1,6 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Highlight } from "@/components/ui/Highlight";
-import { Button } from "@/components/ui/Button";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
 
 export function InvestmentSection() {
   return (
@@ -13,7 +13,7 @@ export function InvestmentSection() {
               Understanding the <Highlight>investment</Highlight>
             </h2>
           </div>
-          <Button href="/franchise/enquire">Request franchise information</Button>
+          <SecondaryButton href="/franchise/enquire">Request franchise information</SecondaryButton>
         </div>
         <div className="flex w-full flex-1 flex-col items-start gap-md">
           <p className="font-sans text-body-default text-text-primary">

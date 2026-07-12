@@ -8,6 +8,7 @@ type CTABannerProps = {
   phoneNumber?: string;
   buttonLabel?: string;
   buttonHref?: string;
+  buttonVariant?: "primary" | "secondary";
 };
 
 export function CTABanner({
@@ -17,6 +18,7 @@ export function CTABanner({
   phoneNumber,
   buttonLabel = "Request an Appointment",
   buttonHref = "/request-an-appointment",
+  buttonVariant = "primary",
 }: CTABannerProps) {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
@@ -26,9 +28,13 @@ export function CTABanner({
           <p className="font-sans text-body-lg text-text-secondary">{description}</p>
         </div>
         <div className="flex flex-col items-center gap-lg sm:flex-row">
-          <Button withIcon href={buttonHref}>
-            {buttonLabel}
-          </Button>
+          {buttonVariant === "primary" ? (
+            <Button withIcon href={buttonHref}>
+              {buttonLabel}
+            </Button>
+          ) : (
+            <SecondaryButton href={buttonHref}>{buttonLabel}</SecondaryButton>
+          )}
           {phoneLabel && phoneNumber ? (
             <SecondaryButton href={`tel:${phoneNumber}`} icon="https://res.cloudinary.com/du0witbcr/image/upload/v1782665058/pampered-paws/icons/phone.svg">
               {phoneLabel}

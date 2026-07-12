@@ -12,7 +12,7 @@ export async function AddOnsSection() {
           </h2>
           <p className="font-sans text-body-lg text-text-primary">
             Every pet is different. These services can be added to a Bath or
-            Regular Groom, or booked on their own.
+            Regular Groom, or requested on their own.
           </p>
         </div>
         <div className="flex w-full flex-col items-start gap-2xl lg:flex-row lg:items-stretch">

@@ -11,7 +11,7 @@ export function TrimNote() {
           your stylist will happily upgrade on the day. Because trimming one
           area means balancing the whole coat, an upgrade isn&rsquo;t always
           possible at short notice, so it&rsquo;s best to let us know when
-          you book.
+          you request your appointment.
         </p>
       </div>
     </section>

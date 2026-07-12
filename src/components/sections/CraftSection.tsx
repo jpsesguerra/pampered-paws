@@ -1,5 +1,5 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Button } from "@/components/ui/Button";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { ServiceChip } from "@/components/ui/ServiceChip";
 import { Highlight } from "@/components/ui/Highlight";
 
@@ -46,7 +46,7 @@ export function CraftSection() {
             or you&rsquo;re ready to build a career doing work you love, this
             is what we do.
           </p>
-          <Button href="/schooling">Learn about the school</Button>
+          <SecondaryButton href="/schooling">Learn about the school</SecondaryButton>
         </div>
       </div>
       <div className="flex w-full flex-col items-start gap-lg overflow-hidden">

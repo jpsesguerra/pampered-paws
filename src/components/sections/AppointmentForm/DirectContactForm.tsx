@@ -73,7 +73,7 @@ export function DirectContactForm({ locations }: { locations: Location[] }) {
   return (
     <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
       <div className="flex max-w-[898px] flex-col items-center gap-md text-center">
-        <Breadcrumb>Booking</Breadcrumb>
+        <Breadcrumb>Request</Breadcrumb>
         <h1 className="font-serif text-h2 text-text-primary">Send us your contact details</h1>
         <p className="font-sans text-label-lg text-text-primary">
           Skip the questionnaire — we&rsquo;ll follow up to confirm your appointment.

@@ -10,7 +10,7 @@ export function BookingSteps() {
           <div className="flex flex-col items-start gap-s+">
             <Eyebrow>Simple from the start</Eyebrow>
             <h2 className="max-w-[460px] font-serif text-h2 text-text-primary">
-              Booking just takes three steps
+              Requesting an appointment takes three steps
             </h2>
           </div>
           <div className="flex w-full max-w-[360px] flex-col items-start gap-2xl rounded-2xl bg-brand-secondary-light p-lg">
@@ -33,7 +33,7 @@ export function BookingSteps() {
             variant="medium"
             icon="location"
             title="Choose your location"
-            description="Toronto, Mississauga or Scarborough. (Scarborough books by phone — see below.)"
+            description="Toronto, Mississauga or Scarborough. (Scarborough takes requests by phone — see below.)"
             className="w-full"
           />
           <Card

@@ -9,16 +9,18 @@ const SERVICES = [
     title: "Regular Groom",
     description:
       "Our all-inclusive grooming service for dogs and cats kept on a 3–6 week schedule. Full bath, coat styling, nail care, ear cleaning and teeth brushing — everything done to your pet's breed standard, by a licensed stylist.",
-    ctaLabel: "Book a Regular Groom",
+    ctaLabel: "Request a Regular Groom",
     ctaHref: "/request-an-appointment",
+    ctaVariant: "primary" as const,
   },
   {
     icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665063/pampered-paws/icons/shower-head.svg",
     title: "Bath",
     description:
       "For clients already in our rotation who want to stay clean and fluffy between full grooms. Includes a full bath, blow dry, nail care and ear cleaning — without the cut and style. A quick top-up, done properly.",
-    ctaLabel: "Book a Bath",
+    ctaLabel: "Request a Bath",
     ctaHref: "/request-an-appointment",
+    ctaVariant: "primary" as const,
   },
   {
     icon: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665052/pampered-paws/icons/hair-dryer.svg",

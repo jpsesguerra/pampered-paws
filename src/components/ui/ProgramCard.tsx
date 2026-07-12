@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
+import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import type { Program } from "@/lib/data/programs";
 import { urlFor } from "@/sanity/lib/image";
 
@@ -25,7 +25,7 @@ export function ProgramCard({ program }: { program: Program }) {
           </div>
         </div>
       </div>
-      <Button href={`/schooling/${program.slug}`}>View Program</Button>
+      <SecondaryButton href={`/schooling/${program.slug}`}>View Program</SecondaryButton>
     </div>
   );
 }

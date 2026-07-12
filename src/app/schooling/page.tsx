@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { Button } from "@/components/ui/Button";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { ProgramCard } from "@/components/ui/ProgramCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -55,9 +54,9 @@ export default async function SchoolingPage() {
                     theory course. Train at your pace, four weeks at a time.
                   </p>
                   <div className="flex flex-col items-start gap-lg sm:flex-row sm:items-center">
-                    <Button withIcon href="#programs">
+                    <SecondaryButton href="#programs">
                       Explore programs
-                    </Button>
+                    </SecondaryButton>
                     <SecondaryButton href="/schooling/enroll">
                       Ask about enrolling
                     </SecondaryButton>

@@ -54,12 +54,12 @@ export function getPhoneLabel(location: Location): string {
 
 export function getBookingNote(location: Location): string {
   if (location.bookingMethod === "phone") {
-    return "Scarborough books by phone — give us a call and we'll get your pet scheduled."
+    return "Scarborough takes requests by phone — give us a call and we'll get your pet scheduled."
       .replace("Scarborough", location.locationName);
   }
   return location.phoneText
-    ? "Book by phone, text, or online inquiry"
-    : "Book by phone or online inquiry";
+    ? "Request by phone, text, or online inquiry"
+    : "Request by phone or online inquiry";
 }
 
 export function getAppointmentHref(location: Location): string {

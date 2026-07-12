@@ -17,7 +17,7 @@ export default async function LocationsPage() {
           <p className="font-sans text-body-lg text-text-primary">
             Three grooming salons across the Greater Toronto Area, each with
             its own team and its own regulars. Choose the location closest to
-            you to see hours, services, and how to book.
+            you to see hours, services, and how to request an appointment.
           </p>
         </div>
         <div className="flex w-full flex-col items-stretch gap-2xl sm:flex-row">
