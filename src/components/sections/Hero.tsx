@@ -73,7 +73,7 @@ export function Hero() {
           className="hero-photo-in relative aspect-[538/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "300ms" }}
         >
-          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664954/pampered-paws/images/Lesley.png" alt="" fill className="object-cover" />
+          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783908123/IMG_4300-fotor-20260712215837_otc6r7.png" alt="" fill className="object-cover" />
         </div>
         <div
           className="hero-photo-in relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"

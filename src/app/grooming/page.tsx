@@ -69,7 +69,7 @@ export default async function GroomingPage() {
             </div>
             <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:items-stretch">
               <GroomingServiceCard
-                image="https://res.cloudinary.com/du0witbcr/image/upload/v1783639966/regular_groom_quy4uy.png"
+                image="https://res.cloudinary.com/du0witbcr/image/upload/v1783908124/_MG_0101_1_poodlemanicure18_1_-fotor-20260712215910_cezifq.png"
                 eyebrow="The full, all-inclusive service"
                 title="Regular Groom"
                 description="A complete head-to-tail groom for pets seen every 3–6 weeks. Your stylist bathes, brushes, clips, scissors and styles your pet to their breed standard or the custom look you choose."
@@ -88,7 +88,7 @@ export default async function GroomingPage() {
                 ctaLabel="View Pricing"
               />
               <GroomingServiceCard
-                image="https://res.cloudinary.com/du0witbcr/image/upload/v1783639967/bath_neo6lg.png"
+                image="https://res.cloudinary.com/du0witbcr/image/upload/v1783908125/_MG_0032_1_poodlewash03-fotor-20260712215930_t1qbml.png"
                 eyebrow="Clean, fresh, and fluffy — between grooms"
                 title="Bath"
                 description="A thorough freshen-up for pets on a regular 3–6 week schedule who don't need a haircut right now. Bathing, brushing and tidying — without body, face or leg trimming."

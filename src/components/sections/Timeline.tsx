@@ -64,7 +64,7 @@ export function Timeline() {
             ))}
           </div>
           <div className="relative h-[400px] w-full flex-1 overflow-hidden rounded-2xl lg:h-auto">
-            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664991/pampered-paws/images/timeline-photo.jpg" alt="" fill className="object-cover" />
+            <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783908126/_MG_0074_1_oodlerobe02-fotor-20260712215919_n9m2fd.png" alt="" fill className="object-cover" />
           </div>
         </div>
       </div>
