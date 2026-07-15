@@ -1,5 +1,16 @@
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
+// Per-location overrides so a location's grooming inquiries route to that
+// location's own Web3Forms access key/inbox instead of the shared default.
+const GROOMING_KEYS_BY_LOCATION_SLUG: Record<string, string | undefined> = {
+  toronto: process.env.NEXT_PUBLIC_WEB3FORMS_GROOMING_KEY_TORONTO,
+  mississauga: process.env.NEXT_PUBLIC_WEB3FORMS_GROOMING_KEY_MISSISSAUGA,
+};
+
+export function getGroomingAccessKey(locationSlug: string, fallbackKey: string): string {
+  return GROOMING_KEYS_BY_LOCATION_SLUG[locationSlug] || fallbackKey;
+}
+
 export async function submitToWeb3Forms(
   accessKey: string,
   subject: string,

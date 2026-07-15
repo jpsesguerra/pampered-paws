@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import type { Location } from "@/lib/data/locations";
 import { buildMailtoHref } from "@/lib/appointmentForm/mailto";
 import { isValidEmail } from "@/lib/appointmentForm/validation";
-import { submitToWeb3Forms } from "@/lib/web3forms";
+import { getGroomingAccessKey, submitToWeb3Forms } from "@/lib/web3forms";
 import { Field, TextareaInput, TextInput } from "@/components/ui/FormFields";
 import { Step1Location } from "./steps/Step1Location";
 import { SuccessPanel } from "@/components/ui/SuccessPanel";
@@ -44,7 +44,8 @@ export function DirectContactForm({ locations }: { locations: Location[] }) {
     };
 
     try {
-      await submitToWeb3Forms(WEB3FORMS_GROOMING_KEY, "Pampered Paws direct contact inquiry", payload);
+      const accessKey = getGroomingAccessKey(selectedLocation.slug, WEB3FORMS_GROOMING_KEY);
+      await submitToWeb3Forms(accessKey, "Pampered Paws direct contact inquiry", payload);
       const mailtoHref = buildMailtoHref(
         selectedLocation.email,
         `Pampered Paws direct contact inquiry — ${ownerName}`,

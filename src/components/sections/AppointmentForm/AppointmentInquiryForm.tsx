@@ -10,7 +10,7 @@ import { OTHER_BREED_OPTION } from "@/lib/appointmentForm/constants";
 import { buildMailtoHref } from "@/lib/appointmentForm/mailto";
 import { effectiveBreedLabel, initialAnswers, type Gender } from "@/lib/appointmentForm/types";
 import { isValidEmail } from "@/lib/appointmentForm/validation";
-import { submitToWeb3Forms } from "@/lib/web3forms";
+import { getGroomingAccessKey, submitToWeb3Forms } from "@/lib/web3forms";
 
 // Testing key (Joel's Web3Forms account) — swap for Eggie's production key before client handoff.
 const WEB3FORMS_GROOMING_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_GROOMING_KEY ?? "";
@@ -155,7 +155,8 @@ export function AppointmentInquiryForm({
     }
 
     try {
-      await submitToWeb3Forms(WEB3FORMS_GROOMING_KEY, "Pampered Paws grooming inquiry", payload);
+      const accessKey = getGroomingAccessKey(selectedLocation.slug, WEB3FORMS_GROOMING_KEY);
+      await submitToWeb3Forms(accessKey, "Pampered Paws grooming inquiry", payload);
       const mailtoHref = buildMailtoHref(selectedLocation.email, `Pampered Paws grooming inquiry — ${answers.petName}`, [
         `location: ${payload.location}`,
         `pet_type: ${payload.pet_type}`,
