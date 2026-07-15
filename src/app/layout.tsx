@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ToastProvider } from "@/components/ui/ToastProvider";
 import { getLocations } from "@/sanity/lib/locations";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
   title: "Pampered Paws | Professional Pet Grooming & Grooming School",
@@ -39,6 +42,7 @@ export default async function RootLayout({
           <Footer locations={locations} />
         </ToastProvider>
       </body>
+      {GA_MEASUREMENT_ID && <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />}
     </html>
   );
 }
