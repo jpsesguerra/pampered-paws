@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      // Legacy Webflow URLs still indexed by Google — 301 them to their
+      // closest equivalent on the new site. Add more here as they turn up.
+      { source: "/contact-us", destination: "/locations", permanent: true },
+      { source: "/schooling/find-a-location", destination: "/locations", permanent: true },
+      { source: "/news-and-events", destination: "/blog", permanent: true },
+      { source: "/franchising", destination: "/franchise", permanent: true },
+    ];
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 768, 1024, 1280, 1440, 1920],
