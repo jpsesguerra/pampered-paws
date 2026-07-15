@@ -5,6 +5,7 @@ import {
   getAppointmentHref,
   getBookingNote,
   getFullAddress,
+  getGoogleMapsEmbedUrl,
   getGoogleMapsViewUrl,
   getPhoneLabel,
 } from "@/lib/data/locations";
@@ -15,7 +16,7 @@ export function LocationVisitCard({ location }: { location: Location }) {
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-lg rounded-[32px] bg-surface-white p-lg sm:flex-row">
         <div className="relative h-[280px] w-full overflow-hidden rounded-2xl sm:h-auto sm:flex-1">
           <iframe
-            src={location.googleMapsEmbedUrl}
+            src={getGoogleMapsEmbedUrl(location)}
             title={`Map to Pampered Paws ${location.locationName}`}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

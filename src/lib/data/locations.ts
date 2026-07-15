@@ -67,5 +67,9 @@ export function getAppointmentHref(location: Location): string {
 }
 
 export function getGoogleMapsViewUrl(location: Location): string {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(getFullAddress(location))}`;
+  return `https://www.google.com/maps/search/?api=1&query=${location.geoLat},${location.geoLng}`;
+}
+
+export function getGoogleMapsEmbedUrl(location: Location): string {
+  return `https://www.google.com/maps?q=${location.geoLat},${location.geoLng}&z=16&output=embed`;
 }
