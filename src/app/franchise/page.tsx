@@ -97,7 +97,6 @@ export default async function FranchisePage() {
           description="Tell us about yourself and the market you're interested in. Our franchise team will be in touch to talk through the opportunity."
           buttonLabel="Franchise inquiry form"
           buttonHref="/franchise/enquire"
-          buttonVariant="secondary"
           phoneLabel={
             <>
               or email{" "}

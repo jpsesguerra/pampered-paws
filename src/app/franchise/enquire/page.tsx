@@ -13,6 +13,7 @@ export default function FranchiseFormPage() {
       accessKey={WEB3FORMS_FRANCHISE_KEY}
       subject="Pampered Paws franchise enquiry"
       notifyEmail="franchise@pamperedpaws.com"
+      messagePlaceholder="Tell us about yourself and the market you're interested in"
     />
   );
 }

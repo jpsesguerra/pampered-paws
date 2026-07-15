@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { Field, TextareaInput, TextInput } from "@/components/ui/FormFields";
+import { Field, SelectInput, TextareaInput, TextInput } from "@/components/ui/FormFields";
 import { SuccessPanel } from "@/components/ui/SuccessPanel";
 import { buildMailtoHref } from "@/lib/appointmentForm/mailto";
 import { isValidEmail } from "@/lib/appointmentForm/validation";
@@ -16,6 +16,8 @@ type ContactFormProps = {
   accessKey: string;
   subject: string;
   notifyEmail: string;
+  locationOptions?: string[];
+  messagePlaceholder?: string;
 };
 
 export function ContactForm({
@@ -26,7 +28,10 @@ export function ContactForm({
   accessKey,
   subject,
   notifyEmail,
+  locationOptions,
+  messagePlaceholder = "Tell us more, or ask us anything",
 }: ContactFormProps) {
+  const [location, setLocation] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -35,14 +40,16 @@ export function ContactForm({
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const isValid = Boolean(name && email && isValidEmail(email) && phone);
+  const isValid = Boolean(
+    name && email && isValidEmail(email) && phone && (!locationOptions || location)
+  );
 
   async function handleSubmit() {
     if (!isValid) return;
     setIsSubmitting(true);
     setErrorMessage(null);
 
-    const payload = { name, phone, email, message };
+    const payload = locationOptions ? { location, name, phone, email, message } : { name, phone, email, message };
 
     try {
       await submitToWeb3Forms(accessKey, subject, payload);
@@ -56,6 +63,7 @@ export function ContactForm({
 
   if (submitted) {
     const mailtoHref = buildMailtoHref(notifyEmail, `${subject} — ${name}`, [
+      ...(locationOptions ? [`location: ${location}`] : []),
       `name: ${name}`,
       `phone: ${phone}`,
       `email: ${email}`,
@@ -82,6 +90,17 @@ export function ContactForm({
         <p className="font-sans text-label-lg text-text-primary">{subtitle}</p>
       </div>
       <div className="flex w-full max-w-[776px] flex-col items-start gap-lg rounded-2xl bg-surface-white p-lg">
+        {locationOptions && (
+          <Field label="Location" required>
+            <SelectInput
+              options={locationOptions}
+              value={location}
+              placeholder="Choose a location"
+              onChange={(e) => setLocation(e.target.value)}
+              required
+            />
+          </Field>
+        )}
         <Field label="Name" required>
           <TextInput value={name} onChange={(e) => setName(e.target.value)} placeholder="Your full name" required />
         </Field>
@@ -108,7 +127,7 @@ export function ContactForm({
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={6}
-            placeholder="Tell us about your pet, or what you're looking for"
+            placeholder={messagePlaceholder}
           />
         </Field>
 

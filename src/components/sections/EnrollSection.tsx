@@ -1,5 +1,5 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import { Button } from "@/components/ui/Button";
 import { IconCircle } from "@/components/ui/IconCircle";
 
 const STEPS = [
@@ -41,9 +41,9 @@ export function EnrollSection() {
                 available on our Policies &amp; Refunds page.
               </p>
             </div>
-            <SecondaryButton href="/schooling/enroll" className="w-full">
-              Enroll Now
-            </SecondaryButton>
+            <Button href="/schooling/enroll" className="w-full">
+              Apply to Enrol
+            </Button>
           </div>
         </div>
         <div className="flex w-full flex-1 flex-col items-start gap-s+">

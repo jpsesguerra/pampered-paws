@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { Button } from "@/components/ui/Button";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { ProgramCard } from "@/components/ui/ProgramCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -54,11 +55,11 @@ export default async function SchoolingPage() {
                     theory course. Train at your pace, four weeks at a time.
                   </p>
                   <div className="flex flex-col items-start gap-lg sm:flex-row sm:items-center">
+                    <Button withIcon href="/schooling/enroll">
+                      Apply to Enrol
+                    </Button>
                     <SecondaryButton href="#programs">
-                      Explore programs
-                    </SecondaryButton>
-                    <SecondaryButton href="/schooling/enroll">
-                      Ask about enrolling
+                      Explore Our Programs
                     </SecondaryButton>
                   </div>
                 </div>
@@ -113,6 +114,8 @@ export default async function SchoolingPage() {
         <CTABanner
           heading="Ready to start your training?"
           description="Tell us your background and goals, and we'll help you find the right program."
+          buttonLabel="Apply to Enrol"
+          buttonHref="/schooling/enroll"
           phoneLabel="or call 416-904-2652"
           phoneNumber="+14169042652"
         />
