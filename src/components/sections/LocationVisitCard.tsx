@@ -13,7 +13,7 @@ import {
 export function LocationVisitCard({ location }: { location: Location }) {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
-      <div className="flex w-full max-w-[1240px] flex-col items-start gap-lg rounded-[32px] bg-surface-white p-lg sm:flex-row">
+      <div className="flex w-full max-w-[1240px] flex-col items-stretch gap-lg rounded-[32px] bg-surface-white p-lg sm:flex-row">
         <div className="relative h-[280px] w-full overflow-hidden rounded-2xl sm:h-auto sm:flex-1">
           <iframe
             src={getGoogleMapsEmbedUrl(location)}
