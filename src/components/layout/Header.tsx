@@ -8,9 +8,16 @@ import { Button } from "@/components/ui/Button";
 const NAV_LINKS = [
   { label: "Grooming", href: "/grooming" },
   { label: "Schooling", href: "/schooling" },
+  { label: "Franchising", href: "/franchise" },
   { label: "Locations", href: "/locations" },
   { label: "About Us", href: "/about-us" },
+];
+
+// Only shown in the mobile menu, alongside NAV_LINKS.
+const MOBILE_ONLY_LINKS = [
   { label: "Blog", href: "/blog" },
+  { label: "Resources", href: "/resources" },
+  { label: "Pricing", href: "/grooming-prices" },
 ];
 
 export function Header() {
@@ -70,7 +77,7 @@ export function Header() {
 
         {isMenuOpen && (
           <nav className="mt-sm flex flex-col items-start gap-md rounded-2xl bg-surface-white p-lg lg:hidden">
-            {NAV_LINKS.map((link) => (
+            {[...NAV_LINKS, ...MOBILE_ONLY_LINKS].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

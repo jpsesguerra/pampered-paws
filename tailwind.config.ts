@@ -52,7 +52,7 @@ const config: Config = {
         "label-default": ["14px", { lineHeight: "20px", letterSpacing: "0.1px", fontWeight: "600" }],
         "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.2px", fontWeight: "600" }],
         "btn-primary": ["15px", { lineHeight: "22px", letterSpacing: "0.2px", fontWeight: "600" }],
-        "btn-secondary": ["16px", { lineHeight: "20px", letterSpacing: "0.1px", fontWeight: "400" }],
+        "btn-secondary": ["16px", { lineHeight: "20px", letterSpacing: "0.1px", fontWeight: "600" }],
       },
       spacing: {
         xxs: "4px",
