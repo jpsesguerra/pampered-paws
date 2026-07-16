@@ -36,7 +36,7 @@ export function BreedPriceLookup({ breeds }: { breeds: BreedPricing[] }) {
   }
 
   return (
-    <div className="flex w-full max-w-[1240px] items-start gap-2xl">
+    <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
       <div className="flex flex-1 flex-col items-start gap-2xl rounded-[32px] bg-surface-white p-2xl">
         <div ref={containerRef} className="relative flex w-full flex-col items-start gap-lg">
           <label htmlFor="breed-search" className="font-sans text-label-xl text-text-primary">

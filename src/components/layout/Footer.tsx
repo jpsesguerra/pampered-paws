@@ -10,6 +10,7 @@ import {
 } from "@/lib/data/locations";
 import { Reveal } from "@/components/ui/Reveal";
 import { useToast } from "@/components/ui/ToastProvider";
+import { cn } from "@/lib/cn";
 
 const REVEAL_DELAYS = [0, 100, 200, 300, 400, 500, 600] as const;
 
@@ -69,10 +70,12 @@ const SOCIAL_LINKS = [
 function ContactRow({
   icon,
   as: Tag = "span",
+  wrap = true,
   ...props
 }: {
   icon: string;
   as?: "span" | "a" | "button";
+  wrap?: boolean;
   children: React.ReactNode;
 } & React.AnchorHTMLAttributes<HTMLAnchorElement> &
   React.ButtonHTMLAttributes<HTMLButtonElement>) {
@@ -85,7 +88,14 @@ function ContactRow({
       <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-accent-gold">
         <img src={icon} alt="" className="size-4" />
       </span>
-      <span className="min-w-0 break-words font-sans text-label-sm text-text-on-pink">{children}</span>
+      <span
+        className={cn(
+          "font-sans text-label-sm text-text-on-pink",
+          wrap ? "min-w-0 break-words" : "whitespace-nowrap"
+        )}
+      >
+        {children}
+      </span>
     </Tag>
   );
 }
@@ -100,7 +110,7 @@ function LocationFooterCard({
   const { showToast } = useToast();
 
   return (
-    <Reveal delay={delay} className="w-full sm:w-[209px]">
+    <Reveal delay={delay} className="w-full sm:min-w-[300px] sm:flex-1">
       <div className="flex w-full flex-col items-start gap-md lg:pb-3xl">
         <Link href={`/locations/${location.slug}`} className="w-full font-serif text-h6 text-text-on-pink">
           {location.locationName} Salon
@@ -124,6 +134,7 @@ function LocationFooterCard({
         <ContactRow
           as="button"
           type="button"
+          wrap={false}
           onClick={() => {
             navigator.clipboard.writeText(location.email);
             showToast("Email copied to your clipboard");
@@ -139,9 +150,9 @@ function LocationFooterCard({
 
 export function Footer({ locations }: { locations: Location[] }) {
   return (
-    <footer className="flex items-center justify-center px-lg py-2xl">
-      <div className="flex w-full max-w-[1240px] flex-col gap-3xl rounded-2xl bg-brand-neutral-dark p-lg sm:gap-6xl sm:p-2xl lg:p-[54px]">
-        <div className="flex w-full flex-col items-start gap-2xl lg:flex-row lg:justify-between">
+    <footer className="flex items-center justify-center px-md py-2xl">
+      <div className="flex w-full max-w-[1480px] flex-col gap-3xl rounded-2xl bg-brand-neutral-dark p-md sm:gap-6xl sm:p-2xl lg:p-[54px]">
+        <div className="flex w-full flex-col items-start gap-2xl min-[1400px]:flex-row min-[1400px]:justify-between">
           <div className="flex flex-col gap-2xl">
             <Image
               src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664981/pampered-paws/images/logo-footer.png"
@@ -175,7 +186,7 @@ export function Footer({ locations }: { locations: Location[] }) {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:flex-wrap lg:flex-1 lg:justify-end lg:gap-lg">
+          <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:flex-wrap sm:gap-lg min-[1400px]:flex-1">
             {locations.map((location, i) => (
               <LocationFooterCard key={location.slug} location={location} delay={REVEAL_DELAYS[i] ?? 600} />
             ))}
