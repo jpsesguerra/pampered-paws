@@ -85,7 +85,7 @@ function ContactRow({
       <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-brand-accent-gold">
         <img src={icon} alt="" className="size-4" />
       </span>
-      <span className="font-sans text-label-sm text-text-on-pink">{children}</span>
+      <span className="min-w-0 break-words font-sans text-label-sm text-text-on-pink">{children}</span>
     </Tag>
   );
 }
