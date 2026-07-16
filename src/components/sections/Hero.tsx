@@ -41,8 +41,7 @@ export function Hero() {
         </Reveal>
         <Reveal delay={100}>
           <h1 className="max-w-[736px] text-center font-serif text-h2 text-text-primary lg:text-display-h1">
-            Your pet, groomed exactly the way{" "}
-            <Highlight>you want</Highlight>
+            Forty-five years of grooming, <Highlight>done right</Highlight>
           </h1>
         </Reveal>
         <Reveal delay={200}>
