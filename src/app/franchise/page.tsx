@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import { Button } from "@/components/ui/Button";
 import { Highlight } from "@/components/ui/Highlight";
 import { ServiceChip } from "@/components/ui/ServiceChip";
 import { OpportunitySection } from "@/components/sections/OpportunitySection";
 import { WhyPartnerSection } from "@/components/sections/WhyPartnerSection";
 import { WhatsIncludedSection } from "@/components/sections/WhatsIncludedSection";
+import { FounderNoteSection } from "@/components/sections/FounderNoteSection";
 import { InvestmentSection } from "@/components/sections/InvestmentSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -50,9 +51,9 @@ export default async function FranchisePage() {
               </Reveal>
             </div>
             <Reveal delay={300}>
-              <SecondaryButton href="/franchise/enquire">
+              <Button withIcon href="/franchise/enquire">
                 Request franchise information
-              </SecondaryButton>
+              </Button>
             </Reveal>
           </div>
           <div className="relative z-0 h-[280px] w-full flex-1 overflow-hidden lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[58%] lg:flex-none">
@@ -86,6 +87,9 @@ export default async function FranchisePage() {
         <WhatsIncludedSection />
       </Reveal>
       <Reveal>
+        <FounderNoteSection />
+      </Reveal>
+      <Reveal>
         <InvestmentSection />
       </Reveal>
       <Reveal>
@@ -97,14 +101,6 @@ export default async function FranchisePage() {
           description="Tell us about yourself and the market you're interested in. Our franchise team will be in touch to talk through the opportunity."
           buttonLabel="Franchise inquiry form"
           buttonHref="/franchise/enquire"
-          phoneLabel={
-            <>
-              or email{" "}
-              <a href="mailto:franchise@pamperedpaws.com" className="underline">
-                franchise@pamperedpaws.com
-              </a>
-            </>
-          }
         />
       </Reveal>
     </>

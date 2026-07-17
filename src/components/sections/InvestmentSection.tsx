@@ -1,21 +1,23 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Highlight } from "@/components/ui/Highlight";
-import { SecondaryButton } from "@/components/ui/SecondaryButton";
 
 export function InvestmentSection() {
   return (
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
-        <div className="flex w-full flex-1 flex-col items-start gap-2xl lg:max-w-[552px]">
-          <div className="flex flex-col items-start gap-lg">
-            <Eyebrow>Investment overview</Eyebrow>
-            <h2 className="font-serif text-h2 text-text-primary">
-              Understanding the <Highlight>investment</Highlight>
-            </h2>
-          </div>
-          <SecondaryButton href="/franchise/enquire">Request franchise information</SecondaryButton>
+        <div className="flex w-full flex-1 flex-col items-start gap-lg lg:max-w-[552px]">
+          <Eyebrow>Investment overview</Eyebrow>
+          <h2 className="font-serif text-h2 text-text-primary">
+            Understanding the <Highlight>investment</Highlight>
+          </h2>
         </div>
         <div className="flex w-full flex-1 flex-col items-start gap-md">
+          <p className="font-sans text-body-default text-text-primary">
+            Financial strength matters, but it isn&rsquo;t the deciding
+            factor. What we&rsquo;re ultimately looking for is leadership,
+            integrity, and the ability to build real relationships in your
+            community — the capital conversation comes after that.
+          </p>
           <p className="font-sans text-body-default text-text-primary">
             A Pampered Paws salon is a full-service, brick-and-mortar
             grooming business — not a mobile or home-based concept. Across
