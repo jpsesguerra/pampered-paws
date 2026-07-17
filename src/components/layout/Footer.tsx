@@ -178,7 +178,7 @@ function LocationFooterCard({
 
 function PartnersRow() {
   return (
-    <div className="flex w-full flex-wrap items-center gap-lg sm:w-auto sm:justify-end">
+    <div className="flex w-full flex-wrap items-center gap-lg sm:w-auto sm:self-end sm:justify-end">
       <span className="font-sans text-label-default text-text-on-pink">Our Partners:</span>
       <div className="flex flex-wrap items-center gap-lg">
         {PARTNERS.map((partner) => (
