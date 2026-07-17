@@ -27,7 +27,7 @@ const HIGHLIGHTS = [
 
 export function LegacyHighlightsSection() {
   return (
-    <section className="flex items-center justify-center bg-surface-neutral-light px-lg py-7xl">
+    <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
         <h2 className="max-w-[784px] text-center font-serif text-h2 text-text-primary">
           The groomer generations of GTA pet owners have trusted
