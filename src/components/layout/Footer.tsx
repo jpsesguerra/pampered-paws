@@ -29,6 +29,34 @@ const PROGRAM_LINKS = [
   { label: "Pricing", href: "/grooming-prices" },
 ];
 
+const PARTNERS = [
+  {
+    name: "DeBoer Grooming Supplies",
+    logo: "https://res.cloudinary.com/du0witbcr/image/upload/v1784261317/Deboer_i3rnd1.png",
+    href: "https://www.deboergroomingsupplies.com/",
+  },
+  {
+    name: "American Kennel Club",
+    logo: "https://res.cloudinary.com/du0witbcr/image/upload/v1784261317/AKC_dnpdrx.png",
+    href: "https://www.akc.org/",
+  },
+  {
+    name: "Kennel Link",
+    logo: "https://res.cloudinary.com/du0witbcr/image/upload/v1784261317/Kennel_iuoqgc.png",
+    href: "https://kennellink.com/index.html",
+  },
+  {
+    name: "Canadian Kennel Club",
+    logo: "https://res.cloudinary.com/du0witbcr/image/upload/v1784261317/CKC_r0r3e8.png",
+    href: "https://www.ckc.ca/en",
+  },
+  {
+    name: "National Dog Groomers Association",
+    logo: "https://res.cloudinary.com/du0witbcr/image/upload/v1784261317/NGAC_gn54pi.png",
+    href: "https://nationalgroomer.com/",
+  },
+];
+
 const SOCIAL_LINKS = [
   {
     label: "Instagram",
@@ -148,6 +176,28 @@ function LocationFooterCard({
   );
 }
 
+function PartnersRow() {
+  return (
+    <div className="flex w-full flex-wrap items-center gap-lg sm:w-auto sm:justify-end">
+      <span className="font-sans text-label-default text-text-on-pink">Our Partners:</span>
+      <div className="flex flex-wrap items-center gap-lg">
+        {PARTNERS.map((partner) => (
+          <a
+            key={partner.name}
+            href={partner.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={partner.name}
+            className="flex h-10 items-center opacity-90 transition-opacity hover:opacity-100"
+          >
+            <img src={partner.logo} alt={partner.name} className="h-full w-auto object-contain" />
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Footer({ locations }: { locations: Location[] }) {
   return (
     <footer className="flex items-center justify-center px-md py-2xl">
@@ -186,10 +236,13 @@ export function Footer({ locations }: { locations: Location[] }) {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:flex-wrap sm:gap-lg min-[1400px]:flex-1">
-            {locations.map((location, i) => (
-              <LocationFooterCard key={location.slug} location={location} delay={REVEAL_DELAYS[i] ?? 600} />
-            ))}
+          <div className="flex w-full flex-col items-start gap-2xl min-[1400px]:flex-1">
+            <div className="flex w-full flex-col items-start gap-2xl sm:flex-row sm:flex-wrap sm:gap-lg">
+              {locations.map((location, i) => (
+                <LocationFooterCard key={location.slug} location={location} delay={REVEAL_DELAYS[i] ?? 600} />
+              ))}
+            </div>
+            <PartnersRow />
           </div>
         </div>
         <div className="flex w-full flex-col items-start gap-lg sm:flex-row sm:items-center sm:justify-between">
