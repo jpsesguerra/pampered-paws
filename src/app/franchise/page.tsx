@@ -7,6 +7,7 @@ import { OpportunitySection } from "@/components/sections/OpportunitySection";
 import { WhyPartnerSection } from "@/components/sections/WhyPartnerSection";
 import { WhatsIncludedSection } from "@/components/sections/WhatsIncludedSection";
 import { FounderNoteSection } from "@/components/sections/FounderNoteSection";
+import { FranchisePartnershipSection } from "@/components/sections/FranchisePartnershipSection";
 import { InvestmentSection } from "@/components/sections/InvestmentSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTABanner } from "@/components/sections/CTABanner";
@@ -90,10 +91,10 @@ export default async function FranchisePage() {
         <FounderNoteSection />
       </Reveal>
       <Reveal>
-        <InvestmentSection />
+        <FranchisePartnershipSection />
       </Reveal>
       <Reveal>
-        <FAQSection items={faqs} />
+        <InvestmentSection />
       </Reveal>
       <Reveal>
         <CTABanner
@@ -102,6 +103,9 @@ export default async function FranchisePage() {
           buttonLabel="Franchise inquiry form"
           buttonHref="/franchise/enquire"
         />
+      </Reveal>
+      <Reveal>
+        <FAQSection items={faqs} />
       </Reveal>
     </>
   );
