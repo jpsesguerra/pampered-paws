@@ -1,8 +1,10 @@
 import { Hero } from "@/components/sections/Hero";
 import { BreedCarousel } from "@/components/sections/BreedCarousel";
+import { LegacyHighlightsSection } from "@/components/sections/LegacyHighlightsSection";
 import { SuccessStories } from "@/components/sections/SuccessStories";
 import { BookingSteps } from "@/components/sections/BookingSteps";
 import { CraftSection } from "@/components/sections/CraftSection";
+import { FranchisingTeaserSection } from "@/components/sections/FranchisingTeaserSection";
 import { TeamSection } from "@/components/sections/TeamSection";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Gallery } from "@/components/sections/Gallery";
@@ -23,6 +25,9 @@ export default async function Home() {
         <BreedCarousel />
       </Reveal>
       <Reveal>
+        <LegacyHighlightsSection />
+      </Reveal>
+      <Reveal>
         <SuccessStories />
       </Reveal>
       <Reveal>
@@ -30,6 +35,9 @@ export default async function Home() {
       </Reveal>
       <Reveal>
         <CraftSection />
+      </Reveal>
+      <Reveal>
+        <FranchisingTeaserSection />
       </Reveal>
       <TeamSection />
       <Reveal>
