@@ -1,5 +1,6 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LocationCard } from "@/components/ui/LocationCard";
+import { RegisteredMark } from "@/components/ui/RegisteredMark";
 import { getLocations } from "@/sanity/lib/locations";
 
 export const revalidate = 60;
@@ -12,7 +13,7 @@ export default async function LocationsPage() {
         <div className="flex max-w-[772px] flex-col items-center gap-lg text-center">
           <Eyebrow>Locations</Eyebrow>
           <h1 className="font-serif text-h2 text-text-primary">
-            Find your nearest Pampered Paws™
+            Find your nearest Pampered Paws<RegisteredMark />
           </h1>
           <p className="font-sans text-body-lg text-text-primary">
             Three grooming salons across the Greater Toronto Area, each with

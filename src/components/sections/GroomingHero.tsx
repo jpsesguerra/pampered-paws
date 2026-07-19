@@ -3,6 +3,7 @@ import { Highlight } from "@/components/ui/Highlight";
 import { Button } from "@/components/ui/Button";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { Reveal } from "@/components/ui/Reveal";
+import { RegisteredMark } from "@/components/ui/RegisteredMark";
 
 export function GroomingHero() {
   return (
@@ -33,7 +34,7 @@ export function GroomingHero() {
             </Reveal>
             <Reveal delay={200}>
               <p className="max-w-[456px] font-sans text-body-lg text-text-primary">
-                Since 1979, GTA pet owners have trusted Pampered Paws™ to treat
+                Since 1979, GTA pet owners have trusted Pampered Paws<RegisteredMark /> to treat
                 their companions like our own. Every groom is built around
                 your pet — their breed, their coat, their comfort, and
                 exactly the look you want.

@@ -2,13 +2,14 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Highlight } from "@/components/ui/Highlight";
 import { IconCircle } from "@/components/ui/IconCircle";
+import { withRegisteredMark } from "@/lib/text";
 
 const EVENTS = [
   {
     icon: "location" as const,
     year: "1979 — The salon",
     description:
-      "Pampered Paws™ opens in Toronto, founded on one rule that still holds: the haircut you ask for is the haircut you get.",
+      "Pampered Paws® opens in Toronto, founded on one rule that still holds: the haircut you ask for is the haircut you get.",
   },
   {
     icon: "graduation-cap" as const,
@@ -26,7 +27,7 @@ const EVENTS = [
     icon: "global" as const,
     year: "1996 — Going international",
     description:
-      "Pampered Paws™ began franchising, opening its first international location in Tokyo.",
+      "Pampered Paws® began franchising, opening its first international location in Tokyo.",
   },
   {
     icon: "paw" as const,
@@ -57,7 +58,7 @@ export function Timeline() {
                 <div className="flex flex-1 flex-col items-start gap-xxs">
                   <h3 className="font-serif text-h5 text-text-primary">{event.year}</h3>
                   <p className="font-sans text-body-default text-text-secondary">
-                    {event.description}
+                    {withRegisteredMark(event.description)}
                   </p>
                 </div>
               </div>

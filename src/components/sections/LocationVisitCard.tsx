@@ -17,7 +17,7 @@ export function LocationVisitCard({ location }: { location: Location }) {
         <div className="relative h-[280px] w-full overflow-hidden rounded-2xl sm:h-auto sm:flex-1">
           <iframe
             src={getGoogleMapsEmbedUrl(location)}
-            title={`Map to Pampered Paws™ ${location.locationName}`}
+            title={`Map to Pampered Paws® ${location.locationName}`}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="absolute inset-0 size-full border-0"

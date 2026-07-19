@@ -44,7 +44,7 @@ export function LocationHero({ location }: { location: Location }) {
           {location.heroImage && (
             <Image
               src={location.heroImage}
-              alt={`Pampered Paws™ ${location.locationName} storefront`}
+              alt={`Pampered Paws® ${location.locationName} storefront`}
               fill
               className="hero-edge-fade object-cover object-left"
             />

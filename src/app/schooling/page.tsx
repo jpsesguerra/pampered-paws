@@ -16,6 +16,7 @@ import { getPrograms } from "@/sanity/lib/programs";
 import { getFaqsByCategory } from "@/sanity/lib/faqs";
 import { getTestimonialsByCategory } from "@/sanity/lib/testimonials";
 import { Reveal } from "@/components/ui/Reveal";
+import { RegisteredMark } from "@/components/ui/RegisteredMark";
 
 export const revalidate = 60;
 
@@ -50,7 +51,7 @@ export default async function SchoolingPage() {
                 <div className="flex flex-col items-start gap-2xl">
                   <p className="font-sans text-body-lg text-text-primary">
                     Whether you&rsquo;re starting a new career, sharpening your
-                    skills, or opening your own salon, Pampered Paws™ gives you
+                    skills, or opening your own salon, Pampered Paws<RegisteredMark /> gives you
                     hands-on training from working stylists — not a classroom
                     theory course. Train at your pace, four weeks at a time.
                   </p>
@@ -83,7 +84,7 @@ export default async function SchoolingPage() {
         <section id="programs" className="flex items-center justify-center px-lg py-7xl">
           <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
             <div className="flex max-w-[716px] flex-col items-center gap-md text-center">
-              <Eyebrow>Schooling at Pampered Paws™</Eyebrow>
+              <Eyebrow>Schooling at Pampered Paws<RegisteredMark /></Eyebrow>
               <h2 className="font-serif text-h2 text-text-primary">Our programs</h2>
               <p className="font-sans text-body-lg text-text-primary">
                 Choose a starting point — or talk to us about a path that

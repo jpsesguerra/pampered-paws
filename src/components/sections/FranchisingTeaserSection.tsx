@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { RegisteredMark } from "@/components/ui/RegisteredMark";
 
 export function FranchisingTeaserSection() {
   return (
@@ -9,7 +10,7 @@ export function FranchisingTeaserSection() {
         <div className="relative size-[240px] shrink-0 overflow-hidden rounded-lg">
           <Image
             src="https://res.cloudinary.com/du0witbcr/image/upload/v1784260148/Lesley_photo_for_website_1_wxixjy.png"
-            alt="Lesley Weeks, Founder & President of Pampered Paws™"
+            alt="Lesley Weeks, Founder & President of Pampered Paws®"
             fill
             className="object-cover"
           />
@@ -20,7 +21,7 @@ export function FranchisingTeaserSection() {
             A proven business in a fast growing industry
           </h3>
           <p className="font-sans text-body-default text-text-primary">
-            Pampered Paws™ has been grooming, training, and building
+            Pampered Paws<RegisteredMark /> has been grooming, training, and building
             successful pet-care businesses since 1979 — across Canada and
             internationally. Now we&rsquo;re opening that proven system to a
             select group of franchise partners.

@@ -16,7 +16,7 @@ export function LocationCard({ location }: { location: Location }) {
         {location.heroImage && (
           <Image
             src={location.heroImage}
-            alt={`Pampered Paws™ ${location.locationName} storefront`}
+            alt={`Pampered Paws® ${location.locationName} storefront`}
             fill
             className="object-cover"
           />

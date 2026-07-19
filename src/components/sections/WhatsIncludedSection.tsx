@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Highlight } from "@/components/ui/Highlight";
 import { IconCircle } from "@/components/ui/IconCircle";
+import { RegisteredMark } from "@/components/ui/RegisteredMark";
 
 const INCLUDED = [
   {
@@ -43,7 +44,7 @@ export function WhatsIncludedSection() {
         <div className="flex flex-col items-start gap-s+">
           <Eyebrow>What you get</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
-            What comes with a Pampered Paws™ <Highlight>franchise</Highlight>
+            What comes with a Pampered Paws<RegisteredMark /> <Highlight>franchise</Highlight>
           </h2>
         </div>
         <div className="flex w-full flex-col items-start gap-7xl lg:flex-row lg:items-stretch">

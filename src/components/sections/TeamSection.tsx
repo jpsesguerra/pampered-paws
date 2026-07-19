@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
+import { RegisteredMark } from "@/components/ui/RegisteredMark";
 
 const VALUES = [
   {
@@ -34,7 +35,7 @@ export function TeamSection() {
               </h2>
               <p className="font-sans text-body-default text-text-primary">
                 For over four decades, GTA pet owners have trusted Pampered
-                Paws™ with the pets they love. We&rsquo;re not the cheapest and
+                Paws<RegisteredMark /> with the pets they love. We&rsquo;re not the cheapest and
                 we&rsquo;re not a luxury label — we&rsquo;re the groomers who
                 refuse to compromise on your pet&rsquo;s comfort, and who
                 believe that should be available to anyone who feels the
@@ -51,7 +52,7 @@ export function TeamSection() {
           <Reveal delay={200} className="relative h-[280px] w-full shrink-0 overflow-hidden rounded-2xl bg-brand-secondary-light sm:h-auto sm:flex-1">
             <Image
               src="https://res.cloudinary.com/du0witbcr/image/upload/v1783908126/DSC02338-fotor-2026071221562_frpdfz.png"
-              alt="The Pampered Paws™ team"
+              alt="The Pampered Paws® team"
               fill
               className="object-cover"
             />

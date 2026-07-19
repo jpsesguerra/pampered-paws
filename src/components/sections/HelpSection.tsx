@@ -1,6 +1,7 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { IconCircle } from "@/components/ui/IconCircle";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import { withRegisteredMark } from "@/lib/text";
 
 const HELP_ITEMS = [
   {
@@ -21,7 +22,7 @@ const HELP_ITEMS = [
   },
   {
     icon: "location" as const,
-    title: "Open your own Pampered Paws™",
+    title: "Open your own Pampered Paws®",
     description:
       "A proven grooming brand with 45 years behind it and locations from the GTA to Tokyo. If you're ready to build something, let's talk.",
     ctaLabel: "Explore the opportunity",
@@ -46,7 +47,7 @@ export function HelpSection() {
               className="flex w-full flex-col items-start gap-md rounded-2xl bg-surface-white py-lg pl-lg pr-2xl"
             >
               <IconCircle variant={item.icon} />
-              <h3 className="font-serif text-h4 text-text-primary">{item.title}</h3>
+              <h3 className="font-serif text-h4 text-text-primary">{withRegisteredMark(item.title)}</h3>
               <p className="font-sans text-body-default text-text-secondary">{item.description}</p>
               <SecondaryButton href={item.ctaHref}>{item.ctaLabel}</SecondaryButton>
             </div>
