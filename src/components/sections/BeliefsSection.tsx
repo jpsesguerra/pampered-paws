@@ -28,7 +28,7 @@ export function BeliefsSection() {
         <div className="flex flex-col items-center gap-md text-center">
           <h2 className="font-serif text-h2 text-text-primary">What we believe</h2>
           <p className="font-sans text-body-lg text-text-primary">
-            Three things have guided Pampered Paws from the first day:
+            Three things have guided Pampered Paws™ from the first day:
           </p>
         </div>
         <div className="flex w-full flex-col items-start gap-lg lg:flex-row lg:items-stretch">

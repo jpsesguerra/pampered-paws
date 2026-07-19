@@ -19,7 +19,7 @@ export function InvestmentSection() {
             community — the capital conversation comes after that.
           </p>
           <p className="font-sans text-body-default text-text-primary">
-            A Pampered Paws salon is a full-service, brick-and-mortar
+            A Pampered Paws™ salon is a full-service, brick-and-mortar
             grooming business — not a mobile or home-based concept. Across
             the industry, opening a brick-and-mortar pet grooming salon
             typically represents a six-figure investment, with the largest

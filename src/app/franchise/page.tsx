@@ -44,7 +44,7 @@ export default async function FranchisePage() {
               </Reveal>
               <Reveal delay={200}>
                 <p className="max-w-[411px] font-sans text-body-default text-text-primary">
-                  Pampered Paws has been grooming, training, and building
+                  Pampered Paws™ has been grooming, training, and building
                   successful pet-care businesses since 1979 — across Canada
                   and internationally. Now we&rsquo;re opening that proven
                   system to a select group of franchise partners.

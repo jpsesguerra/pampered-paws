@@ -32,7 +32,7 @@ export function OriginStory() {
             stretch in the insurance industry. It paid well and the hours
             were good — but there was no room in it for the artistry she
             needed. So she left a stable career for an uncertain one, and in
-            1979, Pampered Paws officially opened its doors.
+            1979, Pampered Paws™ officially opened its doors.
           </p>
         </div>
       </div>

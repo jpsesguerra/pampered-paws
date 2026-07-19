@@ -12,7 +12,7 @@ export function FounderNoteSection() {
           <div className="relative size-[240px] shrink-0 overflow-hidden rounded-lg">
             <Image
               src="https://res.cloudinary.com/du0witbcr/image/upload/v1784260148/Lesley_photo_for_website_1_wxixjy.png"
-              alt="Lesley Weeks, Founder & President of Pampered Paws"
+              alt="Lesley Weeks, Founder & President of Pampered Paws™"
               fill
               className="object-cover"
             />
@@ -23,11 +23,11 @@ export function FounderNoteSection() {
                 &ldquo;We are not looking for franchisees who simply want to
                 buy a business. We&rsquo;re looking for partners who are
                 ready to lead, learn our systems, and give every client — and
-                every pet — the care that&rsquo;s defined Pampered Paws since
+                every pet — the care that&rsquo;s defined Pampered Paws™ since
                 1979.&rdquo;
               </p>
               <p className="font-sans text-label-lg text-text-primary">
-                Lesley Weeks — Founder &amp; President, Pampered Paws Limited
+                Lesley Weeks — Founder &amp; President, Pampered Paws™ Limited
               </p>
             </div>
             <Button href={FOUNDER_LETTER_URL} target="_blank" rel="noopener noreferrer">

@@ -5,7 +5,7 @@ const REASONS = [
     icon: "location" as const,
     title: "A name that's meant quality since 1979.",
     description:
-      "Most grooming franchises are a decade old, if that. Pampered Paws has spent more than 45 years building a reputation pet owners trust — the kind of brand equity a new business usually takes years to earn.",
+      "Most grooming franchises are a decade old, if that. Pampered Paws™ has spent more than 45 years building a reputation pet owners trust — the kind of brand equity a new business usually takes years to earn.",
   },
   {
     icon: "paw" as const,
@@ -17,7 +17,7 @@ const REASONS = [
     icon: "calendar" as const,
     title: "A built-in advantage: our grooming school",
     description:
-      "Pampered Paws runs its own professional grooming school, with graduates operating businesses in more than 20 countries. You're connected to a pipeline of trained talent, with the option to host training programs as a second revenue stream.",
+      "Pampered Paws™ runs its own professional grooming school, with graduates operating businesses in more than 20 countries. You're connected to a pipeline of trained talent, with the option to host training programs as a second revenue stream.",
   },
 ];
 
@@ -26,7 +26,7 @@ export function WhyPartnerSection() {
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
         <h2 className="text-center font-serif text-h3 text-text-primary">
-          Why partner with Pampered Paws
+          Why partner with Pampered Paws™
         </h2>
         <div className="flex w-full flex-col items-start gap-lg lg:flex-row lg:items-stretch">
           {REASONS.map((reason) => (

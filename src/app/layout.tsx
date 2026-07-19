@@ -9,9 +9,9 @@ import "./globals.css";
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
-  title: "Pampered Paws | Professional Pet Grooming & Grooming School",
+  title: "Pampered Paws™ | Professional Pet Grooming & Grooming School",
   description:
-    "Pampered Paws offers professional pet grooming, grooming school programs, and franchise opportunities across Mississauga, Toronto, Scarborough, and Tokyo.",
+    "Pampered Paws™ offers professional pet grooming, grooming school programs, and franchise opportunities across Mississauga, Toronto, Scarborough, and Tokyo.",
 };
 
 export default async function RootLayout({

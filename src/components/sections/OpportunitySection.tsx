@@ -15,7 +15,7 @@ export function OpportunitySection() {
         <div className="flex w-full flex-col items-start gap-2xl lg:flex-row">
           <div className="flex w-full flex-1 flex-col items-start gap-lg">
             <p className="font-sans text-body-default text-text-primary">
-              The decision to franchise Pampered Paws wasn&rsquo;t about
+              The decision to franchise Pampered Paws™ wasn&rsquo;t about
               growing locations — it was about finding partners who share the
               values that built this brand.
             </p>
@@ -27,7 +27,7 @@ export function OpportunitySection() {
               steady, repeat revenue rather than one-time sales.
             </p>
             <p className="font-sans text-body-default text-text-primary">
-              Pampered Paws began franchising in 2004, after 25 years of
+              Pampered Paws™ began franchising in 2004, after 25 years of
               refining how a grooming salon should actually run — pricing,
               workflow, staff training, and client care. We grow
               deliberately, not quickly. Every location has to reflect the
@@ -40,7 +40,7 @@ export function OpportunitySection() {
           <div className="aspect-video w-full flex-1 overflow-hidden rounded-2xl border-[12px] border-brand-primary-pink shadow-lg">
             <iframe
               src="https://www.youtube.com/embed/Go-7E8Nrmgg"
-              title="A message about the Pampered Paws franchise opportunity"
+              title="A message about the Pampered Paws™ franchise opportunity"
               className="size-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

@@ -206,7 +206,7 @@ export function Footer({ locations }: { locations: Location[] }) {
           <div className="flex flex-col gap-2xl">
             <Image
               src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664981/pampered-paws/images/logo-footer.png"
-              alt="Pampered Paws"
+              alt="Pampered Paws™"
               width={244}
               height={72}
               className="h-[60px] w-[203px] object-contain sm:h-[72px] sm:w-[244px]"
@@ -247,7 +247,7 @@ export function Footer({ locations }: { locations: Location[] }) {
         </div>
         <div className="flex w-full flex-col items-start gap-lg sm:flex-row sm:items-center sm:justify-between">
           <p className="font-sans text-body-sm text-[#A8A8A8]">
-            © {new Date().getFullYear()} Pampered Paws Ltd. All rights reserved.
+            © {new Date().getFullYear()} Pampered Paws™ Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-md">
             {SOCIAL_LINKS.map((social) => (

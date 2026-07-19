@@ -30,7 +30,7 @@ export function Header() {
           <Link href="/" className="block h-[44px] w-[183px] shrink-0 sm:h-[59px] sm:w-[247px]">
             <Image
               src="https://res.cloudinary.com/du0witbcr/image/upload/v1782664982/pampered-paws/images/logo.png"
-              alt="Pampered Paws"
+              alt="Pampered Paws™"
               width={247}
               height={59}
               className="h-full w-full object-contain"

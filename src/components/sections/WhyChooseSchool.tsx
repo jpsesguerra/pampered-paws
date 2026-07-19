@@ -7,12 +7,12 @@ export function WhyChooseSchool() {
     <section className="flex items-center justify-center px-lg py-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
         <div className="flex w-full flex-1 flex-col items-start gap-lg">
-          <Eyebrow>Why Choose Pampered Paws</Eyebrow>
+          <Eyebrow>Why Choose Pampered Paws™</Eyebrow>
           <h2 className="font-serif text-h2 text-text-primary">
             A track record you can build a <Highlight>career</Highlight> on
           </h2>
           <p className="font-sans text-body-lg text-text-primary">
-            For more than 45 years, Pampered Paws has trained groomers who go
+            For more than 45 years, Pampered Paws™ has trained groomers who go
             on to do this for a living — and for themselves.
           </p>
         </div>

@@ -13,7 +13,7 @@ const INFO_CARDS = [
     icon: "location" as const,
     title: "Your pet's first visit",
     description:
-      "New to Pampered Paws? Here's what happens.\n\nWhen you arrive, your stylist takes time to talk with you — your pet's age, any health concerns, the condition of their coat, and the look you have in mind. We listen to every word, because the cut you ask for should be the cut you get.",
+      "New to Pampered Paws™? Here's what happens.\n\nWhen you arrive, your stylist takes time to talk with you — your pet's age, any health concerns, the condition of their coat, and the look you have in mind. We listen to every word, because the cut you ask for should be the cut you get.",
     full: false,
   },
   {
