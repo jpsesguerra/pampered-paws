@@ -37,7 +37,7 @@ export default async function RootLayout({
       </head>
       <body className="antialiased font-sans text-text-primary bg-brand-background-neutral">
         <ToastProvider>
-          <Header />
+          <Header locations={locations} />
           <main>{children}</main>
           <Footer locations={locations} />
         </ToastProvider>

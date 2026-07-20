@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
+import type { Location } from "@/lib/data/locations";
 
 const NAV_LINKS = [
   { label: "Grooming", href: "/grooming" },
@@ -14,13 +15,25 @@ const NAV_LINKS = [
   { label: "About Us", href: "/about-us" },
 ];
 
-// Only shown in the mobile menu, alongside NAV_LINKS.
-const MOBILE_ONLY_LINKS = [
+// Two even columns, left column first — `grid-flow-col` below fills column 1
+// top-to-bottom before spilling into column 2, so this order is
+// left-column-then-right, not reading order.
+const MOBILE_MENU_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "Grooming", href: "/grooming" },
+  { label: "Schooling", href: "/schooling" },
+  { label: "Franchising", href: "/franchise" },
+  { label: "Locations", href: "/locations" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Pricing", href: "/grooming-prices" },
   { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
-  { label: "Pricing", href: "/grooming-prices" },
   { label: "Careers", href: "/careers" },
 ];
+
+function sanitizePhone(phone: string) {
+  return phone.replace(/[^0-9+]/g, "");
+}
 
 function MenuToggleIcon({ isOpen }: { isOpen: boolean }) {
   return (
@@ -34,7 +47,7 @@ function MenuToggleIcon({ isOpen }: { isOpen: boolean }) {
   );
 }
 
-export function Header() {
+export function Header({ locations = [] }: { locations?: Location[] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Bottom sheet is a viewport overlay — keep the page from scrolling behind it while open.
@@ -79,28 +92,61 @@ export function Header() {
           </Button>
         </div>
 
-        {/* Mobile bottom-sheet menu: slides up from behind the fixed trigger pill below. */}
+        {/* Mobile bottom-sheet menu: grows up from behind the fixed trigger pill below. */}
         <nav
           id="mobile-menu-panel"
           aria-hidden={!isMenuOpen}
           className={cn(
-            "fixed inset-x-0 bottom-0 top-28 z-40 flex flex-col items-start gap-md overflow-y-auto rounded-t-[32px] bg-surface-white p-lg pb-[104px] shadow-xl transition-transform duration-300 ease-out lg:hidden",
-            isMenuOpen ? "translate-y-0" : "pointer-events-none translate-y-full"
+            "fixed inset-x-0 bottom-0 top-28 z-40 flex origin-bottom flex-col items-center gap-2xl overflow-y-auto rounded-t-[32px] bg-surface-white p-lg pb-[104px] shadow-xl transition-all duration-500 ease-out lg:hidden",
+            isMenuOpen
+              ? "translate-y-0 scale-y-100 opacity-100"
+              : "pointer-events-none translate-y-6 scale-y-95 opacity-0"
           )}
         >
-          {[...NAV_LINKS, ...MOBILE_ONLY_LINKS].map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={closeMenu}
-              className="w-full font-sans text-btn-primary text-text-primary transition-colors duration-300 hover:text-brand-primary-pink"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Button href="/request-an-appointment" className="w-full" onClick={closeMenu}>
+          <div className="grid w-full grid-flow-col grid-rows-5 gap-x-lg gap-y-lg">
+            {MOBILE_MENU_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={closeMenu}
+                className="font-sans text-btn-primary text-text-primary transition-colors duration-300 hover:text-brand-primary-pink"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <Button href="/request-an-appointment" className="w-fit" onClick={closeMenu}>
             Request An Appointment
           </Button>
+
+          <div className="flex w-full flex-col items-center gap-lg">
+            {locations.map((location) => (
+              <div key={location.slug} className="flex w-full flex-col items-center gap-sm">
+                <span className="font-sans text-btn-primary text-text-primary">
+                  {location.locationName}
+                </span>
+                <div className="flex w-full gap-sm">
+                  <a
+                    href={`tel:${sanitizePhone(location.phoneCall)}`}
+                    onClick={closeMenu}
+                    className="flex flex-1 items-center justify-center rounded-full bg-brand-background-neutral px-lg py-sm font-sans text-label-default text-text-primary"
+                  >
+                    Call
+                  </a>
+                  {location.phoneText && (
+                    <a
+                      href={`sms:${sanitizePhone(location.phoneText)}`}
+                      onClick={closeMenu}
+                      className="flex flex-1 items-center justify-center rounded-full bg-brand-background-neutral px-lg py-sm font-sans text-label-default text-text-primary"
+                    >
+                      Text
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </nav>
 
         <button
@@ -111,10 +157,10 @@ export function Header() {
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           className="fixed inset-x-0 bottom-lg z-50 mx-auto flex w-fit items-center gap-sm rounded-full bg-surface-white px-xl py-md shadow-lg lg:hidden"
         >
+          <MenuToggleIcon isOpen={isMenuOpen} />
           <span className="font-sans text-btn-primary text-text-primary">
             {isMenuOpen ? "Close" : "Menu"}
           </span>
-          <MenuToggleIcon isOpen={isMenuOpen} />
         </button>
       </div>
     </header>
