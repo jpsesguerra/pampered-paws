@@ -44,6 +44,17 @@ export function FranchisePartnershipSection() {
             one.
           </p>
         </div>
+        <div className="flex flex-col items-start gap-sm text-left">
+          <h3 className="font-serif text-h4 text-text-primary">Is Franchising Right for You?</h3>
+          <p className="font-sans text-body-default text-text-primary">
+            We&rsquo;re looking for motivated individuals who are passionate
+            about customer service, strong leaders, financially responsible,
+            ready to own and operate their own business, and committed to
+            building a long-term future. You don&rsquo;t need years of
+            grooming experience &mdash; we&rsquo;ll teach you our proven
+            systems.
+          </p>
+        </div>
         <div className="flex w-full flex-col items-start gap-lg">
           {PARTNERSHIP_VALUES.map((value) => (
             <div key={value.title} className="flex w-full items-center gap-lg rounded-2xl bg-surface-white p-lg">

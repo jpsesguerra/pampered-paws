@@ -28,13 +28,18 @@ export function OpportunitySection() {
               steady, repeat revenue rather than one-time sales.
             </p>
             <p className="font-sans text-body-default text-text-primary">
-              Pampered Paws<RegisteredMark /> began franchising in 2004, after 25 years of
-              refining how a grooming salon should actually run — pricing,
-              workflow, staff training, and client care. We grow
-              deliberately, not quickly. Every location has to reflect the
-              same standards and reputation we&rsquo;ve spent decades
-              building, and that discipline is what protects your investment
-              as a partner, not just ours.
+              For over four decades, we&rsquo;ve built a reputation based on
+              quality, education, innovation, and exceptional customer care.
+              Our franchisees benefit from proven systems, comprehensive
+              training, ongoing support, and a brand trusted by thousands of
+              pet owners.
+            </p>
+            <p className="font-sans text-body-default text-text-primary">
+              Whether you&rsquo;re an experienced groomer, a business
+              professional, or someone looking for a complete career change,
+              we&rsquo;ll provide the tools, systems, and guidance to help you
+              succeed. You don&rsquo;t need years of grooming experience
+              &mdash; we&rsquo;ll teach you our proven systems.
             </p>
             <SecondaryButton href="/franchise/enquire">Request franchise information</SecondaryButton>
           </div>

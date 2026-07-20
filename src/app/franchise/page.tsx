@@ -35,20 +35,19 @@ export default async function FranchisePage() {
           <div className="relative z-10 flex w-full flex-col items-start gap-2xl px-lg pt-lg sm:pt-2xl lg:w-fit lg:flex-none lg:px-0 lg:py-2xl">
             <div className="flex flex-col items-start gap-sm">
               <Reveal>
-                <Eyebrow>Franchising Opportunity</Eyebrow>
+                <Eyebrow>Franchise Opportunities</Eyebrow>
               </Reveal>
               <Reveal delay={100}>
                 <h1 className="max-w-[516px] font-serif text-h2 text-text-primary sm:text-display-h1">
-                  Own a grooming business backed by 45 years of{" "}
-                  <Highlight>expertise</Highlight>
+                  Own Your Future. Build Your <Highlight>Legacy.</Highlight>
                 </h1>
               </Reveal>
               <Reveal delay={200}>
                 <p className="max-w-[411px] font-sans text-body-default text-text-primary">
-                  Pampered Paws<RegisteredMark /> has been grooming, training, and building
-                  successful pet-care businesses since 1979 — across Canada
-                  and internationally. Now we&rsquo;re opening that proven
-                  system to a select group of franchise partners.
+                  Turn your passion into your own business. Pampered Paws<RegisteredMark /> is
+                  expanding through carefully selected franchise partners
+                  backed by one of Canada&rsquo;s most respected names in
+                  professional pet grooming.
                 </p>
               </Reveal>
             </div>
@@ -99,9 +98,9 @@ export default async function FranchisePage() {
       </Reveal>
       <Reveal>
         <CTABanner
-          heading="Start the conversation"
-          description="Tell us about yourself and the market you're interested in. Our franchise team will be in touch to talk through the opportunity."
-          buttonLabel="Franchise inquiry form"
+          heading="The Best Time to Start Is Now."
+          description="Every successful business begins with a single decision. Take the first step toward owning your own Pampered Paws® franchise — request your Franchise Information Package today."
+          buttonLabel="Request franchise information"
           buttonHref="/franchise/enquire"
         />
       </Reveal>

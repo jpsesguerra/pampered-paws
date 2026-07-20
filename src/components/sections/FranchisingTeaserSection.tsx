@@ -16,15 +16,15 @@ export function FranchisingTeaserSection() {
           />
         </div>
         <div className="flex flex-1 flex-col items-start gap-md">
-          <Eyebrow>Franchising Opportunity</Eyebrow>
+          <Eyebrow>Franchise Opportunities</Eyebrow>
           <h3 className="font-serif text-h4 text-text-primary">
-            A proven business in a fast growing industry
+            Own Your Future. Build Your Legacy.
           </h3>
           <p className="font-sans text-body-default text-text-primary">
-            Pampered Paws<RegisteredMark /> has been grooming, training, and building
-            successful pet-care businesses since 1979 — across Canada and
-            internationally. Now we&rsquo;re opening that proven system to a
-            select group of franchise partners.
+            Turn your passion into your own business. Pampered Paws<RegisteredMark /> is
+            expanding through carefully selected franchise partners backed by
+            one of Canada&rsquo;s most respected names in professional pet
+            grooming.
           </p>
           <Button href="/franchise">Learn about franchising</Button>
         </div>

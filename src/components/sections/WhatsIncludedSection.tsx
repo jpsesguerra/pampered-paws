@@ -13,7 +13,7 @@ const INCLUDED = [
   {
     icon: "star" as const,
     title: "A complete operating system",
-    description: "The pricing, workflow, and service standards we've refined since 1979",
+    description: "Comprehensive operations manuals covering the pricing, workflow, and service standards we've refined since 1979",
   },
   {
     icon: "location" as const,
@@ -34,6 +34,21 @@ const INCLUDED = [
     icon: "credit-card" as const,
     title: "A second revenue vertical",
     description: "The option to offer grooming education alongside your salon",
+  },
+  {
+    icon: "star" as const,
+    title: "Marketing and business support",
+    description: "Guidance on local marketing and day-to-day business operations",
+  },
+  {
+    icon: "location" as const,
+    title: "Exclusive territories",
+    description: "Protected territory rights so you're not competing with another Pampered Paws® location",
+  },
+  {
+    icon: "graduation-cap" as const,
+    title: "Ongoing coaching and mentorship",
+    description: "Continued guidance from our team well beyond your launch",
   },
 ];
 
