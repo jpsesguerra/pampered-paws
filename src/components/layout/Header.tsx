@@ -103,13 +103,13 @@ export function Header({ locations = [] }: { locations?: Location[] }) {
               : "pointer-events-none translate-y-6 scale-y-95 opacity-0"
           )}
         >
-          <div className="grid w-full grid-flow-col grid-rows-5 gap-x-lg gap-y-lg">
+          <div className="grid w-full grid-flow-col grid-cols-2 grid-rows-5 gap-x-lg gap-y-lg">
             {MOBILE_MENU_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="font-sans text-btn-primary text-text-primary transition-colors duration-300 hover:text-brand-primary-pink"
+                className="text-center font-sans text-btn-primary text-text-primary transition-colors duration-300 hover:text-brand-primary-pink"
               >
                 {link.label}
               </Link>
