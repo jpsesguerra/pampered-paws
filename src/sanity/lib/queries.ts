@@ -49,3 +49,8 @@ export const faqsByCategoryQuery = groq`*[_type == "faq" && category == $categor
 export const allBreedPricingQuery = groq`*[_type == "breedPricing"] | order(breed asc)`;
 
 export const allServicesQuery = groq`*[_type == "service"] | order(category asc, name asc)`;
+
+const jobPostingProjection = groq`{ ..., "slug": slug.current }`;
+
+export const allJobPostingsQuery = groq`*[_type == "jobPosting" && active != false] | order(title asc) ${jobPostingProjection}`;
+export const jobPostingBySlugQuery = groq`*[_type == "jobPosting" && slug.current == $slug][0] ${jobPostingProjection}`;

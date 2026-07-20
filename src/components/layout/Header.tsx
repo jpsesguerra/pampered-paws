@@ -19,6 +19,7 @@ const MOBILE_ONLY_LINKS = [
   { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
   { label: "Pricing", href: "/grooming-prices" },
+  { label: "Careers", href: "/careers" },
 ];
 
 function MenuToggleIcon({ isOpen }: { isOpen: boolean }) {

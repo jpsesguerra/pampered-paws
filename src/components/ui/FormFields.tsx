@@ -35,6 +35,29 @@ export function SelectInput({
   );
 }
 
+export function FileInput({
+  fileName,
+  className,
+  ...props
+}: React.InputHTMLAttributes<HTMLInputElement> & { fileName?: string }) {
+  return (
+    <label
+      className={cn(
+        "flex w-full cursor-pointer items-center justify-between gap-md rounded-full border border-[#efeff2] bg-surface-white px-xl py-lg font-sans text-body-default text-text-primary",
+        className
+      )}
+    >
+      <span className={cn("truncate", !fileName && "text-text-secondary")}>
+        {fileName ?? "Choose a file"}
+      </span>
+      <span className="shrink-0 rounded-full bg-brand-background-neutral px-lg py-xs font-sans text-label-default text-text-primary">
+        Browse
+      </span>
+      <input {...props} type="file" className="sr-only" />
+    </label>
+  );
+}
+
 export function TextareaInput(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
   return (
     <textarea

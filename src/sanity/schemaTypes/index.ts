@@ -7,6 +7,7 @@ import blogPost from "./blogPost";
 import faq from "./faq";
 import breedPricing from "./breedPricing";
 import service from "./service";
+import jobPosting from "./jobPosting";
 
 export const schemaTypes = [
   location,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   faq,
   breedPricing,
   service,
+  jobPosting,
 ];

@@ -21,6 +21,7 @@ const QUICK_LINKS = [
   { label: "Locations", href: "/locations" },
   { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
+  { label: "Careers", href: "/careers" },
 ];
 
 const PROGRAM_LINKS = [
