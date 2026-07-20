@@ -21,7 +21,6 @@ const QUICK_LINKS = [
   { label: "Locations", href: "/locations" },
   { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
-  { label: "Careers", href: "/careers" },
 ];
 
 const PROGRAM_LINKS = [
@@ -29,6 +28,7 @@ const PROGRAM_LINKS = [
   { label: "Schooling", href: "/schooling" },
   { label: "Franchising", href: "/franchise" },
   { label: "Pricing", href: "/grooming-prices" },
+  { label: "Careers", href: "/careers" },
 ];
 
 const PARTNERS = [
