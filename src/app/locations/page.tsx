@@ -8,7 +8,7 @@ export const revalidate = 60;
 export default async function LocationsPage() {
   const locations = await getLocations();
   return (
-    <section className="flex items-center justify-center px-lg py-7xl">
+    <section className="flex items-center justify-center px-lg pt-2xl sm:pt-7xl pb-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
         <div className="flex max-w-[772px] flex-col items-center gap-lg text-center">
           <Eyebrow>Locations</Eyebrow>

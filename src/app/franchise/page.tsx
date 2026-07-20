@@ -30,9 +30,9 @@ export default async function FranchisePage() {
   const faqs = await getFaqsByCategory("franchising");
   return (
     <>
-      <section className="flex items-center justify-center px-lg pt-2xl">
+      <section className="flex items-center justify-center px-lg pt-lg sm:pt-2xl">
         <div className="relative flex w-full max-w-[1240px] flex-col items-start gap-2xl overflow-hidden rounded-[32px] bg-brand-secondary-light lg:flex-row lg:items-center lg:pl-2xl lg:h-[689px]">
-          <div className="relative z-10 flex w-full flex-col items-start gap-2xl px-lg pt-2xl lg:w-fit lg:flex-none lg:px-0 lg:py-2xl">
+          <div className="relative z-10 flex w-full flex-col items-start gap-2xl px-lg pt-lg sm:pt-2xl lg:w-fit lg:flex-none lg:px-0 lg:py-2xl">
             <div className="flex flex-col items-start gap-sm">
               <Reveal>
                 <Eyebrow>Franchising Opportunity</Eyebrow>

@@ -7,7 +7,7 @@ export const revalidate = 60;
 export default async function GroomingPricesPage() {
   const breeds = await getBreedPricing();
   return (
-    <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
+    <section className="flex flex-col items-center gap-2xl px-lg pt-2xl sm:pt-7xl pb-7xl">
       <div className="flex max-w-[1024px] flex-col items-center gap-lg text-center">
         <Eyebrow>Pricing</Eyebrow>
         <h1 className="font-serif text-h2 text-text-primary">

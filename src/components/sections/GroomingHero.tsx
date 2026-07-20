@@ -7,7 +7,7 @@ import { RegisteredMark } from "@/components/ui/RegisteredMark";
 
 export function GroomingHero() {
   return (
-    <section className="flex items-center justify-center px-lg pt-2xl">
+    <section className="flex items-center justify-center px-lg pt-lg sm:pt-2xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl sm:flex-row">
         <Reveal className="h-[280px] w-full sm:h-[600px] sm:flex-1">
           <div className="relative h-[280px] w-full overflow-hidden rounded-[32px] sm:h-[600px]">

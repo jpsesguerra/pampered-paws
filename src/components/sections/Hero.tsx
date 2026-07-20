@@ -16,7 +16,7 @@ const BALLS = [
 
 export function Hero() {
   return (
-    <section className="relative flex flex-col items-center gap-3xl overflow-hidden px-lg py-3xl sm:gap-6xl sm:py-6xl lg:gap-7xl lg:py-7xl">
+    <section className="relative flex flex-col items-center gap-3xl overflow-hidden px-lg pt-xl pb-3xl sm:gap-6xl sm:py-6xl lg:gap-7xl lg:py-7xl">
       {BALLS.map((ball) => (
         <img
           key={ball.src}

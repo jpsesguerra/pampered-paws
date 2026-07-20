@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { IconCircle } from "@/components/ui/IconCircle";
-import { Reveal } from "@/components/ui/Reveal";
 import { RichText } from "@/components/ui/RichText";
 import { JobApplicationForm } from "@/components/sections/JobApplicationForm";
 import { getJobPostings, getJobPostingBySlug, getOtherJobPostings } from "@/sanity/lib/jobPostings";
@@ -23,9 +22,9 @@ export default async function JobPostingPage({ params }: { params: { slug: strin
   const otherJobPostings = (await getOtherJobPostings(jobPosting.slug)).slice(0, 7);
 
   return (
-    <section className="flex items-center justify-center px-lg py-7xl">
+    <section className="flex items-center justify-center px-lg pt-2xl sm:pt-7xl pb-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
-        <Reveal className="w-full flex-1">
+        <div className="w-full flex-1">
           <article className="flex w-full flex-col items-start gap-2xl rounded-[20px] bg-surface-white px-lg py-2xl sm:px-3xl">
             <div className="flex flex-col items-start gap-md">
               <SecondaryButton href="/careers">Back To All Careers</SecondaryButton>
@@ -46,9 +45,9 @@ export default async function JobPostingPage({ params }: { params: { slug: strin
               notifyEmail="careers@pamperedpaws.com"
             />
           </div>
-        </Reveal>
+        </div>
 
-        <Reveal delay={100} className="w-full lg:w-[400px] lg:shrink-0">
+        <div className="w-full lg:w-[400px] lg:shrink-0">
           <div className="flex w-full flex-col items-start gap-2xl">
             <h2 className="w-full text-center font-serif text-h4 text-text-primary">
               Other Openings
@@ -68,7 +67,7 @@ export default async function JobPostingPage({ params }: { params: { slug: strin
               ))}
             </div>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

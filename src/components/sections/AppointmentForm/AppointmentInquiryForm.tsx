@@ -177,7 +177,7 @@ export function AppointmentInquiryForm({
 
   if (successData) {
     return (
-      <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
+      <section className="flex flex-col items-center gap-2xl px-lg pt-2xl sm:pt-7xl pb-7xl">
         <SuccessPanel
           title="Inquiry submitted"
           message={`${successData.petName} is in the queue for ${successData.locationName}. We'll follow up using your preferred contact method.`}
@@ -189,14 +189,14 @@ export function AppointmentInquiryForm({
 
   if (!breedData) {
     return (
-      <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
+      <section className="flex flex-col items-center gap-2xl px-lg pt-2xl sm:pt-7xl pb-7xl">
         <p className="font-sans text-body-default text-text-secondary">Loading…</p>
       </section>
     );
   }
 
   return (
-    <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
+    <section className="flex flex-col items-center gap-2xl px-lg pt-2xl sm:pt-7xl pb-7xl">
       <div className="flex max-w-[898px] flex-col items-center gap-md text-center">
         <Breadcrumb>Request</Breadcrumb>
         <h1 className="font-serif text-h2 text-text-primary">Request an Appointment</h1>

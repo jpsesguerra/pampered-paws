@@ -22,8 +22,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
   return (
     <>
-      <section className="flex items-center justify-center px-lg py-7xl">
-        <Reveal className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
+      <section className="flex items-center justify-center px-lg pt-2xl sm:pt-7xl pb-7xl">
+        <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
           <SecondaryButton href="/blog">Back to Blog</SecondaryButton>
           <div className="flex flex-col items-center gap-s+ text-center">
             <h1 className="max-w-[1024px] font-serif text-h2 text-text-primary sm:text-display-h1">
@@ -35,7 +35,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             {post.image && <Image src={post.image} alt={post.title} fill className="object-cover" />}
           </div>
           <RichText value={post.content} className="w-full max-w-[800px]" />
-        </Reveal>
+        </div>
       </section>
 
       <Reveal>

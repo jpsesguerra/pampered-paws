@@ -15,7 +15,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export default function AboutUsPage() {
   return (
     <>
-      <section className="flex items-center justify-center px-lg pt-2xl">
+      <section className="flex items-center justify-center px-lg pt-lg sm:pt-2xl">
         <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl">
           <Reveal>
             <Eyebrow>About Us</Eyebrow>

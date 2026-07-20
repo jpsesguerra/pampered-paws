@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { IconCircle } from "@/components/ui/IconCircle";
-import { Reveal } from "@/components/ui/Reveal";
 import { RichText } from "@/components/ui/RichText";
 import { getResources, getResourceBySlug, getOtherResources } from "@/sanity/lib/resources";
 
@@ -21,9 +20,9 @@ export default async function ResourcePostPage({ params }: { params: { slug: str
   const hasContent = resource.content && resource.content.length > 0;
 
   return (
-    <section className="flex items-center justify-center px-lg py-7xl">
+    <section className="flex items-center justify-center px-lg pt-2xl sm:pt-7xl pb-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
-        <Reveal className="w-full flex-1">
+        <div className="w-full flex-1">
           <article className="flex w-full flex-col items-start gap-2xl rounded-[20px] bg-surface-white px-lg py-2xl sm:px-3xl">
             <div className="flex flex-col items-start gap-md">
               <SecondaryButton href="/resources">Back To All Resources</SecondaryButton>
@@ -40,9 +39,9 @@ export default async function ResourcePostPage({ params }: { params: { slug: str
               </SecondaryButton>
             )}
           </article>
-        </Reveal>
+        </div>
 
-        <Reveal delay={100} className="w-full lg:w-[400px] lg:shrink-0">
+        <div className="w-full lg:w-[400px] lg:shrink-0">
           <div className="flex w-full flex-col items-start gap-2xl">
             <h2 className="w-full text-center font-serif text-h4 text-text-primary">
               Other Resources
@@ -62,7 +61,7 @@ export default async function ResourcePostPage({ params }: { params: { slug: str
               ))}
             </div>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

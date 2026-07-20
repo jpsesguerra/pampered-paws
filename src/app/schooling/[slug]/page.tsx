@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { IconCircle } from "@/components/ui/IconCircle";
-import { Reveal } from "@/components/ui/Reveal";
 import { RichText } from "@/components/ui/RichText";
 import { getPrograms, getProgramBySlug, getOtherPrograms } from "@/sanity/lib/programs";
 
@@ -20,9 +19,9 @@ export default async function ProgramDetailPage({ params }: { params: { slug: st
   const otherPrograms = await getOtherPrograms(program.slug);
 
   return (
-    <section className="flex items-center justify-center px-lg py-7xl">
+    <section className="flex items-center justify-center px-lg pt-2xl sm:pt-7xl pb-7xl">
       <div className="flex w-full max-w-[1240px] flex-col items-start gap-2xl lg:flex-row">
-        <Reveal className="w-full flex-1">
+        <div className="w-full flex-1">
           <article className="flex w-full flex-col items-start gap-2xl rounded-[20px] bg-surface-white px-lg py-2xl sm:px-3xl">
             <div className="flex flex-col items-start gap-md">
               <SecondaryButton href="/schooling">Back To Schooling</SecondaryButton>
@@ -35,9 +34,9 @@ export default async function ProgramDetailPage({ params }: { params: { slug: st
             <RichText value={program.description} className="w-full" />
             <SecondaryButton href="/schooling/enroll">{program.ctaLabel}</SecondaryButton>
           </article>
-        </Reveal>
+        </div>
 
-        <Reveal delay={100} className="w-full lg:w-[400px] lg:shrink-0">
+        <div className="w-full lg:w-[400px] lg:shrink-0">
           <div className="flex w-full flex-col items-start gap-2xl">
             <h2 className="w-full text-center font-serif text-h4 text-text-primary">
               Other Programs
@@ -57,7 +56,7 @@ export default async function ProgramDetailPage({ params }: { params: { slug: st
               ))}
             </div>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

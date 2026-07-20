@@ -71,7 +71,7 @@ export function ContactForm({
     ]);
 
     return (
-      <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
+      <section className="flex flex-col items-center gap-2xl px-lg pt-2xl sm:pt-7xl pb-7xl">
         <SuccessPanel
           title="Enquiry sent"
           message={`Thanks, ${name}. We'll follow up using your preferred contact method.`}
@@ -83,7 +83,7 @@ export function ContactForm({
   }
 
   return (
-    <section className="flex flex-col items-center gap-2xl px-lg py-7xl">
+    <section className="flex flex-col items-center gap-2xl px-lg pt-2xl sm:pt-7xl pb-7xl">
       <div className="flex max-w-[898px] flex-col items-center gap-md text-center">
         <Breadcrumb>{breadcrumb}</Breadcrumb>
         <h1 className="font-serif text-h2 text-text-primary">{title}</h1>
