@@ -31,7 +31,7 @@ export function TeamSection() {
             <div className="flex flex-col items-start gap-lg">
               <Eyebrow>Our team</Eyebrow>
               <h2 className="font-serif text-h2 text-text-primary">
-                The people behind 45 years of grooming
+                The people behind 47 years of grooming
               </h2>
               <p className="font-sans text-body-default text-text-primary">
                 For over four decades, GTA pet owners have trusted Pampered

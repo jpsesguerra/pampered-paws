@@ -24,7 +24,7 @@ const HELP_ITEMS = [
     icon: "location" as const,
     title: "Open your own Pampered Paws®",
     description:
-      "A proven grooming brand with 45 years behind it and locations from the GTA to Tokyo. If you're ready to build something, let's talk.",
+      "A proven grooming brand with 47 years behind it and locations from the GTA to Tokyo. If you're ready to build something, let's talk.",
     ctaLabel: "Explore the opportunity",
     ctaHref: "/franchise",
   },

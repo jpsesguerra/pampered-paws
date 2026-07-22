@@ -41,12 +41,12 @@ export function Hero() {
         </Reveal>
         <Reveal delay={100}>
           <h1 className="max-w-[736px] text-center font-serif text-h2 text-text-primary lg:text-display-h1">
-            Forty-five years of grooming, <Highlight>done right</Highlight>
+            Forty-seven years of grooming, <Highlight>done right</Highlight>
           </h1>
         </Reveal>
         <Reveal delay={200}>
           <p className="max-w-[536px] text-center font-sans text-label-lg text-brand-neutral-lighter">
-            Forty-five years of expert grooming across the GTA — built around
+            Forty-seven years of expert grooming across the GTA — built around
             your pet&rsquo;s coat, temperament and your standards. No
             compromises, no surprises, just clean, careful work by people
             who&rsquo;ve done this for decades.

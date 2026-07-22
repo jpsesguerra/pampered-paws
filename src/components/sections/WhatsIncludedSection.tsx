@@ -8,7 +8,7 @@ const INCLUDED = [
   {
     icon: "paw" as const,
     title: "An established brand",
-    description: "45 years of recognition and trust, from day one",
+    description: "47 years of recognition and trust, from day one",
   },
   {
     icon: "star" as const,

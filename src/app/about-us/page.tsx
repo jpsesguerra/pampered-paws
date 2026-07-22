@@ -76,7 +76,7 @@ export default function AboutUsPage() {
       <Reveal>
         <CTABanner
           heading="Come see the difference for yourself"
-          description="Forty-five years on, the goal hasn't changed: your pet, cared for exactly the way you want."
+          description="Forty-seven years on, the goal hasn't changed: your pet, cared for exactly the way you want."
           buttonLabel="Find your nearest salon"
           buttonHref="/locations"
           buttonVariant="secondary"

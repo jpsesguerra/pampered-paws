@@ -17,7 +17,7 @@ const HIGHLIGHTS = [
     icon: "calendar" as const,
     title: "A name clients recognize",
     description:
-      "Graduating from a school with a 45-year reputation means something when you're building your own client list or applying for your first grooming role.",
+      "Graduating from a school with a 47-year reputation means something when you're building your own client list or applying for your first grooming role.",
   },
 ];
 

@@ -13,7 +13,7 @@ export function WhyChooseSchool() {
             A track record you can build a <Highlight>career</Highlight> on
           </h2>
           <p className="font-sans text-body-lg text-text-primary">
-            For more than 45 years, Pampered Paws<RegisteredMark /> has trained groomers who go
+            For more than 47 years, Pampered Paws<RegisteredMark /> has trained groomers who go
             on to do this for a living — and for themselves.
           </p>
         </div>

@@ -7,7 +7,7 @@ const REASONS = [
     icon: "location" as const,
     title: "A name that's meant quality since 1979.",
     description:
-      "Most grooming franchises are a decade old, if that. Pampered Paws® has spent more than 45 years building a reputation pet owners trust — the kind of brand equity a new business usually takes years to earn.",
+      "Most grooming franchises are a decade old, if that. Pampered Paws® has spent more than 47 years building a reputation pet owners trust — the kind of brand equity a new business usually takes years to earn.",
   },
   {
     icon: "paw" as const,
