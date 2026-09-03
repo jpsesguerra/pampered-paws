@@ -80,25 +80,23 @@ export default async function SchoolingPage() {
         <WhoIsThisFor />
       </Reveal>
 
-      <Reveal>
-        <section id="programs" className="flex items-center justify-center px-lg py-7xl">
-          <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
-            <div className="flex max-w-[716px] flex-col items-center gap-md text-center">
-              <Eyebrow>Schooling at Pampered Paws<RegisteredMark /></Eyebrow>
-              <h2 className="font-serif text-h2 text-text-primary">Our programs</h2>
-              <p className="font-sans text-body-lg text-text-primary">
-                Choose a starting point — or talk to us about a path that
-                combines several.
-              </p>
-            </div>
-            <div className="grid w-full grid-cols-1 gap-2xl sm:grid-cols-2">
-              {programs.map((program) => (
-                <ProgramCard key={program.slug} program={program} />
-              ))}
-            </div>
+      <section id="programs" className="flex items-center justify-center px-lg py-7xl">
+        <div className="flex w-full max-w-[1240px] flex-col items-center gap-2xl">
+          <div className="flex max-w-[716px] flex-col items-center gap-md text-center">
+            <Eyebrow>Schooling at Pampered Paws<RegisteredMark /></Eyebrow>
+            <h2 className="font-serif text-h2 text-text-primary">Our programs</h2>
+            <p className="font-sans text-body-lg text-text-primary">
+              Choose a starting point — or talk to us about a path that
+              combines several.
+            </p>
           </div>
-        </section>
-      </Reveal>
+          <div className="grid w-full grid-cols-1 gap-2xl sm:grid-cols-2">
+            {programs.map((program) => (
+              <ProgramCard key={program.slug} program={program} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Reveal>
         <EnrollSection />
