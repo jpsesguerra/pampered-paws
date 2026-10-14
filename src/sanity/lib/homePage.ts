@@ -30,7 +30,7 @@ const DEFAULT_HERO_PHOTOS: HeroPhotos = {
   },
 };
 
-// Crop server-side to each slot's aspect ratio (331/398 sides, 538/398 center)
+// Crop server-side to each slot's aspect ratio (331/478 sides, 538/478 center)
 // so the editor's hotspot decides what stays in frame.
 function toHeroPhoto(image: HeroImage | undefined, width: number, height: number, fallback: HeroPhoto): HeroPhoto {
   if (!image?.asset) return fallback;
@@ -48,8 +48,8 @@ export async function getHeroPhotos(): Promise<HeroPhotos> {
     return DEFAULT_HERO_PHOTOS;
   }
   return {
-    left: toHeroPhoto(doc?.heroLeft, 828, 995, DEFAULT_HERO_PHOTOS.left),
-    center: toHeroPhoto(doc?.heroCenter, 1345, 995, DEFAULT_HERO_PHOTOS.center),
-    right: toHeroPhoto(doc?.heroRight, 828, 995, DEFAULT_HERO_PHOTOS.right),
+    left: toHeroPhoto(doc?.heroLeft, 828, 1194, DEFAULT_HERO_PHOTOS.left),
+    center: toHeroPhoto(doc?.heroCenter, 1345, 1194, DEFAULT_HERO_PHOTOS.center),
+    right: toHeroPhoto(doc?.heroRight, 828, 1194, DEFAULT_HERO_PHOTOS.right),
   };
 }

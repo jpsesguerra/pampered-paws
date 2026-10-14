@@ -64,19 +64,19 @@ export function Hero({ photos }: { photos: HeroPhotos }) {
       </div>
       <div className="relative z-10 grid w-full max-w-[1240px] grid-cols-1 gap-lg sm:grid-cols-[1fr_1.625fr_1fr] sm:items-stretch">
         <div
-          className="hero-photo-in relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
+          className="hero-photo-in relative aspect-[331/478] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "0ms" }}
         >
           <Image src={photos.left.src} alt={photos.left.alt} fill sizes="(min-width: 640px) 25vw, 100vw" className="object-cover" />
         </div>
         <div
-          className="hero-photo-in relative aspect-[538/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
+          className="hero-photo-in relative aspect-[538/478] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "300ms" }}
         >
           <Image src={photos.center.src} alt={photos.center.alt} fill sizes="(min-width: 640px) 45vw, 100vw" className="object-cover" />
         </div>
         <div
-          className="hero-photo-in relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
+          className="hero-photo-in relative aspect-[331/478] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "150ms" }}
         >
           <Image src={photos.right.src} alt={photos.right.alt} fill sizes="(min-width: 640px) 25vw, 100vw" className="object-cover" />
