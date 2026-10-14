@@ -54,3 +54,5 @@ const jobPostingProjection = groq`{ ..., "slug": slug.current }`;
 
 export const allJobPostingsQuery = groq`*[_type == "jobPosting" && active != false] | order(title asc) ${jobPostingProjection}`;
 export const jobPostingBySlugQuery = groq`*[_type == "jobPosting" && slug.current == $slug][0] ${jobPostingProjection}`;
+
+export const homePageQuery = groq`*[_type == "homePage" && _id == "homePage"][0]{ heroLeft, heroCenter, heroRight }`;

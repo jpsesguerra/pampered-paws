@@ -8,8 +8,10 @@ import faq from "./faq";
 import breedPricing from "./breedPricing";
 import service from "./service";
 import jobPosting from "./jobPosting";
+import homePage from "./homePage";
 
 export const schemaTypes = [
+  homePage,
   location,
   teamMember,
   testimonial,

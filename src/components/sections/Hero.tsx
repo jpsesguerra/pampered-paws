@@ -4,6 +4,7 @@ import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Highlight } from "@/components/ui/Highlight";
 import { Reveal } from "@/components/ui/Reveal";
+import type { HeroPhotos } from "@/sanity/lib/homePage";
 
 // Each paw starts closer to the hero's center and animates outward to its resting
 // spot, tilting slightly further on the way before settling into its final angle.
@@ -14,7 +15,7 @@ const BALLS = [
   { src: "https://res.cloudinary.com/du0witbcr/image/upload/v1782665001/pampered-paws/icons/ball-4.svg", className: "left-[18%] top-[54%] hidden lg:block", toRot: 25, fromX: 60, fromY: -50, fromRot: 35, delay: 300 },
 ];
 
-export function Hero() {
+export function Hero({ photos }: { photos: HeroPhotos }) {
   return (
     <section className="relative flex flex-col items-center gap-3xl overflow-hidden px-lg pt-xl pb-3xl sm:gap-6xl sm:py-6xl lg:gap-7xl lg:py-7xl">
       {BALLS.map((ball) => (
@@ -66,19 +67,19 @@ export function Hero() {
           className="hero-photo-in relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "0ms" }}
         >
-          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783544610/C80F382A-DF83-4030-9402-3EF6F6213650_y1lbox.jpg" alt="" fill className="object-cover" />
+          <Image src={photos.left.src} alt={photos.left.alt} fill sizes="(min-width: 640px) 25vw, 100vw" className="object-cover" />
         </div>
         <div
           className="hero-photo-in relative aspect-[538/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "300ms" }}
         >
-          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783908123/IMG_4300-fotor-20260712215837_otc6r7.png" alt="" fill className="object-cover" />
+          <Image src={photos.center.src} alt={photos.center.alt} fill sizes="(min-width: 640px) 45vw, 100vw" className="object-cover" />
         </div>
         <div
           className="hero-photo-in relative aspect-[331/398] w-full overflow-hidden rounded-[32px] bg-brand-secondary-light"
           style={{ animationDelay: "150ms" }}
         >
-          <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1783544685/pp-cat_upnhef.png" alt="" fill className="object-cover" />
+          <Image src={photos.right.src} alt={photos.right.alt} fill sizes="(min-width: 640px) 25vw, 100vw" className="object-cover" />
         </div>
       </div>
     </section>

@@ -13,14 +13,19 @@ import { BlogTeaser } from "@/components/sections/BlogTeaser";
 import { Reveal } from "@/components/ui/Reveal";
 import { getAllTestimonials } from "@/sanity/lib/testimonials";
 import { getBlogPosts } from "@/sanity/lib/blog";
+import { getHeroPhotos } from "@/sanity/lib/homePage";
 
 export const revalidate = 60;
 
 export default async function Home() {
-  const [testimonials, blogPosts] = await Promise.all([getAllTestimonials(), getBlogPosts()]);
+  const [testimonials, blogPosts, heroPhotos] = await Promise.all([
+    getAllTestimonials(),
+    getBlogPosts(),
+    getHeroPhotos(),
+  ]);
   return (
     <>
-      <Hero />
+      <Hero photos={heroPhotos} />
       <Reveal>
         <BreedCarousel />
       </Reveal>
